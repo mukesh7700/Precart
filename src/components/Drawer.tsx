@@ -1,6 +1,5 @@
 "use client";
 
-import { useDisclosure } from "@jamsr-ui/hooks";
 import {
   
   Drawer,
@@ -18,7 +17,7 @@ const DrawerUsage = ({ isOpen, onClose, setIsOpen }) => {
   return (
     <div>
       
-      <Drawer anchor="left" isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Drawer anchor="left" isOpen={isOpen} onOpenChange={setIsOpen} >
         <DrawerHeader className="text-2xl font-semibold">Menu</DrawerHeader>
         <DrawerBody>
         <Accordion>
