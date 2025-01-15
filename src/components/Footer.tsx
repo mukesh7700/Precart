@@ -1,4 +1,5 @@
-import { Button, Input } from "@jamsr-ui/react";
+"use client"
+import { Button, Chip, IconButton, Input } from "@jamsr-ui/react";
 import Link from "next/link";
 import { CiLocationOn } from "react-icons/ci";
 import { GrFormNext } from "react-icons/gr";
@@ -7,6 +8,9 @@ import { FiMessageSquare } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
+import { FiMoon } from "react-icons/fi";
+import { MdOutlineWbSunny } from "react-icons/md";
+import { useState, useEffect } from 'react';
 
 
 const helpData = [
@@ -43,8 +47,23 @@ const helpData = [
   ];
 
 const Footer = () => {
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
   return (
-    <div className="px-3 py-5">
+    <div className="px-3 py-5 border-t border-zinc-600">
       <div className="container mx-auto">
         <div>
           <h1 className="text-xl font-semibold ">Subscribe & get 10% off </h1>
@@ -111,9 +130,20 @@ const Footer = () => {
         </div>
       </div>
         </div>
+        <div className="flex items-center gap-2  text-zinc-600 text-sm font-semibold">
+         <p>© 2025 Preline Labs.</p>
+         
+          <Chip variant="dot" className="hover:text-white  hover:underline underline-offset-2">Terms</Chip>
+          <Chip variant="dot" className="hover:text-white hover:underline underline-offset-2">Privacy</Chip>
+          <Chip variant="dot" className="hover:text-white hover:underline underline-offset-2">Your Privacy Choices</Chip>
+          <Chip variant="dot" className="hover:text-white hover:underline underline-offset-2" onClick={toggleTheme}>
+         {theme === 'light' ?  <FiMoon />:<MdOutlineWbSunny /> } 
+          </Chip>
+         
+        </div>
       </div>
     </div>
   );
-};
+};``
 
 export default Footer;

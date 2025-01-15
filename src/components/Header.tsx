@@ -53,7 +53,7 @@ const AvatarItem = () => {
 const HeaderUsage = (props: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [isSerchOpen, setIsSearchOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
@@ -262,7 +262,7 @@ const HeaderUsage = (props: HeaderProps) => {
       />
 
       <Search
-      isOpen={isSerchOpen}
+      isOpen={isSearchOpen}
       setIsOpen={setIsSearchOpen}
       onClose={closeSearch}
       />
