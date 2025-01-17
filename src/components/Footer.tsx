@@ -17,31 +17,31 @@ const helpData = [
     {
       category: "Help ",
       items: [
-        { name: "Help Center", link: "/help-center" },
+        { name: "Help Center", link: "/" },
         { name: "FAQs", link: "/faqs" },
-        { name: "Subscription", link: "/subscription" },
-        { name: "Order Status", link: "/order-status" },
-        { name: "Returns & Exchanges", link: "/returns" },
-        { name: "Contact Us", link: "/contact-us" },
+        { name: "Subscription", link: "/" },
+        { name: "Order Status", link: "/" },
+        { name: "Returns & Exchanges", link: "/" },
+        { name: "Contact Us", link: "/" },
       ],
     },
     
     {
       category: "Resources",
       items: [
-        { name: "Gift Cards", link: "/gift-cards" },
-        { name: "Find a Store", link: "/find-store" },
-        { name: "Membership", link: "/membership" },
+        { name: "Gift Cards", link: "/" },
+        { name: "Find a Store", link: "/" },
+        { name: "Membership", link: "/" },
       ],
     },
     {
       category: "Company",
       items: [
-        { name: "Newsroom", link: "/newsroom" },
-        { name: "New Features", link: "/new-features" },
-        { name: "Careers", link: "/careers" },
-        { name: "Investors", link: "/investors" },
-        { name: "Purpose", link: "/purpose" },
+        { name: "Newsroom", link: "/" },
+        { name: "New Features", link: "/" },
+        { name: "Careers", link: "/" },
+        { name: "Investors", link: "/" },
+        { name: "Purpose", link: "/" },
       ],
     },
   ];
@@ -111,17 +111,17 @@ const Footer = () => {
         <div className="my-10">
             <h1 className="text-lg font-semibold ">Stay connected</h1>
             <div className="flex gap-5 py-2">
-            <Link href="#" className="  text-zinc-400 hover:text-white text-lg font-semibold ">
+            <Link href="/" className="  text-zinc-400 hover:text-white text-lg font-semibold ">
             <FaInstagram />
             
             
             </Link>
-            <Link href="#" className="text-zinc-400 hover:text-white text-lg font-semibold ">
+            <Link href="/" className="text-zinc-400 hover:text-white text-lg font-semibold ">
             <FaYoutube />
             
             
             </Link>
-            <Link href="#" className="text-zinc-400 hover:text-white text-lg font-semibold  ">
+            <Link href="/" className="text-zinc-400 hover:text-white text-lg font-semibold  ">
             <RiTwitterXLine />
             
             
