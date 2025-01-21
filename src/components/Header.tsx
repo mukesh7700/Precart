@@ -69,7 +69,7 @@ const HeaderUsage = (props: HeaderProps) => {
       <Header className="flex justify-between px-4" {...props}>
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex justify-between items-center gap-2">
-            <Link href="#">
+            <Link href="/">
               <svg
                 className="n5h7m mf27b"
                 width="116"
@@ -226,7 +226,7 @@ const HeaderUsage = (props: HeaderProps) => {
               className="p-2"
             >
               <div>
-                <Link href="#">
+                <Link href="/">
                   <Card className="hover:bg-zinc-800 pb-4">
                     <CardHeader
                       heading="James Collins"

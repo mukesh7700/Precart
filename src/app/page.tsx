@@ -1,14 +1,15 @@
 "use client";
 import Link from "next/link";
-import { IconButton, Tab, Tabs } from "@jamsr-ui/react";
+import { IconButton, Tab, Tabs, Text } from "@jamsr-ui/react";
 import { useRef } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { GrFormNext } from "react-icons/gr";
 import Image from "next/image";
 import CardComponent from "@/components/Card";
 import CardComponent2 from "@/components/Card2";
+import Card3 from "@/components/Card3";
 import { MdNavigateNext } from "react-icons/md";
-import { Adids } from '@/components/svgs/Adids.svg';
+import { Adids, Batch, HM, NewBalance, Nick, NorthFace, Puma } from '../components/svgs';
 
 interface Product {
   id: number;
@@ -136,6 +137,45 @@ const mencardData = [
     price: "$120",
   },
 ];
+
+const shoes = [
+
+  {
+    imageSrc: "/shoes1.jpg",
+    altText: "Clothing Item",
+    text: "AIR JORDAN"
+  },
+  {
+    imageSrc: "/shoes2.jpg",
+    altText: "Clothing Item",
+    text: "AIR JORDAN1"
+
+  },
+  {
+    imageSrc: "/shoes3.jpg",
+    altText: "Clothing Item",
+    text: "DUNK"
+
+  },
+  {
+    imageSrc: "/shoes4.jpg",
+    altText: "Clothing Item",
+    text: "AIR FORCE1"
+
+  },
+  {
+    imageSrc: "/shoes5.jpg",
+    altText: "Clothing Item",
+    text: "BLAZER"
+
+  },
+  {
+    imageSrc: "/shoes.avif",
+    altText: "Clothing Item",
+    text: "ADIDAS"
+
+  },
+]
 
 const page = () => {
   const scrollContainer = useRef(null);
@@ -326,25 +366,79 @@ const page = () => {
             The better way to shop with Preline top-products{" "}
           </h1>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {products.map((product) => (
-        <CardComponent2
-          key={product.id}
-          images={product.images}
-          title={product.title}
-          subtitle={product.subtitle}
-          linkText={product.linkText}
-          linkHref={product.linkHref}
-        />
-      ))}
+            {products.map((product) => (
+              <CardComponent2
+                key={product.id}
+                images={product.images}
+                title={product.title}
+                subtitle={product.subtitle}
+                linkText={product.linkText}
+                linkHref={product.linkHref}
+              />
+            ))}
           </div>
         </section>
         <section className="p-5 text-center">
-          <div className="container mx-auto">
-            <div className="flex items-center justify-center">
-              <Adids/>
-            </div>
+
+          <div className="flex justify-center items-center  gap-10 lg:gap-[100px]">
+            <Adids className="h-[75px] w-[75px]" />
+            <Nick className="h-[75px] w-[75px]" />
+            <NewBalance className="h-[75px] w-[75px]" />
+            <NorthFace className="h-[75px] w-[75px]" />
+            <Puma className="h-[75px] w-[75px]" />
+            <HM className="h-[75px] w-[75px]" />
+
+
           </div>
 
+
+        </section>
+        <section className="p-5 text-center">
+          <h1 className="text-3xl font-semibold my-3">
+            Shoes by classics
+          </h1>
+          <div className="relative w-full">
+
+            <div
+
+              className="flex  items-center justify-center flex-nowrap gap-2 overflow-hidden "
+            >
+              <div className="flex gap-5 items-center justify-center flex-nowrap">
+                {shoes.map((card, index) => (
+                  <Card3
+                    key={index}
+                    images={card.imageSrc}
+                    altText={card.altText}
+                    ButtonText={card.text}
+                  />
+                ))}
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <section className="p-5 text-center">
+          <div className="md:flex justify-between items-center gap-16 py-10">
+            <div className="text-center ">
+              <Batch className="mx-auto mb-2" />
+              <Text as="h3" variant="body2" >Secure checkout </Text>
+              <p className="text-neutral-500">Shop with confidence using our encrypted payment system that protects your sensitive information. </p>
+
+            </div>
+            <div className="text-center my-8 ">
+              <Batch className="mx-auto mb-2" />
+              <Text as="h3" variant="body2" >Secure checkout </Text>
+              <p className="text-neutral-500">Shop with confidence using our encrypted payment system that protects your sensitive information. </p>
+
+            </div>
+            <div className="text-center ">
+              <Batch className="mx-auto mb-2" />
+              <Text as="h3" variant="body2" >Secure checkout </Text>
+              <p className="text-neutral-500 ">Shop with confidence using our encrypted payment system that protects your sensitive information. </p>
+
+            </div>
+          </div>
         </section>
       </div>
     </div>
