@@ -8,6 +8,7 @@ import Image from "next/image";
 import CardComponent from "@/components/Card";
 import CardComponent2 from "@/components/Card2";
 import { MdNavigateNext } from "react-icons/md";
+import { Adids } from '@/components/svgs/Adids.svg';
 
 interface Product {
   id: number;
@@ -30,17 +31,17 @@ const products: Product[] = [
   {
     id: 2,
     images: ["/Men1.jpg", "/Men2.jpg", "/Men3.jpg"],
-    title: "Stylish Bags",
-    subtitle: "Starting from $49",
-    linkText: "Shop now",
+    title: "Men's Cloting",
+    subtitle: "Starting from $39",
+    linkText: "View all",
     linkHref: "/products/stylish-bags",
   },
   {
     id: 3,
     images: ["/image1.jpg", "/images2.jpg", "/images3.jpg"],
-    title: "Luxury Watches",
-    subtitle: "Starting from $299",
-    linkText: "Discover more",
+    title: "Women's Clothing",
+    subtitle: "Starting from $59",
+    linkText: "Veiw all",
     linkHref: "/products/luxury-watches",
   },
 ];
@@ -336,6 +337,14 @@ const page = () => {
         />
       ))}
           </div>
+        </section>
+        <section className="p-5 text-center">
+          <div className="container mx-auto">
+            <div className="flex items-center justify-center">
+              <Adids/>
+            </div>
+          </div>
+
         </section>
       </div>
     </div>
