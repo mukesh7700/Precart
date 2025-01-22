@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "Preline"
-    ]
+    ],
+    "cSpell.blockCheckingWhenTextChunkSizeGreaterThan": 5000
 }
