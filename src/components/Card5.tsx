@@ -3,7 +3,7 @@ import React from 'react'
 
 const Card5 = () => {
   return (
-    Link
+    <div>ram</div>
   )
 }
 

@@ -19,20 +19,23 @@ import { CiMenuKebab } from "react-icons/ci";
 import DrawerUsage from "@/components/Drawer";
 import PrelineTemplates from "./PrelineTemplates";
 import { SidebarUsage } from "@/components/SideBar";
+import Home from "@/components/Home"
+import Men from "@/components/Men"
 import { useId } from "react";
 import Cart from "@/components/Cart";
 import Search from "@/components/Search";
 import Image from "next/image";
+import Sales from "@/components/Sales";
 
 
 
 const popoverData = [
   { label: "pages", content: "This is a Popover content1" },
-  { label: "Men", content: "This is a Popover content2" },
+  { label: "Men", content: <Men/> },
   { label: "Women", content: "This is a Popover content3" },
   { label: "Kids", content: "This is a Popover content4" },
-  { label: "Home", content: "This is a Popover content5" },
-  { label: "Sales", content: "This is a Popover content6" },
+  { label: "Home", content: <Home/> },
+  { label: "Sales", content:<Sales/> },
 ];
 
 const AvatarItem = () => {
@@ -115,7 +118,7 @@ const HeaderUsage = (props: HeaderProps) => {
               <PrelineTemplates />
             </Popover>
           </div>
-          <div className="hidden md:flex justify-between items-center gap-6">
+          <div className="hidden md:flex justify-center items-center gap-6">
             {popoverData.map(({ label, content }, index) => (
               <Popover
                 key={index}
@@ -128,10 +131,10 @@ const HeaderUsage = (props: HeaderProps) => {
                     {label}
                   </IconButton>
                 }
-                className="p-2 h-32 w-full"
+                className="py-2 w-full"
                 triggerOn="hover"
               >
-                <Text as="p">{content}</Text>
+                <div>{content}</div>
               </Popover>
             ))}
           </div>
