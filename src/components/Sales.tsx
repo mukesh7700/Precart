@@ -82,7 +82,7 @@ const data = [
   
 const Sales = () => {
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-md mx-auto p-2">
         <div className=" grid grid-cols-2 gap-4 p-4">
           {data.map((item, index)=>(
             <div key={index} className='p-4'>

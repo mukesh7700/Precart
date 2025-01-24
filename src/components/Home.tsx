@@ -1,9 +1,11 @@
 import { Button } from '@jamsr-ui/react'
+import { div } from 'framer-motion/client'
 import Link from 'next/link'
 import React from 'react'
 
 const Home = () => {
   return (
+   <div className='w-screen'>
     <div className='p-10 max-w-xl text-center mx-auto '>
         <div className=''>
             <Button variant='outlined' size='sm'  className='rounded-full py-1 mb-4'>coming soon</Button>
@@ -18,6 +20,8 @@ const Home = () => {
             <Link href="#" className='underline tracking-wide font-semibold underline-offset-4 hover:text-violet-500'>Learn More</Link>
         </div>
     </div>
+   </div>
+    
   )
 }
 

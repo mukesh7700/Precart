@@ -21,19 +21,22 @@ import PrelineTemplates from "./PrelineTemplates";
 import { SidebarUsage } from "@/components/SideBar";
 import Home from "@/components/Home"
 import Men from "@/components/Men"
+import Women from "@/components/Women"
 import { useId } from "react";
 import Cart from "@/components/Cart";
 import Search from "@/components/Search";
 import Image from "next/image";
 import Sales from "@/components/Sales";
+import Kids from "@/components/Kids";
+import Pages from "@/components/Pages";
 
 
 
 const popoverData = [
-  { label: "pages", content: "This is a Popover content1" },
+  { label: "pages", content: <Pages/> },
   { label: "Men", content: <Men/> },
-  { label: "Women", content: "This is a Popover content3" },
-  { label: "Kids", content: "This is a Popover content4" },
+  { label: "Women", content: <Women/> },
+  { label: "Kids", content: <Kids/> },
   { label: "Home", content: <Home/> },
   { label: "Sales", content:<Sales/> },
 ];
@@ -118,7 +121,7 @@ const HeaderUsage = (props: HeaderProps) => {
               <PrelineTemplates />
             </Popover>
           </div>
-          <div className="hidden md:flex justify-center items-center gap-6">
+          <div className="hidden md:flex justify-center items-center  gap-6">
             {popoverData.map(({ label, content }, index) => (
               <Popover
                 key={index}
@@ -131,10 +134,10 @@ const HeaderUsage = (props: HeaderProps) => {
                     {label}
                   </IconButton>
                 }
-                className="py-2 w-full"
+                className="p-0 max-w-fit"
                 triggerOn="hover"
               >
-                <div>{content}</div>
+                <div  >{content}</div>
               </Popover>
             ))}
           </div>
