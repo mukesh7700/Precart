@@ -1,18 +1,22 @@
 "use client";
 import {
   Avatar,
+  Button,
   Card,
   CardHeader,
+  Divider,
   Header,
   IconButton,
   Input,
+  Menu,
+  MenuItem,
   Popover,
   Text,
   type HeaderProps,
 } from "@jamsr-ui/react";
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDownIcon, SearchIcon } from "@jamsr-ui/shared-icons";
+import { ChevronDownIcon, ChevronUpIcon, SearchIcon } from "@jamsr-ui/shared-icons";
 import { FaRegHeart } from "react-icons/fa";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
@@ -29,16 +33,17 @@ import Image from "next/image";
 import Sales from "@/components/Sales";
 import Kids from "@/components/Kids";
 import Pages from "@/components/Pages";
-
+import data from "@/data/Menu";
+import Menu1 from "@/components/Menu1";
 
 
 const popoverData = [
-  { label: "pages", content: <Pages/> },
-  { label: "Men", content: <Men/> },
-  { label: "Women", content: <Women/> },
-  { label: "Kids", content: <Kids/> },
-  { label: "Home", content: <Home/> },
-  { label: "Sales", content:<Sales/> },
+  { label: "pages", content: <Pages /> },
+  { label: "Men", content: <Men /> },
+  { label: "Women", content: <Women /> },
+  { label: "Kids", content: <Kids /> },
+  { label: "Home", content: <Home /> },
+  { label: "Sales", content: <Sales /> },
 ];
 
 const AvatarItem = () => {
@@ -60,7 +65,7 @@ const HeaderUsage = (props: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  
+
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -142,12 +147,12 @@ const HeaderUsage = (props: HeaderProps) => {
             ))}
           </div>
           <div className="flex justify-center items-center gap-4">
-            
-                <IconButton variant="light" label="" radius="full" onClick={openSearch} >
-                  <SearchIcon />
-                </IconButton>
-              
-              
+
+            <IconButton variant="light" label="" radius="full" onClick={openSearch} >
+              <SearchIcon />
+            </IconButton>
+
+
             <Popover
               trigger={
                 <IconButton variant="light" label="" radius="full">
@@ -219,8 +224,8 @@ const HeaderUsage = (props: HeaderProps) => {
             <IconButton variant="light" label="" radius="full" onClick={openCart} >
               <RiShoppingBag4Line />
             </IconButton>
-            
-            <Popover
+
+            {/* <Popover
               placement="bottom-start"
               trigger={
                 <IconButton radius="full" label="Popover Trigger">
@@ -244,16 +249,43 @@ const HeaderUsage = (props: HeaderProps) => {
 
                 <SidebarUsage />
               </div>
-            </Popover>
+            </Popover> */}
+            <Menu
+              classNames={{
+                popover: "min-w-[300px] ",
+                content: "bg-[#121212] border border-neutral-500   p-2"
+              }}
+              trigger={<IconButton radius="full" label="Popover Trigger">
+                <Avatar alt="" width={100} height={100}>
+                  Avatar
+                </Avatar>
+              </IconButton>}
+            >
+              <MenuItem className="mb-3">
+                <Link href="/account">
+                  <Card className=" p-0  bg-transparent">
+                    <CardHeader
+                      heading="James Collins"
+                      startContent={<AvatarItem />}
+                      subHeading="jamescollins@site.so"
+                      className="p-0"
+                    />
+                  </Card>
+                </Link>
+              </MenuItem>
+              <Divider className="mx-2"/>
+              <Menu1/>
+
+            </Menu>
             <IconButton label="" className="md:hidden" onClick={openMenu}>
               <CiMenuKebab />
             </IconButton>
-            
+
           </div>
         </div>
-        
+
       </Header>
-      
+
       <DrawerUsage
         isOpen={isMenuOpen}
         setIsOpen={setIsMenuOpen}
@@ -268,9 +300,9 @@ const HeaderUsage = (props: HeaderProps) => {
       />
 
       <Search
-      isOpen={isSearchOpen}
-      setIsOpen={setIsSearchOpen}
-      onClose={closeSearch}
+        isOpen={isSearchOpen}
+        setIsOpen={setIsSearchOpen}
+        onClose={closeSearch}
       />
     </>
   );

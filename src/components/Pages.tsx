@@ -6,12 +6,12 @@ const Pages = () => {
     return (
         <div className='w-screen'>
             <div className="container mx-auto">
-                <div className="grid grid-flow-col-dense my-4">
+                <div className="grid md:grid-flow-col-dense md:my-4">
                     {pages.map((products) => (
-                        <div key={products.Id} className="py-4">
+                        <div key={products.Id} className="md:py-4">
                             {products.item.map((product) => (
                                 <React.Fragment key={product.title}>
-                                    <h1 className="text-md font-semibold my-6">{product.title}</h1>
+                                    <h1 className="text-md font-semibold md:my-6">{product.title}</h1>
                                     {product.items.map((item) => (
                                         <Link
                                             href="#"

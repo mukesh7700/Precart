@@ -82,19 +82,19 @@ const data = [
   
 const Sales = () => {
   return (
-    <div className="max-w-md mx-auto p-2">
-        <div className=" grid grid-cols-2 gap-4 p-4">
+    <div className="md:max-w-md mx-auto md:p-2">
+        <div className=" md:grid grid-cols-2 gap-4 md:p-4">
           {data.map((item, index)=>(
-            <div key={index} className='p-4'>
+            <div key={index} className='md:p-4'>
               <h1 className='text-md font-semibold mb-3'>{item.title}</h1>
               {item.items.map((item, index)=>(
-                <Link href="#" className='text-md text-neutral-400 underline-offset-4 hover:underline hover:text-white mb-3 block' >{item.title}</Link>
+                <Link href="#" key={index} className='text-md text-neutral-400 underline-offset-4 hover:underline hover:text-white mb-3 block' >{item.title}</Link>
               ))}
             </div>
           ))}
 
         </div>
-        <div className='px-4 py-6 rounded-xl cursor-pointer'
+        <div className='hidden md:block px-4 py-6 rounded-xl cursor-pointer'
         style={{
           backgroundImage:"url('/banner.jpg')" ,
           backgroundSize: 'cover',

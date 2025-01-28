@@ -6,12 +6,12 @@ const Women = () => {
     return (
         <div className='w-screen'>
             <div className="container mx-auto">
-                <div className="grid grid-flow-col-dense my-4">
+                <div className="md:grid grid-flow-col-dense md:my-4">
                     {women.map((products) => (
-                        <div key={products.Id} className="py-4">
+                        <div key={products.Id} className="md:py-4">
                             {products.item.map((product) => (
                                 <React.Fragment key={product.title}>
-                                    <h1 className="text-md font-semibold my-6">{product.title}</h1>
+                                    <h1 className="text-md font-semibold md:my-6">{product.title}</h1>
                                     {product.items.map((item) => (
                                         <Link
                                             href="#"
@@ -25,7 +25,7 @@ const Women = () => {
                             ))}
                         </div>
                     ))}
-                    <div className="p-2 w-full h-full bg-gradient-to-tl from-blue-800 via-purple-600 to-orange-400 rounded-xl cursor-pointer relative">
+                    <div className="hidden md:block p-2 w-full h-full bg-gradient-to-tl from-blue-800 via-purple-600 to-orange-400 rounded-xl cursor-pointer relative">
                         <div
                             className="px-4 py-6 h-full rounded-xl cursor-pointer"
                             style={{
@@ -46,21 +46,21 @@ const Women = () => {
                 </div>
             </div>
 
-            <div className="py-[15px] bg-neutral-500">
-                <div className="container mx-auto flex justify-between gap-8 items-center">
-                    <div className="flex items-center grow p-1 gap-4 hover:bg-black rounded-md cursor-pointer">
+            <div className="py-[15px] md:bg-neutral-500">
+                <div className="container mx-auto md:flex justify-between gap-8 items-center">
+                    <div className="flex items-center grow p-1 gap-4 md:hover:bg-black rounded-md cursor-pointer">
                         <img src="/WomenShoes.avif" alt="shoes" className="h-[40px] w-[40px] rounded-md" />
                         <h1 className="text-md font-semibold tracking-wider">Shoes</h1>
                     </div>
-                    <div className="flex items-center grow p-1 gap-4 hover:bg-black rounded-md cursor-pointer">
+                    <div className="flex items-center grow p-1 gap-4 md:hover:bg-black rounded-md cursor-pointer">
                         <img src="/Womenaccess.avif" alt="accessories" className="h-[40px] w-[40px] rounded-md" />
                         <h1 className="text-md font-semibold tracking-wider">Accessories</h1>
                     </div>
-                    <div className="flex items-center grow p-1 gap-4 hover:bg-black rounded-md cursor-pointer">
+                    <div className="flex items-center grow p-1 gap-4 md:hover:bg-black rounded-md cursor-pointer">
                         <img src="/T-shirt.avif" alt="backpacks" className="h-[40px] w-[40px] rounded-md" />
                         <h1 className="text-md font-semibold tracking-wider">T-shirt</h1>
                     </div>
-                    <div className="flex items-center grow p-1 gap-4 hover:bg-black rounded-md cursor-pointer">
+                    <div className="flex items-center grow p-1 gap-4 md:hover:bg-black rounded-md cursor-pointer">
                         <img src="/hats.avif" alt="socks" className="h-[40px] w-[40px] rounded-md" />
                         <h1 className="text-md font-semibold tracking-wider">Hats</h1>
                     </div>

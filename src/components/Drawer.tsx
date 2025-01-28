@@ -8,6 +8,12 @@ import {
   DrawerHeader,
   Accordion, AccordionItem
 } from "@jamsr-ui/react";
+import Pages from "@/components/Pages";
+import Men from "@/components/Men";
+import Women from "@/components/Women";
+import Kids from "@/components/Kids";
+import Home from "@/components/Home";
+import Sales from "@/components/Sales";
 
 const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
   Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`;
@@ -21,23 +27,23 @@ const DrawerUsage = ({ isOpen, onClose, setIsOpen }) => {
         <DrawerHeader className="text-2xl font-semibold">Menu</DrawerHeader>
         <DrawerBody>
         <Accordion>
-      <AccordionItem aria-label="Pages" heading="Pages ">
-        {content}
+      <AccordionItem aria-label="Pages" heading="Pages " className="p-0">
+        <Pages/>
       </AccordionItem>
-      <AccordionItem aria-label="Men" heading="Men">
-        {content}
+      <AccordionItem aria-label="Men" heading="Men" className="p-0">
+        <Men/>
       </AccordionItem>
-      <AccordionItem aria-label="Women" heading="Women">
-        {content}
+      <AccordionItem aria-label="Women" heading="Women " className="p-0">
+        <Women/>
       </AccordionItem>
-      <AccordionItem aria-label="Kids" heading="Kids">
-        {content}
+      <AccordionItem aria-label="Kids" heading="Kids" className="p-0">
+        <Kids/>
       </AccordionItem>
-      <AccordionItem aria-label="Home" heading="Home">
-        {content}
+      <AccordionItem aria-label="Home" heading="Home" className="p-0">
+        <Home/>
       </AccordionItem>
-      <AccordionItem aria-label="Sales" heading="Sales">
-        {content}
+      <AccordionItem aria-label="Sales" heading="Sales" className="p-0">
+        <Sales/>
       </AccordionItem>
     </Accordion>
         </DrawerBody>
