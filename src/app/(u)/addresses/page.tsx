@@ -1,8 +1,11 @@
+import AuthenticationCard from '@/components/AuthenticationCard'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>address</div>
+    <div className='w-full'>
+      <AuthenticationCard/>
+    </div>
   )
 }
 
