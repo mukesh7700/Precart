@@ -1,13 +1,13 @@
 import Card4 from '@/components/Card4';
 import { Account, Email, Gift, Location, Return, ShopingBeg, Wallet } from '@/components/svgs';
-import { Avatar, Card, CardHeader, Text } from '@jamsr-ui/react'
+import { Avatar, Card, CardHeader, } from '@jamsr-ui/react'
 import Link from 'next/link';
 import React from 'react'
-import { useId } from "react";
+
 import { MdNavigateNext } from 'react-icons/md';
 
 const AvatarItem = () => {
-    const id = useId();
+    
     return (
         <Avatar
             alt="image"

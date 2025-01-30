@@ -1,4 +1,5 @@
 import { Button } from "@jamsr-ui/react";
+import Image from "next/image";
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 
@@ -29,7 +30,9 @@ export default function CardComponent({
     <div className={`text-start cursor-pointer ${className}`}>
       <div className="relative w-60 md:w-80 h-[400px] md:h-[600] rounded-lg group transition-transform duration-300 overflow-hidden">
         {/* Image */}
-        <img
+        <Image
+        width={400}
+        height={400}
           src={imageSrc}
           alt={altText}
           className="w-full h-full object-cover"

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import kids from "@/data/Kids";
+import Image from 'next/image';
 
 const Kids = () => {
     return (
@@ -49,19 +50,27 @@ const Kids = () => {
             <div className="py-[15px] md:bg-neutral-500">
                 <div className="container mx-auto md:flex justify-between gap-8 items-center">
                     <div className="flex items-center grow p-1 gap-4 md:hover:bg-black rounded-md cursor-pointer">
-                        <img src="/Shoes.avif" alt="shoes" className="h-[40px] w-[40px] rounded-md" />
+                        <Image
+                                width={400}
+                                height={400} src="/Shoes.avif" alt="shoes" className="h-[40px] w-[40px] rounded-md" />
                         <h1 className="text-md font-semibold tracking-wider">Shoes</h1>
                     </div>
                     <div className="flex items-center grow p-1 gap-4 md:hover:bg-black rounded-md cursor-pointer">
-                        <img src="/Accessories.avif" alt="accessories" className="h-[40px] w-[40px] rounded-md" />
+                        <Image
+                                width={400}
+                                height={400} src="/Accessories.avif" alt="accessories" className="h-[40px] w-[40px] rounded-md" />
                         <h1 className="text-md font-semibold tracking-wider">Accessories</h1>
                     </div>
                     <div className="flex items-center grow p-1 gap-4 md:hover:bg-black rounded-md cursor-pointer">
-                        <img src="/Beg.avif" alt="backpacks" className="h-[40px] w-[40px] rounded-md" />
+                        <Image
+                                width={400}
+                                height={400} src="/Beg.avif" alt="backpacks" className="h-[40px] w-[40px] rounded-md" />
                         <h1 className="text-md font-semibold tracking-wider">Backpacks</h1>
                     </div>
                     <div className="flex items-center grow p-1 gap-4 md:hover:bg-black rounded-md cursor-pointer">
-                        <img src="/Shorts.avif" alt="socks" className="h-[40px] w-[40px] rounded-md" />
+                        <Image
+                                width={400}
+                                height={400} src="/Shorts.avif" alt="socks" className="h-[40px] w-[40px] rounded-md" />
                         <h1 className="text-md font-semibold tracking-wider">Shorts</h1>
                     </div>
                 </div>

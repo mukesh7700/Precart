@@ -1,5 +1,5 @@
 import React from 'react'
-import { Account } from './svgs'
+
 import Link from 'next/link';
 
 

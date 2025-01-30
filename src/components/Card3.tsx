@@ -1,4 +1,5 @@
 import { Button, Card } from "@jamsr-ui/react";
+import Image from "next/image";
 
 interface ProductCardProps {
   images: string; // Array of image URLs
@@ -26,7 +27,9 @@ export default function Card3(
        relative rounded-xl overflow-hidden h-[180px] w-[200px]  group"
 
       >
-        <img
+        <Image
+                width={400}
+                height={400}
           src={images}
           alt={altText}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

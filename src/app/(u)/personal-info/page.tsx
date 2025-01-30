@@ -17,7 +17,7 @@ const collapsibleItems = [
 ];
 
 
-const page = () => {
+const Page = () => {
   const [collapsibleStates, setCollapsibleStates] = useState<CollapsibleState>({
     1: false,
     2: false,
@@ -42,7 +42,7 @@ const page = () => {
     }));
   };
 
-  const { isOpen, onClose, onOpen, setIsOpen } = useDisclosure();
+  const {  onClose,  } = useDisclosure();
 
   return (
     <div className='p-5 w-full'>
@@ -182,4 +182,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

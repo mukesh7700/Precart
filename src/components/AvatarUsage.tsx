@@ -1,8 +1,7 @@
 import { Avatar, type AvatarProps } from "@jamsr-ui/react";
-import { useId } from "react";
 
 export const AvatarUsage = (props: Partial<AvatarProps>) => {
-  const id = useId();
+  
   return (
     <Avatar
       alt="image"

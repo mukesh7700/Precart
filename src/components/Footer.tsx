@@ -1,5 +1,5 @@
 "use client"
-import { Button, Chip,  Input } from "@jamsr-ui/react";
+import { Button, Chip, Input } from "@jamsr-ui/react";
 import Link from "next/link";
 import { CiLocationOn } from "react-icons/ci";
 import { GrFormNext } from "react-icons/gr";
@@ -144,6 +144,6 @@ const Footer = () => {
       </div>
     </div>
   );
-};``
+};
 
 export default Footer;

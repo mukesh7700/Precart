@@ -15,10 +15,9 @@ import Kids from "@/components/Kids";
 import Home from "@/components/Home";
 import Sales from "@/components/Sales";
 
-const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`;
 
-const DrawerUsage = ({ isOpen, onClose, setIsOpen }) => {
+
+const DrawerUsage = ({ isOpen,  setIsOpen }) => {
  
   return (
     <div>

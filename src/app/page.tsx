@@ -177,7 +177,7 @@ const shoes = [
   },
 ]
 
-const page = () => {
+const Page = () => {
   const scrollContainer = useRef(null);
 
   const scrollLeft = () => {
@@ -445,4 +445,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

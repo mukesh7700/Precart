@@ -26,7 +26,7 @@ import PrelineTemplates from "./PrelineTemplates";
 import Home from "@/components/Home"
 import Men from "@/components/Men"
 import Women from "@/components/Women"
-import { useId } from "react";
+
 import Cart from "@/components/Cart";
 import Search from "@/components/Search";
 import Image from "next/image";
@@ -47,7 +47,7 @@ const popoverData = [
 ];
 
 const AvatarItem = () => {
-  const id = useId();
+  
   return (
     <Avatar
       alt="image"
