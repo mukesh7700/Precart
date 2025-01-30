@@ -1,5 +1,5 @@
 import { Button } from '@jamsr-ui/react'
-import { div } from 'framer-motion/client'
+
 import Link from 'next/link'
 import React from 'react'
 

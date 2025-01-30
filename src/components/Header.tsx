@@ -1,28 +1,28 @@
 "use client";
 import {
   Avatar,
-  Button,
+ 
   Card,
   CardHeader,
   Divider,
   Header,
   IconButton,
-  Input,
+ 
   Menu,
   MenuItem,
   Popover,
-  Text,
+ 
   type HeaderProps,
 } from "@jamsr-ui/react";
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDownIcon, ChevronUpIcon, SearchIcon } from "@jamsr-ui/shared-icons";
+import { ChevronDownIcon,  SearchIcon } from "@jamsr-ui/shared-icons";
 import { FaRegHeart } from "react-icons/fa";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
 import DrawerUsage from "@/components/Drawer";
 import PrelineTemplates from "./PrelineTemplates";
-import { SidebarUsage } from "@/components/SideBar";
+
 import Home from "@/components/Home"
 import Men from "@/components/Men"
 import Women from "@/components/Women"
@@ -33,7 +33,7 @@ import Image from "next/image";
 import Sales from "@/components/Sales";
 import Kids from "@/components/Kids";
 import Pages from "@/components/Pages";
-import data from "@/data/Menu";
+
 import Menu1 from "@/components/Menu1";
 
 

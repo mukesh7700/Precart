@@ -1,7 +1,7 @@
 
-import { Button, Dialog, DialogBody, DialogContent, DialogHeader, Divider, Input, OtpInput } from '@jamsr-ui/react'
+import {  Dialog, DialogBody,  DialogHeader, Divider,  OtpInput } from '@jamsr-ui/react'
 import React from 'react'
-import { useState } from "react";
+
 import { QRcode } from './svgs';
 
 const AuthenticationCard = () => {

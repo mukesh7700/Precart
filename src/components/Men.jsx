@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import men from "@/data/Men"
-import { div } from 'framer-motion/client'
+
 
 const Men = () => {
     return (

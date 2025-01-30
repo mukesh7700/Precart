@@ -1,5 +1,5 @@
 import { Card, CardContent, Link, Text } from "@jamsr-ui/react";
-import Adids from "@/components/svgs/Adids.svg"
+
 interface ProductCardProps {
   images: string[]; // Array of image URLs
   title: string; // Product title

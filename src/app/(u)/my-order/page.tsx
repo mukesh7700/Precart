@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import { Select, SelectItem, type SelectProps } from "@jamsr-ui/react";
+
 import { Card, CardContent, Tab, Tabs } from "@jamsr-ui/react";
 const TabContent = () => (
   <Card>
@@ -14,8 +14,8 @@ const TabContent = () => (
 );
 
 
-const page = (props: Partial<SelectProps>) => {
-  const [value, setValue] = useState<string[]>(["apple"]);
+const page = () => {
+  
   return (
     <div className='p-5 w-full'>
       <div className='flex justify-between items-center w-full'>
@@ -40,6 +40,7 @@ const page = (props: Partial<SelectProps>) => {
     </Tabs>
     
       </div>
+      <TabContent/>
     </div>
   )
 }

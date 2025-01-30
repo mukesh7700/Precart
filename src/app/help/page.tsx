@@ -1,4 +1,4 @@
-import Card5 from '@/components/Card5'
+
 import { Input } from '@jamsr-ui/react'
 import React from 'react'
 import { BiSearch } from 'react-icons/bi'
@@ -24,7 +24,7 @@ const page = () => {
         <div className='py-10 px-16'>
             <h1 className='font-semibold' >Delivery</h1>
             <div className=''></div>
-            <Card5/>
+            
         </div>
       </div>
     </section>

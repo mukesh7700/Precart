@@ -4,7 +4,7 @@ import {
   
   Drawer,
   DrawerBody,
-  DrawerFooter,
+ 
   DrawerHeader,
   Accordion, AccordionItem
 } from "@jamsr-ui/react";
