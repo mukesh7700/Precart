@@ -2,7 +2,7 @@
 import {  Dialog, DialogBody,  DialogHeader, Divider,  OtpInput } from '@jamsr-ui/react'
 import React from 'react'
 
-import { QRcode } from './svgs2';
+import { QRcode } from './svgs';
 
 const AuthenticationCard = () => {
   return (

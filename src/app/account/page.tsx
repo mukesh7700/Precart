@@ -1,5 +1,5 @@
 import Card4 from '@/components/Card4';
-import { Account, Email, Gift, Location, Return, ShopingBeg, Wallet } from '@/components/svgs2';
+import { Account, Email, Gift, Location, Return, ShopingBeg, Wallet } from '@/components/svgs';
 import { Avatar, Card, CardHeader, } from '@jamsr-ui/react'
 import Link from 'next/link';
 import React from 'react'
