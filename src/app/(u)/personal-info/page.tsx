@@ -1,7 +1,7 @@
 "use client"
 import { AvatarUsage } from "@/components/AvatarUsage"
 
-import { Close, FileUpload } from "@/components/svgs"
+import { Close, FileUpload } from "@/components/svgs2"
 import { Button, Card, CardContent, CardHeader, Collapsible, CollapsibleContent, Dialog, DialogBody, DialogContent, DialogFooter, DialogHeader, DialogTrigger, IconButton, Input, Text,  } from "@jamsr-ui/react"
 import { useDisclosure } from "@jamsr-ui/hooks";
 import { useState } from "react";

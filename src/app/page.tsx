@@ -9,7 +9,7 @@ import CardComponent from "@/components/Card";
 import CardComponent2 from "@/components/Card2";
 import Card3 from "@/components/Card3";
 import { MdNavigateNext } from "react-icons/md";
-import { Adids, Batch, HM, NewBalance, Nick, NorthFace, Puma } from '../components/svgs';
+import { Adids, Batch, HM, NewBalance, Nick, NorthFace, Puma } from '../components/svgs2';
 
 interface Product {
   id: number;
