@@ -28,7 +28,7 @@ export default function CardComponent({
 }: CardComponentProps) {
   return (
     <div className={`text-start cursor-pointer ${className}`}>
-      <div className="relative w-60 md:w-80 h-[400px] md:h-[600] rounded-lg group transition-transform duration-300 overflow-hidden">
+      <div className="relative w-60 md:w-80 h-[400px] md:h-[600px] rounded-lg group transition-transform duration-300 overflow-hidden">
         {/* Image */}
         <Image
         width={400}

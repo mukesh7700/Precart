@@ -178,7 +178,7 @@ const shoes = [
 ]
 
 const Page = () => {
-  const scrollContainer = useRef(null);
+  const scrollContainer = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
     if (scrollContainer.current) {

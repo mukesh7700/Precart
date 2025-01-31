@@ -22,43 +22,43 @@ const AvatarItem = () => {
 const account = [
 
     {
-        images: <Account />,
+        logo: <Account />,
         title: "Account",
         subtitle: "Update your details, email preferences and passowrd",
         linkHref: '/'
     },
     {
-        images: <ShopingBeg />,
+        logo: <ShopingBeg />,
         title: "My Orders",
         subtitle: "Cheack the status of your orders or see past orders",
         linkHref: '/'
     },
     {
-        images: <Location />,
+        logo: <Location />,
         title: "Addresses",
         subtitle: "Manage your billing & shipping addresses",
         linkHref: '/'
     },
     {
-        images: <Wallet />,
+        logo: <Wallet />,
         title: "Payment",
         subtitle: "Manage credit cards",
         linkHref: '/'
     },
     {
-        images: <Email />,
+        logo: <Email />,
         title: "Email Newsletter",
         subtitle: "Select which emails you want to receive from us",
         linkHref: '/'
     },
     {
-        images: <Gift />,
+        logo: <Gift />,
         title: "Gift Cards",
         subtitle: "View blance or redeem a card, and purchease a new Gift Card",
         linkHref: '/'
     },
     {
-        images: <Return />,
+        logo: <Return />,
         title: "Returns &Refunds",
         subtitle: "Manage your returns and refunds",
         linkHref: '/'
@@ -84,7 +84,7 @@ const page = () => {
                 </div>
                 <div className='py-3 grid md:grid-cols-2 lg:grid-cols-3 gap-4 '>
                     {account.map((item, index) => (
-                        <Card4 key={index} images={item.images} title={item.title} subtitle={item.subtitle} linkHref={item.linkHref} />
+                        <Card4 key={index} logo={item.logo} title={item.title} subtitle={item.subtitle} linkHref={item.linkHref} />
                     ))}
 
                 </div>

@@ -15,9 +15,13 @@ import Kids from "@/components/Kids";
 import Home from "@/components/Home";
 import Sales from "@/components/Sales";
 
+interface CartProps {
+  isOpen: boolean;
+  
+  setIsOpen: (open: boolean) => void;
+}
 
-
-const DrawerUsage = ({ isOpen,  setIsOpen }) => {
+const DrawerUsage: React.FC<CartProps> = ({ isOpen,  setIsOpen }) => {
  
   return (
     <div>

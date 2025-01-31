@@ -67,13 +67,12 @@ const HeaderUsage = (props: HeaderProps) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const openMenu = () => setIsMenuOpen(true);
-  const closeMenu = () => setIsMenuOpen(false);
 
   const openCart = () => setIsCartOpen(true);
   const closeCart = () => setIsCartOpen(false);
 
   const openSearch = () => setIsSearchOpen(true);
-  const closeSearch = () => setIsSearchOpen(false);
+
 
   return (
     <>
@@ -289,7 +288,7 @@ const HeaderUsage = (props: HeaderProps) => {
       <DrawerUsage
         isOpen={isMenuOpen}
         setIsOpen={setIsMenuOpen}
-        onClose={closeMenu}
+        
       />
 
       {/* Cart Drawer */}
@@ -302,7 +301,7 @@ const HeaderUsage = (props: HeaderProps) => {
       <Search
         isOpen={isSearchOpen}
         setIsOpen={setIsSearchOpen}
-        onClose={closeSearch}
+       
       />
     </>
   );

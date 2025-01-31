@@ -9,7 +9,12 @@ import {
   Repeater,
 } from "@jamsr-ui/react";
 
-const Cart = ({ isOpen, onClose, setIsOpen }) => {
+interface CartProps {
+  isOpen: boolean;
+  onClose: () => void;
+  setIsOpen: (open: boolean) => void;
+}
+const Cart: React.FC<CartProps> = ({ isOpen, onClose, setIsOpen }) => {
   return (
     <div>
       <Drawer isOpen={isOpen} onOpenChange={(open) => setIsOpen(open)}>

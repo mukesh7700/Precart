@@ -9,6 +9,7 @@ import AuthenticationCard from "@/components/AuthenticationCard";
 
 
 type CollapsibleState = Record<number, boolean>;
+
 const collapsibleItems = [
   { id: 1, heading: "Name", subHeading: "James Collins" },
   { id: 2, heading: "Email", subHeading: "jamescollins@site.so " },
@@ -28,14 +29,14 @@ const Page = () => {
   const [activeButtons, setActiveButtons] = useState<CollapsibleState>({});
 
 
-  const handleToggle = (id) => {
+  const handleToggle = (id: number) => {
     setCollapsibleStates((prev) => ({
       ...prev,
       [id]: !prev[id],
     }));
   };
 
-  const handleButtonClick = (id) => {
+  const handleButtonClick = (id: number) => {
     setActiveButtons((prev) => ({
       ...prev,
       [id]: !prev[id], // Toggle active state

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 
 interface ProductCardProps {
-    images: string; // Array of image URLs
+    logo:React.ReactNode; // Array of image URLs
     title: string; // Product title
     subtitle: string; // Product subtitle or price
     linkHref: string; // Link URL
@@ -12,7 +12,7 @@ interface ProductCardProps {
 
 const Card4 = (
     { 
-        images, 
+        logo, 
         title, 
         subtitle,  
         linkHref="#"
@@ -20,7 +20,7 @@ const Card4 = (
 ) => {
   return (
     <Link href={linkHref} className='px-4 py-8 border border-neutral-500 rounded-lg hover:border-violet-500 hover:border-2 cursor-pointer '>
-        <p className='w-[30px] h-[30px]'>{images}</p>
+        <p className='w-[30px] h-[30px]'>{logo}</p>
         <p  className='px-0 py-2 text-lg font-semibold' >{title}</p>
         <p className='text-md text-neutral-500 leading-3'>{subtitle}</p>
     </Link>
