@@ -10,6 +10,7 @@ import CardComponent2 from "@/components/Card2";
 import Card3 from "@/components/Card3";
 import { MdNavigateNext } from "react-icons/md";
 import { Adids, Batch, HM, NewBalance, Nick, NorthFace, Puma } from '../components/svgs';
+import Carousel from "@/components/Carousel";
 
 interface Product {
   id: number;
@@ -203,7 +204,9 @@ const Page = () => {
   return (
     <div>
       <div className="container mx-auto ">
-        <section className="h-96 bg-zinc-600 rounded-lg m-5"></section>
+        <section className="">
+          <Carousel/>
+        </section>
         <section className=" flex p-5 justify-center gap-6 items-center">
           <div className="text-center ">
             <Link href="#">

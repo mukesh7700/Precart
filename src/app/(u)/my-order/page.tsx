@@ -28,7 +28,7 @@ const page = () => {
         </div>
       </div>
       <div>
-      <Tabs defaultValue="photos" variant='underlined' className='border-b pb-0 mb-0'>
+      <Tabs defaultValue="photos" variant='underlined' className='border-b border-neutral-500 pb-0 mb-0'>
       <Tab value="photos" heading="Photos" className='pb-0'>
       </Tab>
       <Tab value="music" heading="Music">

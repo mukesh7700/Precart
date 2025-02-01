@@ -4,7 +4,7 @@ import "./globals.css";
 import { UIProvider } from "@jamsr-ui/react";
 import HeaderUsage from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import  "Flowbite" 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

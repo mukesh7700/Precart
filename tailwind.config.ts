@@ -1,5 +1,8 @@
 import { withJamsrUI } from "@jamsr-ui/theme";
+
 import type { Config } from "tailwindcss";
+
+
 
 const config: Config = withJamsrUI({
   content: [
@@ -7,8 +10,12 @@ const config: Config = withJamsrUI({
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@jamsr-ui/*/dist/*.js",
+    
+    
   ],
   theme: {},
-  plugins: [],
+  plugins: [
+    
+  ],
 });
 export default config;
