@@ -3,6 +3,7 @@ import { m } from "framer-motion";
 import { BackArrow, NextArrow } from "@/components/svgs";
 import { IconButton } from "@jamsr-ui/react";
 import Link from "next/link";
+import Image from "next/image";
 
 const slides = [
   {
@@ -10,7 +11,7 @@ const slides = [
     title: "Fall favorites",
     description:
       "Our always-in-season staple, in brand new colors and your favorite fits.",
-    buttons: [{ text: "Shop women's clothing", link: "/" }],
+    buttons: [{ text: "Shop women's clothing", link: "/product/women"}],
   },
   {
     src: "/Carousel2.jpg",
@@ -58,7 +59,7 @@ const Carousel = () => {
             transition={{ duration: 0.5 }}
             style={{ zIndex: index === currentIndex ? 10 : 1 }}  
           >
-            <img
+            <Image width={400} height={400}
               src={slide.src}
               alt={slide.title}
               className="w-full h-full object-cover rounded-lg"

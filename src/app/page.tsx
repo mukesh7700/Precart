@@ -4,13 +4,14 @@ import { IconButton, Tab, Tabs, Text } from "@jamsr-ui/react";
 import { useRef } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { GrFormNext } from "react-icons/gr";
-import Image from "next/image";
-import CardComponent from "@/components/Card";
-import CardComponent2 from "@/components/Card2";
-import Card3 from "@/components/Card3";
+
+import CardComponent from "@/components/HoverButtonCard";
+import CardComponent2 from "@/components/GridCard";
+import Card3 from "@/components/HoverCard";
 import { MdNavigateNext } from "react-icons/md";
 import { Adids, Batch, HM, NewBalance, Nick, NorthFace, Puma } from '../components/svgs';
 import Carousel from "@/components/Carousel";
+import ItemList from "@/components/ItemList";
 
 interface Product {
   id: number;
@@ -96,47 +97,42 @@ const womencardData = [
 
 const mencardData = [
   {
-    imageSrc: "/Men1.jpg",
+    imageSrc: "/trending/men/Trouser.jpg",
     altText: "Clothing Item",
     title: "Slim Lyocell Trousers",
     description: "Men's Trousers",
     price: "$50",
   },
   {
-    imageSrc: "/Men2.jpg",
+    imageSrc: "/trending/men/jacket.jpg",
+    altText: "Clothing Item",
+    title: "Casual Leather Shoes",
+    description: "Men's Footwear",
+    price: "$120",
+  },
+  {
+    imageSrc: "/trending/men/Tshirt.jpg",
     altText: "Clothing Item",
     title: "Classic Denim Jacket",
     description: "Men's Outerwear",
     price: "$80",
   },
   {
-    imageSrc: "/Men3.jpg",
+    imageSrc: "/trending/men/Hoodie.jpg",
     altText: "Clothing Item",
     title: "Cotton Crew Neck Tee",
     description: "Men's T-Shirt",
     price: "$25",
   },
   {
-    imageSrc: "/Men4.jpg",
+    imageSrc: "/trending/men/WhiteTshirt.jpg",
     altText: "Clothing Item",
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
   },
-  {
-    imageSrc: "/Men5.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/Men6.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
+  
+  
 ];
 
 const shoes = [
@@ -178,6 +174,13 @@ const shoes = [
   },
 ]
 
+const items = [
+  { name: "T Shirt", image: "/shirt.avif", link: "/help"},
+  { name: "Trousers", image: "/trouser.avif", link: "#" },
+  { name: "Shoes", image: "/shoes.avif", link: "#" },
+  { name: "Jackets", image: "/jacket.avif", link: "#" }
+];
+
 const Page = () => {
   const scrollContainer = useRef<HTMLDivElement>(null);
 
@@ -207,56 +210,7 @@ const Page = () => {
         <section className="">
           <Carousel/>
         </section>
-        <section className=" flex p-5 justify-center gap-6 items-center">
-          <div className="text-center ">
-            <Link href="#">
-              <Image
-                src="/shirt.avif"
-                width={300}
-                height={500}
-                alt="Picture of the author"
-                className="h-20 w-20 mb-2 rounded-full hover:outline outline-2 outline-offset-4 outline-zinc-600"
-              />
-            </Link>
-            T Shirt
-          </div>
-          <div className="text-center ">
-            <Link href="#">
-              <Image
-                src="/trouser.avif"
-                width={300}
-                height={500}
-                alt="Picture of the author"
-                className="h-20 w-20 mb-2  rounded-full hover:outline outline-2 outline-offset-4 outline-zinc-600"
-              />
-            </Link>
-            Trousers
-          </div>
-          <div className="text-center ">
-            <Link href="#">
-              <Image
-                src="/shoes.avif"
-                width={300}
-                height={500}
-                alt="Picture of the author"
-                className="h-20 w-20 mb-2  rounded-full hover:outline outline-2 outline-offset-4 outline-zinc-600"
-              />
-            </Link>
-            Shose
-          </div>
-          <div className="text-center ">
-            <Link href="#">
-              <Image
-                src="/jacket.avif"
-                width={300}
-                height={500}
-                alt="Picture of the author"
-                className="h-20 w-20 mb-2  rounded-full hover:outline outline-2 outline-offset-4 outline-zinc-600"
-              />
-            </Link>
-            Jackets
-          </div>
-        </section>
+        <ItemList items={items} />
         <section className="p-5 text-center">
           <h1 className="text-3xl font-semibold my-3">Trending now </h1>
           <Tabs
