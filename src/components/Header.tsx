@@ -71,9 +71,9 @@ const HeaderUsage = (props: HeaderProps) => {
     <>
       <Header className="flex justify-between px-4" {...props}>
         <div className="container mx-auto flex justify-between items-center">
-          <div className="flex  items-center gap-2">
+          <div className="flex  items-center gap-4">
             <Link href="/">
-              <Logo className="h-[25px]  fill-black dark:fill-white" />
+              <Logo className="h-[22px]   fill-black dark:fill-white" />
             </Link>
             <Popover
               trigger={
