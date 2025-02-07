@@ -11,7 +11,7 @@ const slides = [
     title: "Fall favorites",
     description:
       "Our always-in-season staple, in brand new colors and your favorite fits.",
-    buttons: [{ text: "Shop women's clothing", link: "/product/women"}],
+    buttons: [{ text: "Shop women's clothing", link: "/product/women/mini-categories"}],
   },
   {
     src: "/Carousel2.jpg",
@@ -20,7 +20,7 @@ const slides = [
       "From lightweight layers to the perfect pair of pants, new seasonal favorites are here.",
     buttons: [
       { text: "Shop men", link: "/help" },
-      { text: "Shop women", link: "/help" },
+      { text: "Shop women", link: "/product/women/categories" },
     ],
   },
   {
@@ -29,7 +29,7 @@ const slides = [
     description: "Summer sale",
     buttons: [
       { text: "Shop men", link: "/help" },
-      { text: "Shop women", link: "/help" },
+      { text: "Shop women", link: "/product/women/categories" },
     ],
   },
 ];

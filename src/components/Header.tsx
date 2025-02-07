@@ -221,7 +221,7 @@ const HeaderUsage = (props: HeaderProps) => {
             <Menu
               classNames={{
                 popover: "min-w-[300px] ",
-                content: "bg-[#121212] border border-neutral-500   p-2",
+                content: "bg-[#121212]  border-none p-2",
               }}
               trigger={
                 <IconButton radius="full" label="Popover Trigger">

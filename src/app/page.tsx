@@ -237,6 +237,7 @@ const Page = () => {
                   <div className="flex gap-3 items-center flex-nowrap">
                     {mencardData.map((card, index) => (
                       <CardComponent
+                      href="/"
                         key={index}
                         imageSrc={card.imageSrc}
                         altText={card.altText}
@@ -285,6 +286,7 @@ const Page = () => {
                     <div className="flex gap-3 items-center flex-nowrap">
                       {womencardData.map((card, index) => (
                         <CardComponent
+                          href="/"
                           key={index}
                           imageSrc={card.imageSrc}
                           altText={card.altText}

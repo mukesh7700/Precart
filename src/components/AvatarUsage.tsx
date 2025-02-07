@@ -1,15 +1,16 @@
-import { Avatar, type AvatarProps } from "@jamsr-ui/react";
+import { Avatar } from "@jamsr-ui/react";
 
-export const AvatarUsage = (props: Partial<AvatarProps>) => {
-  
+
+export const AvatarUsage = () => {
+ 
   return (
     <Avatar
       alt="image"
-      className="flex"
+      
       src="/Men1.jpg"
-      width={200}
-      height={200}
-      {...props}
+      width={100}
+      height={100}
+      
     />
   );
 };
