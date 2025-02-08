@@ -1,5 +1,6 @@
 "use client";
 import ButtonCard from "@/components/ButtonCard";
+import FilterDrawer from "@/components/filter/FilterDrawer";
 import FullImageCard from "@/components/FullImageCard";
 
 import ItemList from "@/components/ItemList";
@@ -8,7 +9,7 @@ import { Filter } from "@/components/svgs";
 
 import { Button, Divider, Select, SelectItem } from "@jamsr-ui/react";
 
-import React from "react";
+import React, { useState } from "react";
 
 const items = [
   { name: "Dresses", image: "/WomenDresses.jpg", link: "#" },
@@ -123,6 +124,10 @@ const ButtonCardData =[{
 },
 ]
 const page = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const openMenu = () => setIsMenuOpen(true);
+
   return (
     <section className="container mx-auto">
       <div className="text-center p-3">
@@ -136,6 +141,7 @@ const page = () => {
             variant="text"
             startContent={<Filter className="w-4 h-4" />}
             className="hover:underline underline-offset-4  text-md "
+            onClick={openMenu}
           >
             Filter
           </Button>
@@ -178,6 +184,8 @@ const page = () => {
           
         </div>
       </div>
+
+      <FilterDrawer isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </section>
   );
 };

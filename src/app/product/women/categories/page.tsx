@@ -143,7 +143,7 @@ const page = () => {
             title={card.title}
             description={card.description}
             price={card.price}
-            showInfoText="Quick view"
+            
           />
         ))}
         <FullImageCard src="/Card2.jpg" href="#" title="New Arrivals" subtitle="Shop Now"/>
