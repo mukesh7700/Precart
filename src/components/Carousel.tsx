@@ -48,7 +48,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-full p-4 mx-auto overflow-hidden">
+    <div className="relative w-full  p-4 mx-auto overflow-hidden">
       <div className="relative w-full h-[400px] lg:h-[600px] flex items-center justify-center">
         {slides.map((slide, index) => (
           <m.div

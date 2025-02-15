@@ -17,8 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Precart",
-  description: "e-commerce website build in JamsrUI and tailwindcss",
+  title: "Precart – eCommerce website Template with JamsrUI, Next.js, & Tailwind CSS",
+  description: "Precart – eCommerce website Template with JamsrUI, Next.js, & Tailwind CSS",
+  icons: {
+    icon: "/fevicon.png",
+  },
 };
 
 export default function RootLayout({
