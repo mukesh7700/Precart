@@ -102,7 +102,7 @@ const HeaderUsage = (props: HeaderProps) => {
                   </Button>
                 }
                 className="p-0 max-w-fit"
-                triggerOn="hover"
+                
               >
                 <div>{content}</div>
               </Popover>
