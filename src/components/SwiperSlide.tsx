@@ -1,63 +1,85 @@
-'use client';
+"use client";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import CardComponent from './HoverButtonCard';
+import { useRef, useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { Swiper as SwiperType } from "swiper/types";
 
-const slides = [
-  { src: "/trending/men/Trouser.jpg", title: "Slide 1", description: "This is the first slide description.", price: " 1" },
-  { src: "/trending/men/Trouser.jpg", title: "Slide 2", description: "This is the second slide description.", price: " 1" },
-  { src: "/trending/men/Trouser.jpg", title: "Slide 3", description: "This is the third slide description.", price: " 1" },
-  { src: "/trending/men/Hoodie.jpg", title: "Slide 4", description: "This is the fourth slide description.", price: " 1" },
-  
+// Dummy images (replace with actual image URLs)
+const images = [
+  "/images/slide1.jpg",
+  "/images/slide2.jpg",
+  "/images/slide3.jpg",
+  "/images/slide1.jpg",
+  "/images/slide2.jpg",
+  "/images/slide3.jpg",
 ];
 
-const Carousel = () => {
+const CustomSwiper: React.FC = () => {
+  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
+  const [initialized, setInitialized] = useState(false);
 
-  const handleLike = () => {
-    console.log("Liked!");
-  };
-
-  const handleInfo = () => {
-    console.log("Show info clicked!");
-  };
+  useEffect(() => {
+    if (swiperRef.current && prevRef.current && nextRef.current) {
+      const swiper = swiperRef.current;
+      if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
+        swiper.params.navigation.prevEl = prevRef.current;
+        swiper.params.navigation.nextEl = nextRef.current;
+        swiper.navigation.init();
+        swiper.navigation.update();
+        setInitialized(true); // Force re-render
+      }
+    }
+  }, [initialized]);
 
   return (
-    <div className="w-full max-w-6xl mx-auto">
+    <div className="relative w-full max-w-4xl mx-auto">
+      {/* Swiper Component */}
       <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={20}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 2 }, // Small screens (sm: 2 images)
-          768: { slidesPerView: 3 }, // Medium screens (md: 3 images)
-          1024: { slidesPerView: 4 }, // Large screens (lg: 4 images)
-        }}
-        navigation
+        modules={[Navigation]}
+        spaceBetween={50}
+        slidesPerView={3}
         pagination={{ clickable: true }}
+        
+        navigation={{ prevEl: null, nextEl: null }}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        className="rounded-xl shadow-lg"
       >
-        {slides.map((slide, index) => (
+        {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <CardComponent
-                                      key={index}
-                                      imageSrc={slide.src}
-                                      altText={slide.title}
-                                      title={slide.title}
-                                      description={slide.description}
-                                      price={slide.price}
-                                      onLike={handleLike}
-                                      onInfo={handleInfo}
-                                      showInfoText="Quick view"
-                                    />
-            
+            <img
+              src={src}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-64 object-cover rounded-xl"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Custom Navigation Buttons */}
+      <button
+        ref={prevRef}
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white p-2 shadow-lg text-black"
+      >
+        <IoIosArrowBack size={24} />
+      </button>
+
+      <button
+        ref={nextRef}
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white p-2 shadow-lg text-black"
+      >
+        <IoIosArrowForward size={24} />
+      </button>
     </div>
   );
 };
 
-export default Carousel;
+export default CustomSwiper;

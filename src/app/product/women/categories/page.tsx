@@ -1,6 +1,7 @@
 import FullImageCard from "@/components/FullImageCard";
 import Card3 from "@/components/HoverCard";
 import ShopingCard from "@/components/ShopingCard";
+import CustomSwiper from "@/components/SwiperSlide";
 import React from "react";
 const shoes = [
   {
@@ -148,6 +149,7 @@ const page = () => {
         ))}
         <FullImageCard src="/Card2.jpg" href="#" title="New Arrivals" subtitle="Shop Now"/>
       </div>
+      <CustomSwiper/>
     </div>
   );
 };
