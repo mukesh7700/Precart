@@ -2,12 +2,13 @@
 
 import { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Swiper as SwiperType } from "swiper/types";
+import Image from "next/image";
 
 // Dummy images (replace with actual image URLs)
 const images = [
@@ -55,7 +56,9 @@ const CustomSwiper: React.FC = () => {
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <img
+            <Image
+            height={400}
+            width={400}
               src={src}
               alt={`Slide ${index + 1}`}
               className="w-full h-64 object-cover rounded-xl"

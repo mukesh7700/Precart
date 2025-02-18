@@ -2,25 +2,27 @@
 import React, { useState } from "react";
 
 const Size: React.FC = () => {
-  const [selectedPrices, setSelectedPrices] = useState([
-    "$0-$25",
-    "$50-$100",
-    "$100-$150",
-    "$150+",
-  ]);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
-  const priceRanges = [
-    { label: "$0-$25", count: 53 },
-    { label: "$25-$50", count: 92 },
-    { label: "$50-$100", count: 135 },
-    { label: "$100-$150", count: 27 },
-    { label: "$150+", count: 3 },
+  const categories = [
+    { label: "Shirt", count: 47 },
+    { label: "T-shirt", count: 89 },
+    { label: "Polos", count: 35 },
+    { label: "Trousers", count: 30 },
+    { label: "Jeans", count: 21 },
+    { label: "Shorts", count: 5 },
+    { label: "Jackets", count: 15 },
+    { label: "Sweatshirts", count: 44 },
+    { label: "Sweaters", count: 1 },
+    { label: "Hoodies", count: 21 },
+    { label: "Blazers", count: 3 },
+    { label: "Suits", count: 6 },
   ];
 
-  const toggleCheckbox = (label: any) => {
-    setSelectedPrices((prev) =>
+  const toggleCheckbox = (label: string) => {
+    setSelectedCategories((prev) =>
       prev.includes(label)
-        ? prev.filter((price) => price !== label)
+        ? prev.filter((Size) => Size !== label)
         : [...prev, label]
     );
   };
@@ -29,17 +31,17 @@ const Size: React.FC = () => {
     <div className="p-2 rounded-md bg-black mb-2">
       <h1 className="mb-3 font-semibold">Size</h1>
       <div>
-        <div className="bg-black text-white p-2 rounded-lg ">
-          {priceRanges.map(({ label, count }) => (
+        <div className="bg-black text-white p-2 rounded-lg">
+          {categories.map(({ label, count }) => (
             <label
               key={label}
               className="flex items-center gap-2 p-2 hover:bg-neutral-900 w-full rounded-lg"
             >
               <input
                 type="checkbox"
-                checked={selectedPrices.includes(label)}
+                checked={selectedCategories.includes(label)}
                 onChange={() => toggleCheckbox(label)}
-                className="w-4 h-4 accent-blue-500 "
+                className="w-4 h-4 accent-blue-500"
               />
               <span className="flex-grow">{label}</span>
               <span className="text-gray-400">({count})</span>

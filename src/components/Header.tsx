@@ -15,8 +15,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDownIcon} from "@jamsr-ui/shared-icons";
-import { FaRegHeart } from "react-icons/fa";
-import { RiShoppingBag4Line } from "react-icons/ri";
+
 import { CiMenuKebab } from "react-icons/ci";
 
 import DrawerUsage from "@/components/Drawer";
@@ -28,7 +27,7 @@ import Women from "@/components/Women";
 
 import Cart from "@/components/Cart";
 import Search from "@/components/Search";
-import Image from "next/image";
+
 import Sales from "@/components/Sales";
 import Kids from "@/components/Kids";
 import Pages from "@/components/Pages";

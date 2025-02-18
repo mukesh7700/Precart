@@ -123,7 +123,7 @@ const ButtonCardData =[{
   count:30
 },
 ]
-const page = () => {
+const Page = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenu = () => setIsMenuOpen(true);
@@ -131,7 +131,7 @@ const page = () => {
   return (
     <section className="container mx-auto">
       <div className="text-center p-3">
-      <h1 className="font-semibold text-2xl mx-auto">Women's Clothing</h1>
+      <h1 className="font-semibold text-2xl mx-auto">Women&apos;s Clothing</h1>
       </div>
       
       <ItemList items={items} />
@@ -190,4 +190,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -48,7 +48,7 @@ const Page = () => {
   return (
     <div className='p-5 w-full'>
       <div className='p-2 flex items-center gap-3 border-b border-neutral-500 '>
-        <AvatarUsage className="h-[70px] w-[70px]" />
+        <AvatarUsage  />
 
         <Button variant="outlined" startContent={<FileUpload />} size="md" className="px-2 py-1" >Upload Photo</Button>
 

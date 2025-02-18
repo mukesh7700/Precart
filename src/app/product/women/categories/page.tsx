@@ -129,7 +129,7 @@ const page = () => {
         ))}
       </div>
       <div className="px-4">
-      <h1 className="font-semibold text-2xl ">Women's Clothing</h1>
+      <h1 className="font-semibold text-2xl ">Women&apos;s Clothing</h1>
       <div className="flex items-center justify-between gap-4 p-3">
       
       </div>
