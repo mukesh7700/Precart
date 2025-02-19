@@ -81,9 +81,7 @@ const Carousel = () => {
                 ))}
               </div>
             </div>
-            <div className="absolute bottom-4 text-sm bg-neutral-200 text-black px-3 py-1 rounded-full">
-              {currentIndex + 1} / {slides.length}
-            </div>
+            
           </m.div>
         ))}
       </div>

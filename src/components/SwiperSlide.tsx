@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, ReactNode } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, } from "swiper/modules";
 import "swiper/css";
@@ -8,19 +8,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Swiper as SwiperType } from "swiper/types";
-import Image from "next/image";
 
-// Dummy images (replace with actual image URLs)
-const images = [
-  "/images/slide1.jpg",
-  "/images/slide2.jpg",
-  "/images/slide3.jpg",
-  "/images/slide1.jpg",
-  "/images/slide2.jpg",
-  "/images/slide3.jpg",
-];
+interface CustomSwiperProps {
+  items: ReactNode[]; // Accepts array of React components
+  autoplay?: boolean;
+}
 
-const CustomSwiper: React.FC = () => {
+const CustomSwiper: React.FC<CustomSwiperProps> = ({ items, autoplay = true }) => {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const swiperRef = useRef<SwiperType | null>(null);
@@ -34,36 +28,34 @@ const CustomSwiper: React.FC = () => {
         swiper.params.navigation.nextEl = nextRef.current;
         swiper.navigation.init();
         swiper.navigation.update();
-        setInitialized(true); // Force re-render
+        setInitialized(true);
       }
     }
   }, [initialized]);
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
-      {/* Swiper Component */}
+    <div className="relative w-full flex justify-center  ">
       <Swiper
-        modules={[Navigation]}
-        spaceBetween={50}
-        slidesPerView={3}
-        pagination={{ clickable: true }}
+        modules={[Navigation, ]}
+        spaceBetween={20}
+        slidesPerView={2} // 🔥 Ensures 2 items on small screens
+        breakpoints={{
+          480: { slidesPerView: 2 },  // Phones
+          640: { slidesPerView: 3 },  // Small devices (mobile)
+          768: { slidesPerView: 4 },  // Tablets
+          1024: { slidesPerView: 5 }, // Laptops
+          1280: { slidesPerView: 6 }, // Large desktop screens
+        }}
+        
         
         navigation={{ prevEl: null, nextEl: null }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        className="rounded-xl shadow-lg"
+        className="rounded-xl   shadow-lg"
       >
-        {images.map((src, index) => (
-          <SwiperSlide key={index}>
-            <Image
-            height={400}
-            width={400}
-              src={src}
-              alt={`Slide ${index + 1}`}
-              className="w-full h-64 object-cover rounded-xl"
-            />
-          </SwiperSlide>
+        {items.map((component, index) => (
+          <SwiperSlide key={index} className="mx-auto " >{component}</SwiperSlide>
         ))}
       </Swiper>
 

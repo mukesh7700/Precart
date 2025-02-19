@@ -12,6 +12,7 @@ import { MdNavigateNext } from "react-icons/md";
 import { Adids, Batch, HM, NewBalance, Nick, NorthFace, Puma } from '../components/svgs';
 import Carousel from "@/components/Carousel";
 import ItemList from "@/components/ItemList";
+import CustomSwiper from "@/components/SwiperSlide";
 
 interface Product {
   id: number;
@@ -356,26 +357,16 @@ const Page = () => {
           <h1 className="text-3xl font-semibold my-3">
             Shoes by classics
           </h1>
-          <div className="relative w-full">
-
-            <div
-
-              className="flex  items-center justify-center flex-nowrap gap-2 overflow-hidden "
-            >
-              <div className="flex gap-5 items-center justify-center flex-nowrap">
-                {shoes.map((card, index) => (
-                  <Card3
-                    key={index}
-                    images={card.imageSrc}
-                    altText={card.altText}
-                    ButtonText={card.text}
-                  />
-                ))}
-
-              </div>
-            </div>
-
-          </div>
+          <CustomSwiper
+  items={shoes.map((card, index) => (
+    <Card3
+      key={index}
+      images={card.imageSrc}
+      altText={card.altText}
+      ButtonText={card.text}
+    />
+  ))}
+/>
         </section>
         <section className="p-5 text-center">
           <div className="md:flex justify-between items-center gap-16 py-10">
