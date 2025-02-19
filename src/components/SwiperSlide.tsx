@@ -11,10 +11,10 @@ import { Swiper as SwiperType } from "swiper/types";
 
 interface CustomSwiperProps {
   items: ReactNode[]; // Accepts array of React components
-  autoplay?: boolean;
+  
 }
 
-const CustomSwiper: React.FC<CustomSwiperProps> = ({ items, autoplay = true }) => {
+const CustomSwiper: React.FC<CustomSwiperProps> = ({ items }) => {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const swiperRef = useRef<SwiperType | null>(null);
