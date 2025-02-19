@@ -47,19 +47,23 @@ const helpData = [
   ];
 
 const Footer = () => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState("dark"); // Default to dark mode
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-    document.documentElement.setAttribute('data-theme', savedTheme);
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme") || "dark"; // Default to dark
+      setTheme(savedTheme);
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    }
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", newTheme);
+      document.documentElement.setAttribute("data-theme", newTheme);
+    }
   };
 
   return (
@@ -71,7 +75,7 @@ const Footer = () => {
         <div className="flex gap-3 py-2 ">
           <div>
             <Input type="email" />
-          </div>
+          </div> 
           <div>
             <Button variant="solid">Sign up</Button>
           </div>
