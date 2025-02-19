@@ -47,6 +47,10 @@ const Carousel = () => {
     );
   };
 
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div className="relative w-full  p-4 mx-auto overflow-hidden">
       <div className="relative w-full h-[400px] lg:h-[600px] flex items-center justify-center">
@@ -85,6 +89,20 @@ const Carousel = () => {
           </m.div>
         ))}
       </div>
+
+       {/* Pagination Dots (Fixed Position & z-index) */}
+       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex ? "bg-white scale-125" : "bg-gray-500"
+            }`}
+            onClick={() => goToSlide(index)}
+          ></button>
+        ))}
+      </div>
+
 
       {/* Navigation Buttons */}
       <IconButton

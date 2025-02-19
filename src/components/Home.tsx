@@ -6,7 +6,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-   <div className='w-screen'>
+   <div className='w-screen xl:w-[1500px]  p-2 px-8'>
     <div className='md:p-10 md:max-w-xl text-center mx-auto '>
         <div className=''>
             <Button variant='outlined' size='sm'  className='rounded-full py-1 mb-4'>coming soon</Button>

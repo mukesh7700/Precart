@@ -9,12 +9,12 @@ import "swiper/css/pagination";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Swiper as SwiperType } from "swiper/types";
 
-interface CustomSwiperProps {
+interface TabImageSwiperProps {
   items: ReactNode[]; // Accepts array of React components
   
 }
 
-const CustomSwiper: React.FC<CustomSwiperProps> = ({ items }) => {
+const TabImageSwiper: React.FC<TabImageSwiperProps> = ({ items }) => {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const swiperRef = useRef<SwiperType | null>(null);
@@ -42,9 +42,8 @@ const CustomSwiper: React.FC<CustomSwiperProps> = ({ items }) => {
         breakpoints={{
           480: { slidesPerView: 2 },  // Phones
           640: { slidesPerView: 3 },  // Small devices (mobile)
-          768: { slidesPerView: 4 },  // Tablets
-          1024: { slidesPerView: 5 }, // Laptops
-          1280: { slidesPerView: 6 }, // Large desktop screens
+          768: { slidesPerView: 3 },  // Tablets
+          1024: { slidesPerView: 4 } // Large desktop screens
         }}
         
         
@@ -77,4 +76,4 @@ const CustomSwiper: React.FC<CustomSwiperProps> = ({ items }) => {
   );
 };
 
-export default CustomSwiper;
+export default TabImageSwiper;

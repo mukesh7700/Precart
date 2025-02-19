@@ -100,10 +100,10 @@ const HeaderUsage = (props: HeaderProps) => {
                     {label}
                   </Button>
                 }
-                className="p-0 max-w-fit"
-                
+                className="p-0"
+                triggerOn="hover"
               >
-                <div>{content}</div>
+                <div >{content}</div>
               </Popover>
             ))}
           </div>

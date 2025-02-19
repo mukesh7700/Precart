@@ -59,9 +59,9 @@ export default function CardComponent({
           {showInfoText}
         </Button>
       </div>
-      <h1 className="text-xl font-semibold mt-3">{title}</h1>
-      <p className="text-lg font-semibold text-zinc-500">{description}</p>
-      <p className="text-lg font-semibold text-zinc-300">{price}</p>
+      <h1 className="text-lg font-bold mt-3">{title}</h1>
+      <p className="text-md font-semibold text-zinc-500">{description}</p>
+      <p className="text-md font-semibold text-zinc-300">{price}</p>
     </Link>
   );
 }

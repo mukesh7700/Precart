@@ -4,8 +4,8 @@ import women from "@/data/Women";
 
 const Women = () => {
     return (
-        <div className='w-[1500px] p-2 px-8'>
-            <div className=" mx-auto">
+        <div className='w-screen xl:w-[1500px]  p-2 px-8'>
+            <div className="container mx-auto">
                 <div className="md:grid grid-flow-col-dense md:my-4">
                     {women.map((products) => (
                         <div key={products.Id} className="md:py-2 ">
@@ -37,7 +37,7 @@ const Women = () => {
                         >
                             <Link
                                 href="#"
-                                className="absolute top-3/4 left-1/2 transform -translate-x-1/2 text-md tracking-wider rounded-full px-2 bg-gradient-to-r from-neutral-500 via-neutral-500 to-neutral-300"
+                                className=" hidden xl:block absolute top-3/4 left-1/2 transform -translate-x-1/2 text-md tracking-wider rounded-full px-2 bg-gradient-to-r from-neutral-500 via-neutral-500 to-neutral-300"
                             >
                                 Shop now
                             </Link>
