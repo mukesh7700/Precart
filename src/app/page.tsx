@@ -16,6 +16,8 @@ import {
   Nick,
   NorthFace,
   Puma,
+  Return,
+  Van,
 } from "../components/svgs";
 import Carousel from "@/components/Carousel";
 import ItemList from "@/components/ItemList";
@@ -65,6 +67,7 @@ const womencardData = [
     title: "Slim Lyocell Trousers",
     description: "Men's Trousers",
     price: "$50",
+    isTrending: true,
   },
   {
     imageSrc: "/images2.jpg",
@@ -79,6 +82,7 @@ const womencardData = [
     title: "Cotton Crew Neck Tee",
     description: "Men's T-Shirt",
     price: "$25",
+    
   },
   {
     imageSrc: "/images4.jpg",
@@ -100,6 +104,7 @@ const womencardData = [
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
+    isTrending: true,
   },
 ];
 
@@ -110,6 +115,7 @@ const mencardData = [
     title: "Slim Lyocell Trousers",
     description: "Men's Trousers",
     price: "$50",
+    
   },
   {
     imageSrc: "/images2.jpg",
@@ -117,6 +123,7 @@ const mencardData = [
     title: "Classic Denim Jacket",
     description: "Men's Outerwear",
     price: "$80",
+    isTrending: true,
   },
   {
     imageSrc: "/images3.jpg",
@@ -124,6 +131,7 @@ const mencardData = [
     title: "Cotton Crew Neck Tee",
     description: "Men's T-Shirt",
     price: "$25",
+    isTrending: true,
   },
   {
     imageSrc: "/images4.jpg",
@@ -131,6 +139,7 @@ const mencardData = [
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
+    
   },
   {
     imageSrc: "/images6.jpg",
@@ -138,6 +147,8 @@ const mencardData = [
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
+    isTrending: true,
+  
   },
   {
     imageSrc: "/image7.jpg",
@@ -145,6 +156,7 @@ const mencardData = [
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
+    
   },]
 
 const shoes = [
@@ -230,6 +242,7 @@ const Page = () => {
             title={card.title}
             description={card.description}
             price={card.price}
+            isTrending={card.isTrending}
             onLike={handleLike}
             onInfo={handleInfo}
             showInfoText="Quick view"
@@ -259,6 +272,7 @@ const Page = () => {
             title={card.title}
             description={card.description}
             price={card.price}
+            isTrending={card.isTrending}
             onLike={handleLike}
             onInfo={handleInfo}
             showInfoText="Quick view"
@@ -321,33 +335,31 @@ const Page = () => {
         <section className="p-5 text-center">
           <div className="md:flex justify-between items-center gap-16 py-10">
             <div className="text-center ">
-              <Batch className="mx-auto mb-2" />
+              <Batch className="mx-auto mb-2 h-10 w-10" />
               <Text as="h3" variant="body2">
-                Secure checkout{" "}
+                Secure checkout
               </Text>
               <p className="text-neutral-500">
                 Shop with confidence using our encrypted payment system that
-                protects your sensitive information.{" "}
+                protects your sensitive information.
               </p>
             </div>
             <div className="text-center my-8 ">
-              <Batch className="mx-auto mb-2" />
+              <Van className="mx-auto mb-2 h-10 w-10" />
               <Text as="h3" variant="body2">
-                Secure checkout{" "}
+              Free shipping 
               </Text>
               <p className="text-neutral-500">
-                Shop with confidence using our encrypted payment system that
-                protects your sensitive information.{" "}
+              Enjoy complimentary delivery gbx61 all orders, with no minimum purchase required. 
               </p>
             </div>
             <div className="text-center ">
-              <Batch className="mx-auto mb-2" />
+              <Return className="mx-auto mb-2 h-10 w-10" />
               <Text as="h3" variant="body2">
-                Secure checkout{" "}
+              30 days return
               </Text>
               <p className="text-neutral-500 ">
-                Shop with confidence using our encrypted payment system that
-                protects your sensitive information.{" "}
+              Not satisfied? Return any item within 30 days of purchase for a full refund or exchange. 
               </p>
             </div>
           </div>

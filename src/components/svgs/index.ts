@@ -22,3 +22,5 @@ export {default as Logo} from './Logo.svg'
 export {default as Filter} from './Filter.svg'
 export {default as SearchIcon} from './SearchIcon.svg'
 export {default as CartIcon} from './CartIcon.svg'
+export {default as Fire} from './Fire.svg'
+

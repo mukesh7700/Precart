@@ -13,7 +13,7 @@ const Men = () => {
                         <div key={index} className='md:py-2'>
                             <h1 className='text-md font-semibold md:my-3'>{item.title}</h1>
                             {item.items.map((item, index) => (
-                                <Link href="#" className='text-sm text-neutral-400 underline-offset-4 hover:underline hover:text-white mb-3 block' key={index} >{item.title}</Link>
+                                <Link href="#"    className='text-sm text-neutral-400 underline-offset-4 hover:underline hover:text-white mb-3 block' key={index} >{item.title}</Link>
                             ))}
                         </div>
                     ))}

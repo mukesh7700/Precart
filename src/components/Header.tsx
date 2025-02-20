@@ -102,6 +102,7 @@ const HeaderUsage = (props: HeaderProps) => {
                 }
                 className="p-0"
                 triggerOn="hover"
+                
               >
                 <div >{content}</div>
               </Popover>
