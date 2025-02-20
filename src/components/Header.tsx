@@ -14,12 +14,12 @@ import {
 } from "@jamsr-ui/react";
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDownIcon} from "@jamsr-ui/shared-icons";
+
 
 import { CiMenuKebab } from "react-icons/ci";
 
 import DrawerUsage from "@/components/Drawer";
-import PrelineTemplates from "./PrelineTemplates";
+
 
 import Home from "@/components/Home";
 import Men from "@/components/Men";
@@ -67,25 +67,17 @@ const HeaderUsage = (props: HeaderProps) => {
   const closeCart = () => setIsCartOpen(false);
 
   const openSearch = () => setIsSearchOpen(true);
+  
 
   return (
     <>
       <Header className="flex justify-between " {...props}>
-        <div className="container mx-auto flex justify-between p-4 items-center">
+        <div className="container max-w-[1280px] mx-auto flex justify-between py-4 items-center">
           <div className="flex  items-center gap-4  w-fit">
             <Link href="/">
               <Logo className="h-[22px]   fill-black dark:fill-white" />
             </Link>
-            <Popover
-              trigger={
-                <IconButton size="sm" variant="light" label="Popover Trigger">
-                  <ChevronDownIcon />
-                </IconButton>
-              }
-              className="p-2"
-            >
-              <PrelineTemplates />
-            </Popover>
+            
           </div>
           <div className="hidden md:flex justify-center items-center w-full    ">
             {popoverData.map(({ label, content }, index) => (

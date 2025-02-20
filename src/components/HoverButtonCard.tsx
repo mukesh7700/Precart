@@ -37,11 +37,10 @@ export default function CardComponent({
       <div className="relative h-[300px] md:h-[400px] rounded-lg group transition-transform duration-300 overflow-hidden">
         {/* Trending Chip */}
         {isTrending && (
-          
-          
-            
-            <Chip className="absolute top-3 left-3 bg-black pe-3 font-bold"  ><Fire className="h-5 w-5" />Trending</Chip>
-          
+          <Chip className="absolute top-3 left-3 bg-black pe-3 font-bold">
+            <Fire className="h-5 w-5" />
+            Trending
+          </Chip>
         )}
 
         {/* Image */}
@@ -71,9 +70,11 @@ export default function CardComponent({
           {showInfoText}
         </Button>
       </div>
-      <h1 className="text-lg font-bold mt-3">{title}</h1>
-      <p className="text-md font-semibold text-zinc-500">{description}</p>
-      <p className="text-md font-semibold text-zinc-300">{price}</p>
+      <div className="px-1">
+        <h1 className="text-md font-semibold mt-2">{title}</h1>
+        <p className="text-sm font-semibold text-zinc-500">{description}</p>
+        <p className="text-sm font-semibold text-zinc-300">{price}</p>
+      </div>
     </Link>
   );
 }

@@ -25,7 +25,7 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
               className="h-28 w-28 mb-2 rounded-full hover:outline outline-2 outline-offset-4 outline-zinc-600"
             />
           </Link>
-          <p>{item.name}</p>
+          <p className="text-md">{item.name}</p>
         </div>
       ))}
     </section>

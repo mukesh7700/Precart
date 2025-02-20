@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
-import {  Tab, Tabs, Text } from "@jamsr-ui/react";
-
+import { Tab, Tabs, Text } from "@jamsr-ui/react";
 
 import CardComponent from "@/components/HoverButtonCard";
 import CardComponent2 from "@/components/GridCard";
@@ -36,7 +35,11 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    images: ["/Shoes1.jpg", "/Shoes2.jpg", "/Shoes3.jpg"],
+    images: [
+      "/images/others/1.webp",
+      "/images/others/2.webp",
+      "/images/others/3.webp",
+    ],
     title: "Nike Shoes",
     subtitle: "Starting from $99",
     linkText: "View all",
@@ -44,15 +47,19 @@ const products: Product[] = [
   },
   {
     id: 2,
-    images: ["/Men1.jpg", "/Men2.jpg", "/Men3.jpg"],
+    images: ["/images/men/11.jpg", "/images/men/12.jpg", "/images/men/9.jpg"],
     title: "Men's Cloting",
     subtitle: "Starting from $39",
     linkText: "View all",
-    linkHref: "/products/stylish-bags",
+    linkHref: "/men",
   },
   {
     id: 3,
-    images: ["/image1.jpg", "/images2.jpg", "/images3.jpg"],
+    images: [
+      "/images/women/8.jpg",
+      "/images/women/10.jpg",
+      "/images/women/1.jpg",
+    ],
     title: "Women's Clothing",
     subtitle: "Starting from $59",
     linkText: "Veiw all",
@@ -62,7 +69,7 @@ const products: Product[] = [
 
 const womencardData = [
   {
-    imageSrc: "/image1.jpg",
+    imageSrc: "/images/women/2.jpg",
     altText: "Clothing Item",
     title: "Slim Lyocell Trousers",
     description: "Men's Trousers",
@@ -70,36 +77,35 @@ const womencardData = [
     isTrending: true,
   },
   {
-    imageSrc: "/images2.jpg",
+    imageSrc: "/images/women/8.jpg",
     altText: "Clothing Item",
     title: "Classic Denim Jacket",
     description: "Men's Outerwear",
     price: "$80",
   },
   {
-    imageSrc: "/images3.jpg",
+    imageSrc: "/images/women/7.jpg",
     altText: "Clothing Item",
     title: "Cotton Crew Neck Tee",
     description: "Men's T-Shirt",
     price: "$25",
-    
   },
   {
-    imageSrc: "/images4.jpg",
+    imageSrc: "/images/women/6.jpg",
     altText: "Clothing Item",
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
   },
   {
-    imageSrc: "/images6.jpg",
+    imageSrc: "/images/women/10.jpg",
     altText: "Clothing Item",
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
   },
   {
-    imageSrc: "/image7.jpg",
+    imageSrc: "/images/women/9.jpg",
     altText: "Clothing Item",
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
@@ -110,15 +116,14 @@ const womencardData = [
 
 const mencardData = [
   {
-    imageSrc: "/image1.jpg",
+    imageSrc: "/images/men/1.jpg",
     altText: "Clothing Item",
     title: "Slim Lyocell Trousers",
     description: "Men's Trousers",
     price: "$50",
-    
   },
   {
-    imageSrc: "/images2.jpg",
+    imageSrc: "/images/men/3.jpg",
     altText: "Clothing Item",
     title: "Classic Denim Jacket",
     description: "Men's Outerwear",
@@ -126,7 +131,7 @@ const mencardData = [
     isTrending: true,
   },
   {
-    imageSrc: "/images3.jpg",
+    imageSrc: "/images/men/4.jpg",
     altText: "Clothing Item",
     title: "Cotton Crew Neck Tee",
     description: "Men's T-Shirt",
@@ -134,30 +139,28 @@ const mencardData = [
     isTrending: true,
   },
   {
-    imageSrc: "/images4.jpg",
+    imageSrc: "/images/men/6.jpg",
     altText: "Clothing Item",
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
-    
   },
   {
-    imageSrc: "/images6.jpg",
+    imageSrc: "/images/men/7.jpg",
     altText: "Clothing Item",
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
     isTrending: true,
-  
   },
   {
-    imageSrc: "/image7.jpg",
+    imageSrc: "/images/men/9.jpg",
     altText: "Clothing Item",
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
-    
-  },]
+  },
+];
 
 const shoes = [
   {
@@ -200,10 +203,6 @@ const items = [
 ];
 
 const Page = () => {
-  
-
-  
-
   const handleLike = () => {
     console.log("Liked!");
   };
@@ -214,78 +213,76 @@ const Page = () => {
 
   return (
     <div>
-      <div className="container mx-auto ">
+      <div className="container max-w-[1280px] mx-auto p-0">
         <section className="">
           <Carousel />
         </section>
         <ItemList items={items} />
         <section className="p-5 text-center">
-          <h1 className="text-3xl font-semibold my-3">Trending now </h1>
+          <h1 className="text-3xl font-semibold my-3">Trending Now </h1>
           <Tabs
             classNames={{
-              tab: " w-[200px] ",
+              tab: " w-[200px]  ",
             }}
             variant="bordered"
             defaultValue="men"
           >
             <Tab value="men" heading="Men">
-              
-      
-      <div className="px-4 py-6 w-full">
-        <TabImageSwiper
-          items={mencardData.map((card, index) => (
-            <CardComponent
-            href="/"
-            key={index}
-            imageSrc={card.imageSrc}
-            altText={card.altText}
-            title={card.title}
-            description={card.description}
-            price={card.price}
-            isTrending={card.isTrending}
-            onLike={handleLike}
-            onInfo={handleInfo}
-            showInfoText="Quick view"
-            />
-          ))}
-        />
-      </div>
+              <div className="px-4 py-6 w-full">
+                <TabImageSwiper
+                  items={mencardData.map((card, index) => (
+                    <CardComponent
+                      href="/"
+                      key={index}
+                      imageSrc={card.imageSrc}
+                      altText={card.altText}
+                      title={card.title}
+                      description={card.description}
+                      price={card.price}
+                      isTrending={card.isTrending}
+                      onLike={handleLike}
+                      onInfo={handleInfo}
+                      showInfoText="Quick view"
+                    />
+                  ))}
+                />
+              </div>
               <div className="py-5 flex justify-center">
                 <Link
                   href="#"
                   className="hover:text-purple-600 hover:underline underline-offset-4 flex items-end text-lg "
                 >
-                  Show all men <NextArrow className="h-6"/>
+                  Show all men <NextArrow className="h-6" />
                 </Link>
               </div>
             </Tab>
             <Tab value="women" heading="Women">
               <div>
-              <div className="px-4 py-6 w-full">
-        <TabImageSwiper
-          items={womencardData.map((card, index) => (
-            <CardComponent
-            href="/"
-            key={index}
-            imageSrc={card.imageSrc}
-            altText={card.altText}
-            title={card.title}
-            description={card.description}
-            price={card.price}
-            isTrending={card.isTrending}
-            onLike={handleLike}
-            onInfo={handleInfo}
-            showInfoText="Quick view"
-            />
-          ))}
-        />
-      </div>
+                <div className="px-4 py-6 w-full">
+                  <TabImageSwiper
+                    items={womencardData.map((card, index) => (
+                      <CardComponent
+                        href="/"
+                        key={index}
+                        imageSrc={card.imageSrc}
+                        altText={card.altText}
+                        title={card.title}
+                        description={card.description}
+                        price={card.price}
+                        isTrending={card.isTrending}
+                        onLike={handleLike}
+                        onInfo={handleInfo}
+                        showInfoText="Quick view"
+                      />
+                    ))}
+                  />
+                </div>
                 <div className="py-5 flex justify-center">
                   <Link
                     href="#"
                     className="  hover:text-purple-600 hover:underline underline-offset-4 flex items-end text-lg "
                   >
-                   <p>Show all women</p>  <NextArrow className="h-6"/>
+                    <p>Show all women</p> <NextArrow className="h-6" />
                   </Link>
                 </div>
               </div>
@@ -294,7 +291,7 @@ const Page = () => {
         </section>
         <section className="p-5 text-center">
           <h1 className="text-3xl font-semibold my-3">
-            The better way to shop with Preline top-products{" "}
+            The better way to shop with Precart top-products{" "}
           </h1>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {products.map((product) => (
@@ -347,19 +344,21 @@ const Page = () => {
             <div className="text-center my-8 ">
               <Van className="mx-auto mb-2 h-10 w-10" />
               <Text as="h3" variant="body2">
-              Free shipping 
+                Free shipping
               </Text>
               <p className="text-neutral-500">
-              Enjoy complimentary delivery gbx61 all orders, with no minimum purchase required. 
+                Enjoy complimentary delivery gbx61 all orders, with no minimum
+                purchase required.
               </p>
             </div>
             <div className="text-center ">
               <Return className="mx-auto mb-2 h-10 w-10" />
               <Text as="h3" variant="body2">
-              30 days return
+                30 days return
               </Text>
               <p className="text-neutral-500 ">
-              Not satisfied? Return any item within 30 days of purchase for a full refund or exchange. 
+                Not satisfied? Return any item within 30 days of purchase for a
+                full refund or exchange.
               </p>
             </div>
           </div>

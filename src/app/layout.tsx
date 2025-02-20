@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { UIProvider } from "@jamsr-ui/react";
+import { UIProvider, UIStylesProvider } from "@jamsr-ui/react";
 import HeaderUsage from "@/components/Header";
 import Footer from "@/components/Footer";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Precart – eCommerce website Template with JamsrUI, Next.js, & Tailwind CSS",
-  description: "Precart – eCommerce website Template with JamsrUI, Next.js, & Tailwind CSS",
+  title:
+    "Precart – eCommerce website Template with JamsrUI, Next.js, & Tailwind CSS",
+  description:
+    "Precart – eCommerce website Template with JamsrUI, Next.js, & Tailwind CSS",
   icons: {
     icon: "/fevicon.png",
   },
@@ -35,11 +36,18 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <UIProvider>
-          <HeaderUsage isBordered />
+          <UIStylesProvider
+            card={{
+              isBordered: true,
+              className: "border border-[hsl(210,9.8%,16.1%)] bg-transparent",
+            }}
+          >
+            <HeaderUsage isBordered />
 
-          {children}
-          
-          <Footer />
+            {children}
+
+            <Footer />
+          </UIStylesProvider>
         </UIProvider>
       </body>
     </html>

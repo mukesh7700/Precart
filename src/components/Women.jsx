@@ -33,6 +33,7 @@ const Women = () => {
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'center',
+                                
                             }}
                         >
                             <Link

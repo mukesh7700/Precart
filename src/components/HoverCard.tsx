@@ -20,7 +20,7 @@ export default function Card3({
       <Link
         href="#"
         className=" 
-       relative rounded-xl overflow-hidden h-[180px]   group"
+       relative rounded-sm overflow-hidden h-[180px]   group"
       >
         <Image
           width={400}

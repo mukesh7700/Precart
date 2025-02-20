@@ -19,7 +19,7 @@ const slides = [
     description:
       "From lightweight layers to the perfect pair of pants, new seasonal favorites are here.",
     buttons: [
-      { text: "Shop men", link: "/help" },
+      { text: "Shop men", link: "/men" },
       { text: "Shop women", link: "/product/women/categories" },
     ],
   },
@@ -52,7 +52,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-full  p-4 mx-auto overflow-hidden">
+    <div className="relative w-full  py-4 mx-auto overflow-hidden">
       <div className="relative w-full h-[400px] lg:h-[600px] flex items-center justify-center">
         {slides.map((slide, index) => (
           <m.div
