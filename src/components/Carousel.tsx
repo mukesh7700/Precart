@@ -28,7 +28,7 @@ const slides = [
     title: "Up to 50% off",
     description: "Summer sale",
     buttons: [
-      { text: "Shop men", link: "/help" },
+      { text: "Shop men", link: "/men" },
       { text: "Shop women", link: "/product/women/categories" },
     ],
   },

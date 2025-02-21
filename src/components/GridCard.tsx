@@ -1,4 +1,5 @@
-import { Card, CardContent, Link, Text } from "@jamsr-ui/react";
+import { CardContent, Text } from "@jamsr-ui/react";
+import Link from "next/link";
 
 interface ProductCardProps {
   images: string[]; // Array of image URLs
@@ -18,7 +19,8 @@ export default function CardComponent2(
   }: ProductCardProps
 ) {
   return (
-    <Card className="border  cursor-pointer   grid gap-4 p-1 group">
+    <Link href={linkHref}  className="border rounded-md border-[hsl(210,9.8%,16.1%)]  cursor-pointer   grid gap-4 p-1 group">
+      
       {/* Main image and other images in a grid */}
       <div className="grid grid-cols-3 grid-rows-2  gap-2">
         <div className="col-span-2 row-span-2 bg-green-600 p-1 rounded-tl-sm     overflow-hidden "
@@ -55,11 +57,11 @@ export default function CardComponent2(
       <CardContent className="text-center -mt-6 ">
         <Text as="h5" variant="h5" >{title}</Text>
         <Text as="h3" className="text-foreground-400 mb-3 " >{subtitle}</Text>
-        <Link underline="always" className="text-white group-hover:text-blue-400 transition-colors duration-300" href={linkHref}>
+        <h1  className=" underline underline-offset-4 group-hover:text-blue-400 transition-colors duration-300" >
           {linkText}
-        </Link>
+        </h1>
         
       </CardContent>
-    </Card>
+    </Link>
   );
 }

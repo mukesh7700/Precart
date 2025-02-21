@@ -115,17 +115,17 @@ const Footer = () => {
         <div className="my-10">
             <h1 className="text-lg font-semibold ">Stay connected</h1>
             <div className="flex gap-5 py-2">
-            <Link href="/" className="  text-zinc-400 hover:text-white text-lg font-semibold ">
+            <Link href="/" className="  text-zinc-400 hover:text-current text-lg font-semibold ">
             <FaInstagram />
             
             
             </Link>
-            <Link href="/" className="text-zinc-400 hover:text-white text-lg font-semibold ">
+            <Link href="/" className="text-zinc-400 hover:text-current text-lg font-semibold ">
             <FaYoutube />
             
             
             </Link>
-            <Link href="/" className="text-zinc-400 hover:text-white text-lg font-semibold  ">
+            <Link href="/" className="text-zinc-400 hover:text-current text-lg font-semibold  ">
             <RiTwitterXLine />
             
             

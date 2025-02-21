@@ -1,3 +1,4 @@
+import { Card } from '@jamsr-ui/react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -82,7 +83,7 @@ const data = [
   
 const Sales = () => {
   return (
-    <div className="md:max-w-md mx-auto md:p-2">
+    <Card className="md:max-w-md bg-[#181818] mx-auto md:p-2">
         <div className=" md:grid grid-cols-2 gap-4 md:p-4">
           {data.map((item, index)=>(
             <div key={index} className='md:p-4'>
@@ -107,7 +108,7 @@ const Sales = () => {
           <Link href="#" className='text-md hover:underline underline-offset-4 tracking-wider'>Shop now</Link>
         </div>
       
-    </div>
+    </Card>
   )
 }
 

@@ -87,16 +87,16 @@ const HeaderUsage = (props: HeaderProps) => {
                   <Button
                     variant="text"
                     
-                    className="hover:underline underline-offset-8 text-md"
+                    className="hover:underline underline-offset-8 text-md "
                   >
                     {label}
                   </Button>
                 }
-                className="p-0"
+                className="p-0 bg-transparent shadow-none"
                 triggerOn="hover"
                 
               >
-                <div >{content}</div>
+                <div className="" >{content}</div>
               </Popover>
             ))}
           </div>

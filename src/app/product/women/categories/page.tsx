@@ -39,21 +39,21 @@ const shoes = [
 
 const mencardData = [
   {
-    imageSrc: "/trending/men/Trouser.jpg",
+    imageSrc: "/images/women/1.jpg",
     altText: "Clothing Item",
     title: "Slim Lyocell Trousers",
     description: "Men's Trousers",
     price: "$50",
   },
   {
-    imageSrc: "/trending/men/jacket.jpg",
+    imageSrc: "/images/women/2.jpg",
     altText: "Clothing Item",
     title: "Casual Leather Shoes",
     description: "Men's Footwear",
     price: "$120",
   },
   {
-    imageSrc: "/trending/men/Tshirt.jpg",
+    imageSrc: "/images/women/8.jpg",
     altText: "Clothing Item",
     title: "Classic Denim Jacket",
     description: "Men's Outerwear",

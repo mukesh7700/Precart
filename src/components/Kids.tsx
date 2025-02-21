@@ -2,10 +2,12 @@ import Link from 'next/link';
 import React from 'react';
 import kids from "@/data/Kids";
 import Image from 'next/image';
+import { Card } from '@jamsr-ui/react';
 
 const Kids = () => {
     return (
-        <div className='w-screen xl:w-[1500px]  p-2 px-8'>
+        <div className="w-screen">
+            <Card className='w-screen xl:w-[1500px] mx-auto bg-[#181818] p-2 px-8'>
             <div className="container mx-auto">
                 <div className="grid md:grid-flow-col-dense md:my-2">
                     {kids.map((products) => (
@@ -30,7 +32,7 @@ const Kids = () => {
                         <div
                             className="px-4 py-6 h-full rounded-xl cursor-pointer"
                             style={{
-                                backgroundImage: "url('/kids.jpg')",
+                                backgroundImage: "url('images/kids/1.jpg')",
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 
@@ -38,7 +40,7 @@ const Kids = () => {
                         >
                             <Link
                                 href="#"
-                                className="hidden md:block  absolute top-3/4 left-1/2 transform -translate-x-1/2 text-md tracking-wider rounded-full px-2 bg-gradient-to-r from-neutral-500 via-neutral-500 to-neutral-300"
+                                className="hidden xl:block  absolute top-3/4 left-1/2 transform -translate-x-1/2 text-md tracking-wider rounded-full px-2 bg-gradient-to-r from-neutral-500 via-neutral-500 to-neutral-300"
                             >
                                 Shop now
                             </Link>
@@ -75,7 +77,9 @@ const Kids = () => {
                     </div>
                 </div>
             </div>
+        </Card>
         </div>
+        
     );
 };
 

@@ -63,7 +63,7 @@ const products: Product[] = [
     title: "Women's Clothing",
     subtitle: "Starting from $59",
     linkText: "Veiw all",
-    linkHref: "/products/luxury-watches",
+    linkHref: "/product/women/categories",
   },
 ];
 

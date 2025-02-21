@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
 import women from "@/data/Women";
+import { Card } from '@jamsr-ui/react';
 
 const Women = () => {
     return (
-        <div className='w-screen xl:w-[1500px]  p-2 px-8'>
+        <div className="w-screen  ">
+<Card className='w-screen xl:w-[1500px] mx-auto bg-[#181818]  p-2 px-8'>
             <div className="container mx-auto">
                 <div className="md:grid grid-flow-col-dense md:my-4">
                     {women.map((products) => (
@@ -29,7 +31,7 @@ const Women = () => {
                         <div
                             className="px-4 py-6 h-full rounded-xl cursor-pointer"
                             style={{
-                                backgroundImage: "url('/images3.jpg')",
+                                backgroundImage: "url('/images/women/8.jpg')",
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'center',
@@ -67,7 +69,9 @@ const Women = () => {
                     </div>
                 </div>
             </div>
+        </Card>
         </div>
+        
     );
 };
 

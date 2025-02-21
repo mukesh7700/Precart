@@ -2,10 +2,16 @@ import Link from 'next/link'
 import React from 'react'
 import men from "@/data/Men"
 
+import { Card } from '@jamsr-ui/react'
+
 
 const Men = () => {
     return (
-        <div className='w-screen xl:w-[1500px]  p-2 px-8'>
+        <div className="w-screen  ">
+            
+        
+
+        <Card className='w-screen xl:w-[1500px] mx-auto bg-[#181818] p-2 px-8  '>
             <div className="container  mx-auto ">
 
                 <div className=" grid md:grid-flow-col-dense md:my-2  ">
@@ -20,7 +26,7 @@ const Men = () => {
                     <div className= 'hidden md:block p-2 w-full h-full bg-gradient-to-tl  from-blue-800 via-purple-600 to-orange-400 rounded-xl cursor-pointer relative'>
                         <div className='px-4 py-6 h-full  rounded-xl cursor-pointer '
                             style={{
-                                backgroundImage: "url('/Men3.jpg')",
+                                backgroundImage: "url('/images/men/3.jpg')",
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'center',
@@ -62,6 +68,7 @@ const Men = () => {
                 </div>
             </div>
             
+        </Card>
         </div>
 
     )
