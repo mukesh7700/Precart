@@ -7,14 +7,14 @@ import Image from "next/image";
 
 const slides = [
   {
-    src: "/Carousel1.jpg",
+    src: "/images/carousel/4.png",
     title: "Fall favorites",
     description:
       "Our always-in-season staple, in brand new colors and your favorite fits.",
     buttons: [{ text: "Shop women's clothing", link: "/product/women/mini-categories"}],
   },
   {
-    src: "/Carousel2.jpg",
+    src: "/images/carousel/5.png",
     title: "New styles",
     description:
       "From lightweight layers to the perfect pair of pants, new seasonal favorites are here.",
@@ -24,7 +24,7 @@ const slides = [
     ],
   },
   {
-    src: "/Carousel3.jpg",
+    src: "/images/carousel/6.png",
     title: "Up to 50% off",
     description: "Summer sale",
     buttons: [
@@ -53,23 +53,31 @@ const Carousel = () => {
 
   return (
     <div className="relative w-full  py-4 mx-auto overflow-hidden">
-      <div className="relative w-full h-[400px] lg:h-[600px] flex items-center justify-center">
+      <div className="relative w-full h-[200px] md:h-[300px] lg:h-[480px]  flex items-center justify-center">
         {slides.map((slide, index) => (
           <m.div
             key={index}
-            className="absolute w-full h-full flex flex-col items-center justify-center text-white text-center bg-black bg-opacity-50 rounded-lg"
+            className="absolute  w-full h-full flex flex-col items-center justify-center text-white text-center bg-black  rounded-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: index === currentIndex ? 1 : 0 }}
             transition={{ duration: 0.5 }}
             style={{ zIndex: index === currentIndex ? 10 : 1 }}  
           >
-            <Image width={400} height={400}
-              src={slide.src}
-              alt={slide.title}
-              className="w-full h-full object-cover rounded-lg"
-            />
-            <div className="absolute top-1/2 transform -translate-y-1/2 px-4 text-center w-2/3">
-              <h2 className="text-5xl font-bold">{slide.title}</h2>
+            
+  <Image
+    src={slide.src}
+    alt={slide.title}
+    layout="fill"
+    objectFit="cover"
+    className="rounded-lg"
+  />
+
+
+
+            <div className={`text-black/75 absolute top-1/2 ${
+      index === 0 ? "left-1/2 -translate-x-1/2" : "left-[33%]"
+    } -translate-y-1/2 px-4 text-center w-2/3`}>
+              <h2 className="text-5xl font-bold ">{slide.title}</h2>
               <p className="text-md">{slide.description}</p>
               <div className="mt-2 flex justify-center gap-2">
                 {slide.buttons.map((button, btnIndex) => (
@@ -77,7 +85,7 @@ const Carousel = () => {
                     key={btnIndex}
                     href={button.link}
                     passHref
-                    className="text-white hover:text-neutral-200 font-semibold text-lg px-4 py-2 rounded-lg underline underline-offset-4 tracking-tight leading-tight"
+                    className=" hover:text-black font-semibold text-lg px-4 py-2 rounded-lg underline underline-offset-4 tracking-tight leading-tight"
                   >
                     {button.text}
                     
