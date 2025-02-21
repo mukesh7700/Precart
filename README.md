@@ -22,7 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Hi there 👋
 
-We use Kubernetes, Docker, Rust, Nextjs, React, TypeScript, Tailwind CSS, Drizzle ORM, PostgreSQL, MongoDB, Prisma, Redis, Rust, Actix Web, Axum and various other technologies as per the requirements of the project.
+We use  Nextjs, React, TypeScript, Tailwind CSS,  MongoDB, Prisma, Redis, Rust, Actix Web, Axum and various other technologies as per the requirements of the project.
 
 ## Connect with Us
 
