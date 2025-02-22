@@ -1,6 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+
+
+@import "@jamsr-ui/theme/styles.css";
+@source "../../node_modules/@jamsr-ui";
 
 *{
   outline: none;

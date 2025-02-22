@@ -23,8 +23,8 @@ const Men = () => {
                             ))}
                         </div>
                     ))}
-                    <div className= 'hidden md:block p-2 w-full h-full bg-gradient-to-tl  from-blue-800 via-purple-600 to-orange-400 rounded-xl cursor-pointer relative'>
-                        <div className='px-4 py-6 h-full  rounded-xl cursor-pointer '
+                    <div className= 'hidden md:block  w-full h-full  rounded-lg cursor-pointer relative'>
+                        <div className='px-4 py-6 h-full  rounded-lg  '
                             style={{
                                 backgroundImage: "url('/images/men/3.jpg')",
                                 backgroundSize: 'cover',

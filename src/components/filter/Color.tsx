@@ -28,7 +28,7 @@ const Color: React.FC = () => {
   };
 
   return (
-    <div className="p-2 rounded-md bg-black mb-2">
+    <div className="p-2 rounded-md bg-black ">
       <h1 className="mb-3 font-semibold">Color</h1>
       <div>
         <div className="bg-black text-white p-2 rounded-lg">

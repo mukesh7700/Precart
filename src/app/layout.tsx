@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { UIProvider, UIStylesProvider } from "@jamsr-ui/react";
+import { UIConfigProvider, UIProvider } from "@jamsr-ui/react";
 import HeaderUsage from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <UIProvider>
-          <UIStylesProvider
+          <UIConfigProvider
             card={{
               isBordered: true,
               className: "border border-[hsl(210,9.8%,16.1%)] bg-transparent",
@@ -47,7 +47,7 @@ export default function RootLayout({
             {children}
 
             <Footer />
-          </UIStylesProvider>
+          </UIConfigProvider>
         </UIProvider>
       </body>
     </html>

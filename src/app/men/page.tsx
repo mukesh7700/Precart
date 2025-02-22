@@ -90,6 +90,7 @@ const ButtonCardData =[{
       title: "Cotton Crew Neck Tee",
       description: "Men's T-Shirt",
       price: "$25",
+      isTrending: true,
     },
     {
       imageSrc: "/images/men/11.jpg",
@@ -119,9 +120,13 @@ const Page = () => {
     
       const openMenu = () => setIsMenuOpen(true);
 
+      const handleLike = () => {
+        console.log("Liked!");
+      };
+
   return (
-    <div className='container mx-auto'>
-        <div className="pt-4 pb-[50px] px-3">
+    <div className='container mx-auto max-w-screen-xl '>
+        <div className="pt-4 pb-[50px] py-3">
         <p className='text-lg font-semibold'>Men&apos;s Clothing </p>
         <div className="py-3 flex gap-5 justify-start items-center">
           {ButtonCardData.map((card, index) => (
@@ -130,7 +135,7 @@ const Page = () => {
           
         </div>
       </div>
-      <div className="flex items-center justify-between p-3">
+      <div className="flex items-center justify-between py-3">
         <div>
           <Button
             variant="text"
@@ -154,17 +159,21 @@ const Page = () => {
           </Select>
         </div>
       </div>
-      <div className="grid grid-cols-5 gap-4 p-3">
+      <div className="grid grid-cols-5 gap-4 py-3">
         <FullImageCard src="/images/men/14.webp" href="#" title="Be Your Own Boss" subtitle="Shop Now"/>
         {mencardData.map((card, index) => (
           <ShopingCard
-            key={index}
-            imageSrc={card.imageSrc}
-            altText={card.altText}
-            title={card.title}
-            description={card.description}
-            price={card.price}
-            showInfoText="Quick view"
+          href="/"
+          key={index}
+          imageSrc={card.imageSrc}
+          altText={card.altText}
+          title={card.title}
+          description={card.description}
+          price={card.price}
+          isTrending={card.isTrending}
+          onLike={handleLike}
+          
+          showInfoText="Quick view"
           />
         ))}
         <FullImageCard src="/images/men/15.webp" href="#" title="New Arrivals" subtitle="Shop Now"/>

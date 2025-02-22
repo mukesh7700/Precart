@@ -23,4 +23,6 @@ export {default as Filter} from './Filter.svg'
 export {default as SearchIcon} from './SearchIcon.svg'
 export {default as CartIcon} from './CartIcon.svg'
 export {default as Fire} from './Fire.svg'
+export {default as DownArrow} from './DownArrow.svg'
+
 

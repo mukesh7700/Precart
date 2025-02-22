@@ -24,6 +24,7 @@ const mencardData = [
     title: "Slim Lyocell Trousers",
     description: "Men's Trousers",
     price: "$50",
+    isTrending: true,
   },
   {
     imageSrc: "/trending/men/jacket.jpg",
@@ -128,6 +129,12 @@ const Page = () => {
 
   const openMenu = () => setIsMenuOpen(true);
 
+  const handleLike = () => {
+    console.log("Liked!");
+  };
+
+  
+
   return (
     <section className="container mx-auto max-w-[1280px]">
       <div className="text-center py-3">
@@ -159,17 +166,21 @@ const Page = () => {
           </Select>
         </div>
       </div>
-      <div className="grid grid-cols-5 gap-4 py-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4  py-4">
         <FullImageCard src="/Card1.jpg" href="#" title="Be Your Own Boss" subtitle="Shop Now"/>
         {mencardData.map((card, index) => (
           <ShopingCard
-            key={index}
-            imageSrc={card.imageSrc}
-            altText={card.altText}
-            title={card.title}
-            description={card.description}
-            price={card.price}
-            showInfoText="Quick view"
+          href="/"
+          key={index}
+          imageSrc={card.imageSrc}
+          altText={card.altText}
+          title={card.title}
+          description={card.description}
+          price={card.price}
+          isTrending={card.isTrending}
+          onLike={handleLike}
+          
+          showInfoText="Quick view"
           />
         ))}
         <FullImageCard src="/Card2.jpg" href="#" title="New Arrivals" subtitle="Shop Now"/>
