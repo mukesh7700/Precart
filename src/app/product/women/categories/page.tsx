@@ -118,8 +118,8 @@ const mencardData = [
 ];
 const page = () => {
   return (
-    <div className="container mx-auto ">
-      <div className="px-4 py-6">
+    <div className="container mx-auto max-w-[1280px]">
+      <div className=" py-6">
         <CustomSwiper
           items={shoes.map((card, index) => (
             <Card3
@@ -132,11 +132,11 @@ const page = () => {
         />
       </div>
 
-      <div className="px-4">
+      <div className="px-">
         <h1 className="font-semibold text-2xl ">Women&apos;s Clothing</h1>
         <div className="flex items-center justify-between gap-4 p-3"></div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-4">
         <FullImageCard
           src="/Card1.jpg"
           href="#"

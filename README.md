@@ -1,23 +1,27 @@
+## Precart – eCommerce website Template with JamsrUI, Next.js, & Tailwind CSS
+
+Built with **Next.js 15** App Router 
 
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Demo](https://jamsrworld.com/products/precart-ecommerce-website-template-with-jamsrui-nextjs-tailwind-css/aywkltixnaubtdp6j3tf50mo)
 
 
 
+## Tech Stack
 
+- [Next.js](https://nextjs.org)
+- [JamsrUI](https://jamsr-ui.jamsrworld.com)
 
+ **Install dependencies**
+   Install  `node_modules` with:
 
+   ``` shell
+   pnpm install
+   ```
+
+ **You're All Set!**  
+  Start terminal and run
+
+   ``` shell
+   pnpm dev
+   ```

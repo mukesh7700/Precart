@@ -68,7 +68,7 @@ const Footer = () => {
 
   return (
     <div className="px-3 py-5 border-t border-zinc-600">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-[1280px]">
         <div>
           <h1 className="text-xl font-semibold ">Subscribe & get 10% off </h1>
         </div>

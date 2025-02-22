@@ -7,8 +7,9 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="w-screen">
-      <Card className="w-screen mx-auto bg-[#181818] xl:w-[1500px]  p-2 px-8">
+    
+    <div className="">
+      <Card className=" w-fit mx-auto bg-[#181818]   p-2 px-8">
         <div className="md:p-10 md:max-w-xl text-center mx-auto ">
           <div className="">
             <Button

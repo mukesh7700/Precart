@@ -129,13 +129,13 @@ const Page = () => {
   const openMenu = () => setIsMenuOpen(true);
 
   return (
-    <section className="container mx-auto">
-      <div className="text-center p-3">
+    <section className="container mx-auto max-w-[1280px]">
+      <div className="text-center py-3">
       <h1 className="font-semibold text-2xl mx-auto">Women&apos;s Clothing</h1>
       </div>
       
       <ItemList items={items} />
-      <div className="flex items-center justify-between p-3">
+      <div className="flex items-center justify-between py-3 ">
         <div>
           <Button
             variant="text"
@@ -159,7 +159,7 @@ const Page = () => {
           </Select>
         </div>
       </div>
-      <div className="grid grid-cols-5 gap-4 p-3">
+      <div className="grid grid-cols-5 gap-4 py-3">
         <FullImageCard src="/Card1.jpg" href="#" title="Be Your Own Boss" subtitle="Shop Now"/>
         {mencardData.map((card, index) => (
           <ShopingCard
@@ -174,8 +174,8 @@ const Page = () => {
         ))}
         <FullImageCard src="/Card2.jpg" href="#" title="New Arrivals" subtitle="Shop Now"/>
       </div>
-      <Divider color="dark" className="px-3"/>
-      <div className="pt-4 pb-[50px] px-3">
+      <Divider color="dark" />
+      <div className="pt-4 pb-[50px] ">
         <p>Related categories </p>
         <div className="py-3 flex gap-5 justify-start items-center">
           {ButtonCardData.map((card, index) => (
