@@ -36,7 +36,6 @@ import Menu1 from "@/components/Menu1";
 import { CartIcon, Logo, SearchIcon } from "./svgs";
 
 const popoverData = [
-  { label: "Pages", content: <Pages /> },
   { label: "Men", content: <Men /> },
   { label: "Women", content: <Women /> },
   { label: "Kids", content: <Kids /> },
