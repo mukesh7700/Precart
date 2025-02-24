@@ -13,121 +13,43 @@ import { DownArrow} from "@/components/svgs";
 import CustomSwiper from "@/components/SwiperSlide";
 import { Button,  Popover, Select, SelectItem } from "@jamsr-ui/react";
 import React from "react";
+import womencardData from "@/data/WomenCloths";
 
 const shoes = [
   {
-    imageSrc: "/shoes1.jpg",
+    imageSrc: "/images/women/20.webp",
     altText: "Clothing Item",
-    text: "AIR JORDAN",
+    text: "Dresses",
   },
 
   {
-    imageSrc: "/shoes2.jpg",
+    imageSrc: "/images/others/tShirt/WomenSuits.jpg",
     altText: "Clothing Item",
-    text: "AIR JORDAN1",
+    text: "Suits",
   },
   {
-    imageSrc: "/shoes3.jpg",
+    imageSrc: "/images/others/shoes/1.webp",
     altText: "Clothing Item",
-    text: "DUNK",
+    text: "Shose",
   },
   {
-    imageSrc: "/shoes4.jpg",
+    imageSrc: "/images/women/12.jpg",
     altText: "Clothing Item",
-    text: "AIR FORCE1",
+    text: "Jackets",
   },
   {
-    imageSrc: "/shoes5.jpg",
+    imageSrc: "/images/women/22.webp",
     altText: "Clothing Item",
-    text: "BLAZER",
+    text: "Trousers",
   },
   {
-    imageSrc: "/shoes.avif",
+    imageSrc: "/images/women/21.webp",
     altText: "Clothing Item",
-    text: "ADIDAS",
+    text: "Jeans",
   },
 ];
 
-const mencardData = [
-  {
-    imageSrc: "/images/women/1.jpg",
-    altText: "Clothing Item",
-    title: "Slim Lyocell Trousers",
-    description: "Men's Trousers",
-    price: "$50",
-  },
-  {
-    imageSrc: "/images/women/2.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/images/women/8.jpg",
-    altText: "Clothing Item",
-    title: "Classic Denim Jacket",
-    description: "Men's Outerwear",
-    price: "$80",
-  },
-  {
-    imageSrc: "/trending/men/Hoodie.jpg",
-    altText: "Clothing Item",
-    title: "Cotton Crew Neck Tee",
-    description: "Men's T-Shirt",
-    price: "$25",
-  },
-  {
-    imageSrc: "/trending/men/WhiteTshirt.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/image1.jpg",
-    altText: "Clothing Item",
-    title: "Slim Lyocell Trousers",
-    description: "Men's Trousers",
-    price: "$50",
-  },
-  {
-    imageSrc: "/images2.jpg",
-    altText: "Clothing Item",
-    title: "Classic Denim Jacket",
-    description: "Men's Outerwear",
-    price: "$80",
-  },
-  {
-    imageSrc: "/images3.jpg",
-    altText: "Clothing Item",
-    title: "Cotton Crew Neck Tee",
-    description: "Men's T-Shirt",
-    price: "$25",
-  },
-  {
-    imageSrc: "/images4.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/images6.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/image7.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-    isTrending: true,
-  },
-];
+
 const popoverData = [
   { label: "Filter", content: <AppliesFilter /> },
   { label: "Category", content: <Category /> },
@@ -198,12 +120,12 @@ const page = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 py-4">
         <FullImageCard
-          src="/Card1.jpg"
+          src="/images/women/11.webp"
           href="#"
           title="Be Your Own Boss"
           subtitle="Shop Now"
         />
-        {mencardData.map((card, index) => (
+        {womencardData.map((card, index) => (
           <ShopingCard
             href={`/product/women/categories/${card.title}`} 
             key={index}
@@ -218,7 +140,7 @@ const page = () => {
           />
         ))}
         <FullImageCard
-          src="/Card2.jpg"
+          src="/images/women/20.webp"
           href="#"
           title="New Arrivals"
           subtitle="Shop Now"

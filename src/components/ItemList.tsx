@@ -22,7 +22,7 @@ const ItemList: React.FC<ItemListProps> = ({ items }) => {
               width={300}
               height={500}
               alt={item.name}
-              className="h-28 w-28 mb-2 rounded-full hover:outline outline-2 outline-offset-4 outline-zinc-600"
+              className="h-28 w-28 mb-2 rounded-full hover:outline-2 outline-offset-4 outline-zinc-600"
             />
           </Link>
           <p className="text-md">{item.name}</p>

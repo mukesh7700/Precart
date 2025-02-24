@@ -16,7 +16,7 @@ export default function Card3({
   altText,
 }: ProductCardProps) {
   return (
-    <Card className="cursor-pointer">
+    <Card className="cursor-pointer border-none">
       <Link
         href="#"
         className=" 
@@ -30,7 +30,7 @@ export default function Card3({
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <Button
-          className="absolute group top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-black rounded-full "
+          className="uppercase absolute group top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-black rounded-full "
           size="sm"
         >
           {ButtonText}

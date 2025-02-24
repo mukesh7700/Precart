@@ -22,6 +22,8 @@ import Carousel from "@/components/Carousel";
 import ItemList from "@/components/ItemList";
 import CustomSwiper from "@/components/SwiperSlide";
 import TabImageSwiper from "@/components/TabImageSwiper";
+import womencardData from "@/data/WomenCloths";
+import mencardData from "@/data/MenCloths";
 
 interface Product {
   id: number;
@@ -36,9 +38,9 @@ const products: Product[] = [
   {
     id: 1,
     images: [
-      "/images/others/1.webp",
-      "/images/others/2.webp",
-      "/images/others/3.webp",
+      "/images/others/shoes/1.webp",
+      "/images/others/shoes/2.webp",
+      "/images/others/shoes/3.webp",
     ],
     title: "Nike Shoes",
     subtitle: "Starting from $99",
@@ -67,139 +69,47 @@ const products: Product[] = [
   },
 ];
 
-const womencardData = [
-  {
-    imageSrc: "/images/women/2.jpg",
-    altText: "Clothing Item",
-    title: "Slim Lyocell Trousers",
-    description: "Men's Trousers",
-    price: "$50",
-    isTrending: true,
-  },
-  {
-    imageSrc: "/images/women/8.jpg",
-    altText: "Clothing Item",
-    title: "Classic Denim Jacket",
-    description: "Men's Outerwear",
-    price: "$80",
-  },
-  {
-    imageSrc: "/images/women/7.jpg",
-    altText: "Clothing Item",
-    title: "Cotton Crew Neck Tee",
-    description: "Men's T-Shirt",
-    price: "$25",
-  },
-  {
-    imageSrc: "/images/women/6.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/images/women/10.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/images/women/9.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-    isTrending: true,
-  },
-];
 
-const mencardData = [
-  {
-    imageSrc: "/images/men/1.jpg",
-    altText: "Clothing Item",
-    title: "Slim Lyocell Trousers",
-    description: "Men's Trousers",
-    price: "$50",
-  },
-  {
-    imageSrc: "/images/men/3.jpg",
-    altText: "Clothing Item",
-    title: "Classic Denim Jacket",
-    description: "Men's Outerwear",
-    price: "$80",
-    isTrending: true,
-  },
-  {
-    imageSrc: "/images/men/4.jpg",
-    altText: "Clothing Item",
-    title: "Cotton Crew Neck Tee",
-    description: "Men's T-Shirt",
-    price: "$25",
-    isTrending: true,
-  },
-  {
-    imageSrc: "/images/men/6.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/images/men/7.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-    isTrending: true,
-  },
-  {
-    imageSrc: "/images/men/9.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-];
 
 const shoes = [
   {
-    imageSrc: "/shoes1.jpg",
+    imageSrc: "/images/others/shoes/1.webp",
     altText: "Clothing Item",
     text: "AIR JORDAN",
   },
   {
-    imageSrc: "/shoes2.jpg",
+    imageSrc: "/images/others/shoes/8.webp",
     altText: "Clothing Item",
     text: "AIR JORDAN1",
   },
   {
-    imageSrc: "/shoes3.jpg",
+    imageSrc: "/images/others/shoes/6.webp",
     altText: "Clothing Item",
     text: "DUNK",
   },
   {
-    imageSrc: "/shoes4.jpg",
+    imageSrc: "/images/others/shoes/7.webp",
     altText: "Clothing Item",
     text: "AIR FORCE1",
   },
   {
-    imageSrc: "/shoes5.jpg",
+    imageSrc: "/images/others/shoes/10.webp",
     altText: "Clothing Item",
     text: "BLAZER",
   },
   {
-    imageSrc: "/shoes.avif",
+    imageSrc: "/images/others/shoes/3.webp",
     altText: "Clothing Item",
     text: "ADIDAS",
   },
+  
 ];
 
 const items = [
-  { name: "T Shirt", image: "/shirt.avif", link: "/help" },
-  { name: "Trousers", image: "/trouser.avif", link: "#" },
-  { name: "Shoes", image: "/shoes.avif", link: "#" },
-  { name: "Jackets", image: "/jacket.avif", link: "#" },
+  { name: "T Shirt", image: "/images/others/tShirt/1.webp", link: "/help" },
+  { name: "Trousers", image: "/images/others/tShirt/2.webp", link: "#" },
+  { name: "Shoes", image: "/images/others/shoes/1.webp", link: "#" },
+  { name: "Jackets", image: "/images/others/tShirt/3.webp", link: "#" },
 ];
 
 const Page = () => {
@@ -218,19 +128,20 @@ const Page = () => {
           <Carousel />
         </section>
         <ItemList items={items} />
-        <section className="p-5 text-center">
+        <section className=" text-center">
           <h1 className="text-3xl font-semibold my-3">Trending Now </h1>
           <Tabs
             classNames={{
-              tab: " w-[200px]  ",
+              tab: " w-[200px] ",
+              
             }}
             variant="bordered"
             defaultValue="men"
           >
             <Tab value="men" heading="Men">
-              <div className="px-4 py-6 w-full">
+              <div className=" py-6 w-full">
                 <TabImageSwiper
-                  items={mencardData.map((card, index) => (
+                  items={mencardData.slice(0, 6).map((card, index) => (
                     <CardComponent
                       href="/"
                       key={index}
@@ -247,9 +158,9 @@ const Page = () => {
                   ))}
                 />
               </div>
-              <div className="py-5 flex justify-center">
+              <div className="py-4 flex justify-center">
                 <Link
-                  href="#"
+                  href="/men"
                   className="hover:text-purple-600 hover:underline underline-offset-4 flex items-end text-lg "
                 >
                   Show all men <NextArrow className="h-6" />
@@ -258,9 +169,9 @@ const Page = () => {
             </Tab>
             <Tab value="women" heading="Women">
               <div>
-                <div className="px-4 py-6 w-full">
+                <div className=" py-6 w-full">
                   <TabImageSwiper
-                    items={womencardData.map((card, index) => (
+                    items={womencardData.slice(0, 6).map((card, index) => (
                       <CardComponent
                         href="/"
                         key={index}
@@ -279,7 +190,7 @@ const Page = () => {
                 </div>
                 <div className="py-5 flex justify-center">
                   <Link
-                    href="#"
+                    href="/product/women/categories"
                     className="  hover:text-purple-600 hover:underline underline-offset-4 flex items-end text-lg "
                   >
                     <p>Show all women</p> <NextArrow className="h-6" />
@@ -289,11 +200,11 @@ const Page = () => {
             </Tab>
           </Tabs>
         </section>
-        <section className="p-5 text-center">
+        <section className="py-5 text-center">
           <h1 className="text-3xl font-semibold my-3">
             The better way to shop with Precart top-products{" "}
           </h1>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {products.map((product) => (
               <CardComponent2
                 key={product.id}
@@ -306,7 +217,7 @@ const Page = () => {
             ))}
           </div>
         </section>
-        <section className="p-5 text-center">
+        <section className="py-5 text-center">
           <div className="flex justify-center items-center  gap-10 lg:gap-[100px]">
             <Adids className="h-[75px] w-[75px]" />
             <Nick className="h-[75px] w-[75px]" />
@@ -316,7 +227,7 @@ const Page = () => {
             <HM className="h-[75px] w-[75px]" />
           </div>
         </section>
-        <section className="p-5 text-center">
+        <section className="py-5 text-center">
           <h1 className="text-3xl font-semibold my-3">Shoes by classics</h1>
           <CustomSwiper
             items={shoes.map((card, index) => (

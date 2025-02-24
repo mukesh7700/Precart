@@ -8,95 +8,17 @@ import ShopingCard from "@/components/ShopingCard";
 import { Filter } from "@/components/svgs";
 
 import { Button, Divider, Select, SelectItem } from "@jamsr-ui/react";
-
+import womencardData from "@/data/WomenCloths";
 import React, { useState } from "react";
 
 const items = [
-  { name: "Dresses", image: "/WomenDresses.jpg", link: "#" },
-  { name: "Trousers", image: "/WomenTrousers.jpg", link: "#" },
-  { name: "Jeans", image: "/WomenJeans.jpg", link: "#" },
+  { name: "Suits", image: "/images/others/tShirt/WomenSuits.jpg", link: "#" },
+  { name: "Dresses", image: "/images/others/tShirt/WomenDresses.jpg", link: "#" },
+  { name: "Trousers", image: "/images/others/tShirt/WomenTrousers.jpg", link: "#" },
+  { name: "Jeans", image: "/images/others/tShirt/WomenJeans.jpg", link: "#" },
 ];
 
-const mencardData = [
-  {
-    imageSrc: "/trending/men/Trouser.jpg",
-    altText: "Clothing Item",
-    title: "Slim Lyocell Trousers",
-    description: "Men's Trousers",
-    price: "$50",
-    isTrending: true,
-  },
-  {
-    imageSrc: "/trending/men/jacket.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/trending/men/Tshirt.jpg",
-    altText: "Clothing Item",
-    title: "Classic Denim Jacket",
-    description: "Men's Outerwear",
-    price: "$80",
-  },
-  {
-    imageSrc: "/trending/men/Hoodie.jpg",
-    altText: "Clothing Item",
-    title: "Cotton Crew Neck Tee",
-    description: "Men's T-Shirt",
-    price: "$25",
-  },
-  {
-    imageSrc: "/trending/men/WhiteTshirt.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/image1.jpg",
-    altText: "Clothing Item",
-    title: "Slim Lyocell Trousers",
-    description: "Men's Trousers",
-    price: "$50",
-  },
-  {
-    imageSrc: "/images2.jpg",
-    altText: "Clothing Item",
-    title: "Classic Denim Jacket",
-    description: "Men's Outerwear",
-    price: "$80",
-  },
-  {
-    imageSrc: "/images3.jpg",
-    altText: "Clothing Item",
-    title: "Cotton Crew Neck Tee",
-    description: "Men's T-Shirt",
-    price: "$25",
-  },
-  {
-    imageSrc: "/images4.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/images6.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-  {
-    imageSrc: "/image7.jpg",
-    altText: "Clothing Item",
-    title: "Casual Leather Shoes",
-    description: "Men's Footwear",
-    price: "$120",
-  },
-];
+
 
 const ButtonCardData =[{
   src:"/buttonCard/Jeans.jpg",
@@ -166,9 +88,9 @@ const Page = () => {
           </Select>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4  py-4">
-        <FullImageCard src="/Card1.jpg" href="#" title="Be Your Own Boss" subtitle="Shop Now"/>
-        {mencardData.map((card, index) => (
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4  py-4">
+        <FullImageCard src="/images/women/11.webp" href="#" title="Be Your Own Boss" subtitle="Shop Now"/>
+        {womencardData.map((card, index) => (
           <ShopingCard
           href="/"
           key={index}
@@ -183,7 +105,7 @@ const Page = () => {
           showInfoText="Quick view"
           />
         ))}
-        <FullImageCard src="/Card2.jpg" href="#" title="New Arrivals" subtitle="Shop Now"/>
+        <FullImageCard src="/images/women/20.webp" href="#" title="New Arrivals" subtitle="Shop Now"/>
       </div>
       <Divider color="dark" />
       <div className="pt-4 pb-[50px] ">

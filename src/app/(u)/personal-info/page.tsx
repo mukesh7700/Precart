@@ -59,7 +59,7 @@ const Page = () => {
             isOpen={collapsibleStates[item.id]}
             onOpenChange={() => handleToggle(item.id)}
           >
-            <Card className="bg-transparent">
+            <Card className="bg-transparen border-none">
               <CardHeader
                 className="p-0"
                 heading={item.heading}
@@ -67,6 +67,7 @@ const Page = () => {
                 endContent={
                   <Button
                     variant="text"
+                    disableRipple
                     size="lg"
                     onClick={() => {
                       handleToggle(item.id);
@@ -90,7 +91,7 @@ const Page = () => {
                       placeholder=""
                       value={item.subHeading}
                     />
-                    <Button className="mt-2">Save changes</Button>
+                    <Button  className="mt-2">Save changes</Button>
                   </div>
                 </CardContent>
               </CollapsibleContent>
@@ -100,7 +101,7 @@ const Page = () => {
       ))}
       <div className="border-b border-neutral-500 p-4">
 
-        <Card className="bg-transparent">
+        <Card className="bg-transparent border-none">
           <CardHeader
             className="p-0"
             heading="Two-factor authentication "
@@ -108,7 +109,7 @@ const Page = () => {
             endContent={
               <Dialog>
                 <DialogTrigger>
-                  <Button size="lg" variant="text" className="underline underline-offset-4 px-2">Turn gbx61</Button>
+                  <Button disableRipple size="lg" variant="text" className="underline underline-offset-4 px-2">Turn gbx61</Button>
                 </DialogTrigger>
                 <DialogContent>
                   <AuthenticationCard />
@@ -124,7 +125,7 @@ const Page = () => {
       </div>
       <div className="  border-neutral-500 p-4">
 
-        <Card className="bg-transparent">
+        <Card className="bg-transparent border-none">
           <CardHeader
             className="p-0"
             heading="Deactivate your account "
@@ -144,7 +145,7 @@ const Page = () => {
               } 
               >
                 <DialogTrigger>
-                  <Button size="lg" variant="text" color="danger" className="underline underline-offset-4 px-2">Deactivate</Button>
+                  <Button size="lg" variant="text" disableRipple color="danger" className="underline underline-offset-4 px-2">Deactivate</Button>
                 </DialogTrigger>
                 <DialogContent>
                 <DialogHeader></DialogHeader>

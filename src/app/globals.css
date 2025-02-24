@@ -5,11 +5,7 @@
 @import "@jamsr-ui/theme/styles.css";
 @source "../../node_modules/@jamsr-ui";
 
-*{
-  outline: none;
-  outline-color: transparent;
 
-}
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
