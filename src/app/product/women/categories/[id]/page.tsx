@@ -1,11 +1,7 @@
-import React from 'react'
+const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const resolvedParams = await params; // Ensure it resolves properly
 
-const page = ({params}) => {
-  return (
-    <div>
-    Product details : {decodeURIComponent(params.id)}
-  </div>
-  )
-}
+  return <div>Product details: {decodeURIComponent(resolvedParams.id)}</div>;
+};
 
-export default page
+export default Page;

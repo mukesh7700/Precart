@@ -30,7 +30,7 @@ import Search from "@/components/Search";
 
 import Sales from "@/components/Sales";
 import Kids from "@/components/Kids";
-import Pages from "@/components/Pages";
+
 
 import Menu1 from "@/components/Menu1";
 import { CartIcon, Logo, SearchIcon } from "./svgs";
