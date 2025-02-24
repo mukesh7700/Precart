@@ -32,7 +32,7 @@ const Kids = () => {
                         <div
                             className="px-4 py-6 h-full rounded-xl cursor-pointer"
                             style={{
-                                backgroundImage: "url('images/kids/1.jpg')",
+                                backgroundImage: "url('/images/kids/1.jpg')",
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 
