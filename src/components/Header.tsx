@@ -71,6 +71,7 @@ const HeaderUsage = (props: HeaderProps) => {
                   <Button
                     variant="text"
                     disableRipple
+                    disableAnimation
                     className="hover:underline ui-hover:text-neutral-500 underline-offset-8 text-md  "
                   >
                     {label}
