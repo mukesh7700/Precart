@@ -106,7 +106,7 @@ const HeaderUsage = (props: HeaderProps) => {
             <Menu
               classNames={{
                 popover: "min-w-[300px] ",
-                content: "bg-[#121212]  border-none p-2",
+                content: "bg-[#121212]  border-none  p-2",
               }}
               trigger={
                 <IconButton radius="full" label="Popover Trigger">
@@ -121,14 +121,14 @@ const HeaderUsage = (props: HeaderProps) => {
                 </IconButton>
               }
             >
-              <MenuItem className="mb-3">
+              <MenuItem className="mb-3 ">
                 <Link href="/account">
                   <Card className=" p-1 border-none  bg-transparent">
                     <CardHeader
                       heading="James Collins"
                       startContent={<Avatar
                         alt="image"
-                        className="flex"
+                        className="flex text-red-500"
                         src="/images/avatar/profile.jpg"
                         width={100}
                         height={100}

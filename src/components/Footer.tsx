@@ -87,7 +87,7 @@ const Footer = () => {
           <ul>
             {section.items.map((item) => (
               <li key={item.name}>
-                <Link href={item.link} className="leading-loose hover:underline underline-offset-2 text-zinc-400 hover:text-zinc-300 text-lg " >{item.name}</Link>
+                <Link href={item.link} className="leading-loose hover:underline underline-offset-2 text-zinc-400 hover:text-zinc-300 text-md " >{item.name}</Link>
               </li>
             ))}
           </ul>
@@ -135,7 +135,7 @@ const Footer = () => {
       </div>
         </div>
         <div className="flex items-center gap-2  text-zinc-600 text-sm font-semibold">
-         <p>© 2025 Preline Labs.</p>
+         <p>© 2025 Precart Labs.</p>
          
           <Chip variant="dot" className="hover:text-white  hover:underline underline-offset-2">Terms</Chip>
           <Chip variant="dot" className="hover:text-white hover:underline underline-offset-2">Privacy</Chip>

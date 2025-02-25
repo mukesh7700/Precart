@@ -24,5 +24,13 @@ export {default as SearchIcon} from './SearchIcon.svg'
 export {default as CartIcon} from './CartIcon.svg'
 export {default as Fire} from './Fire.svg'
 export {default as DownArrow} from './DownArrow.svg'
+export {default as Email1} from './Email1.svg'
+export {default as Gift1} from './Gift1.svg'
+export {default as Location2} from './Location2.svg'
+export {default as Wallet1} from './Wallet1.svg'
+export {default as Logout} from './Logout.svg'
+export {default as Order} from './Order.svg'
+export {default as OrderDitals} from './OrderDitals.svg'
+export {default as Person} from './Person.svg'
 
 

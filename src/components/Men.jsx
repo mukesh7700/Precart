@@ -11,7 +11,7 @@ const Men = () => {
             
         
 
-        <Card className='w-screen xl:w-[1500px] mx-auto bg-[#181818] p-2 px-8  '>
+        <Card className='w-screen xl:w-[1500px] mx-auto  dark:bg-[#181818] p-2 px-8  '>
             <div className="container  mx-auto ">
 
                 <div className=" grid md:grid-flow-col-dense md:my-2  ">

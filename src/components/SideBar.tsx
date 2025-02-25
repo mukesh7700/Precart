@@ -15,7 +15,7 @@ export const SidebarUsage = () => {
   const pathname = usePathname(); // Get the current path
 
   return (
-    <Sidebar className="w-[300px] h-auto bg-transparent">
+    <Sidebar className="w-[300px] h-auto bg-transparent ">
       <>
         {data.map((item, index) => (
           <React.Fragment key={index}>
@@ -25,11 +25,16 @@ export const SidebarUsage = () => {
                 return (
                   <Link href={subItem.url} key={subIndex}>
                     <SidebarMenuItemButton
-                      className={`mt-3 flex gap-3 text-md ${
+                      className={`mt-3 flex gap-3 text-lg ${
                         isActive ? "bg-zinc-800 " : ""
                       }`}
                     >
+                      <span className="w-6 h-6">
                       {subItem.icon}
+                      </span>
+                      
+                      
+                      
                       <span>{subItem.title}</span>
                     </SidebarMenuItemButton>
                   </Link>
