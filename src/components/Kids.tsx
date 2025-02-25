@@ -3,11 +3,17 @@ import React from 'react';
 import kids from "@/data/Kids";
 import Image from 'next/image';
 import { Card } from '@jamsr-ui/react';
+import { useTheme } from '@/context/ThemeContext';
 
 const Kids = () => {
+    const { theme } = useTheme();
     return (
         <div className="w-screen">
-            <Card className='w-screen xl:w-[1500px] mx-auto bg-[#181818] p-2 px-8'>
+            <Card
+                  className={`w-screen xl:w-[1500px] mx-auto p-2 px-8 transition-colors duration-300 ${
+                    theme === "light" ? "bg-white text-black" : "bg-[#181818] text-white"
+                  }`}
+                >
             <div className="container mx-auto">
                 <div className="grid md:grid-flow-col-dense md:my-2">
                     {kids.map((products) => (

@@ -4,6 +4,7 @@ import "./globals.css";
 import { UIConfigProvider, UIProvider } from "@jamsr-ui/react";
 import HeaderUsage from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ThemeProvider>
         <UIProvider>
           <UIConfigProvider
             card={{
@@ -49,6 +51,7 @@ export default function RootLayout({
             <Footer />
           </UIConfigProvider>
         </UIProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

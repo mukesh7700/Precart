@@ -6,7 +6,7 @@ import {
   Order,
   OrderDitals,
   Person,
-  Return,
+  Return1,
   Wallet1,
 } from "@/components/svgs";
 
@@ -20,12 +20,12 @@ const data = [
         icon: <Person />,
       },
       {
-        title: "My Orders",
+        title: "Orders",
         url: "/my-order",
         icon: <Order />,
       },
       {
-        title: "Order Details",
+        title: "Cart",
         url: "/order-details",
         icon: <OrderDitals />,
       },
@@ -34,43 +34,13 @@ const data = [
         url: "/addresses",
         icon: <Location2 />,
       },
-      {
-        title: "Payment",
-        url: "/payment",
-        icon: <Wallet1 />,
-      },
-      {
-        title: "Email Newsletter",
-        url: "/email-newsletter",
-        icon: <Email1 />,
-      },
+      
+      
+      
     ],
   },
-  {
-    Id: "2",
-    items: [
-      {
-        title: "Gift Card",
-        url: "/gift-card",
-        icon: <Gift1 />,
-      },
-      {
-        title: "Return & Refunds",
-        url: "/return-and-refund",
-        icon: <Return />,
-      },
-    ],
-  },
-  {
-    Id: "3",
-    items: [
-      {
-        title: "Logout",
-        url: "#",
-        icon: <Logout />,
-      },
-    ],
-  },
+  
+  
 ];
 
 export default data;

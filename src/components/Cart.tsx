@@ -1,13 +1,17 @@
 "use client";
 
 import {
+  Alert,
   Button,
+  Divider,
   Drawer,
   DrawerBody,
   DrawerFooter,
   DrawerHeader,
   Repeater,
 } from "@jamsr-ui/react";
+import { Close } from "./svgs";
+import { AlertWithAction } from "./AlertAction";
 
 interface CartProps {
   isOpen: boolean;
@@ -15,20 +19,32 @@ interface CartProps {
   setIsOpen: (open: boolean) => void;
 }
 const Cart: React.FC<CartProps> = ({ isOpen, onClose, setIsOpen }) => {
+  
+
   return (
     <div>
-      <Drawer isOpen={isOpen} onOpenChange={(open) => setIsOpen(open)}>
-        <DrawerHeader className="text-lg font-semibold">Your Cart</DrawerHeader>
-        <DrawerBody>
-          <Repeater repeat={3}>
-            <p className="mb-4">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-              laborum optio quo reiciendis odio facilis quos adipisci unde eum
-              vero perspiciatis, minima iste doloribus voluptatibus officia
-              dicta, maxime, placeat qui.
-            </p>
-          </Repeater>
+      <Drawer anchor="right"
+        isOpen={isOpen}
+        onOpenChange={setIsOpen}
+       
+        className="max-w-[400px] "
+        closeButton={
+          <Button
+            className="absolute  right-2 top-3 rounded-full text-md py-1"
+            variant="outlined"
+            size="sm"
+            onClick={onClose}
+            endContent={<Close />}
+          >
+            Esc
+          </Button>
+        }>
+        <DrawerHeader className="text-lg font-semibold" >Cart (3 items)</DrawerHeader>
+        <Divider/>
+        <DrawerBody className="p-0">
+       <AlertWithAction/>
         </DrawerBody>
+        <Divider/>
         <DrawerFooter className="flex justify-between">
           <Button onClick={onClose} variant="light">
             Cancel

@@ -63,7 +63,7 @@ const Page = () => {
               <CardHeader
                 className="p-0"
                 heading={item.heading}
-                subHeading={item.subHeading}
+                
                 endContent={
                   <Button
                     variant="text"
@@ -75,7 +75,7 @@ const Page = () => {
                     }
                     }
                     className={`underline underline-offset-4 px-2 ${activeButtons[item.id]
-                      ? "text-blue-500" // Active color
+                      ? "text-red-500" // Active color
                       : "" // Default color
                       }`}
                   >
@@ -86,11 +86,7 @@ const Page = () => {
               <CollapsibleContent>
                 <CardContent className="p-0 pt-2">
                   <div className="w-1/3">
-                    <Input
-                      className=""
-                      placeholder=""
-                      value={item.subHeading}
-                    />
+                     
                     <Button  className="mt-2">Save changes</Button>
                   </div>
                 </CardContent>

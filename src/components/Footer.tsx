@@ -11,6 +11,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { FiMoon } from "react-icons/fi";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { useState, useEffect } from 'react';
+import { useTheme } from "@/context/ThemeContext";
 
 
 const helpData = [
@@ -47,30 +48,15 @@ const helpData = [
   ];
 
 const Footer = () => {
-  const [theme, setTheme] = useState("dark"); // Default to dark mode
+  const { theme, toggleTheme } = useTheme();// Default to dark mode
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme") || "dark"; // Default to dark
-      setTheme(savedTheme);
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("theme", newTheme);
-      document.documentElement.setAttribute("data-theme", newTheme);
-    }
-  };
+  
 
   return (
     <div className="px-3 py-5 border-t border-zinc-600">
       <div className="container mx-auto max-w-[1280px]">
         <div>
-          <h1 className="text-xl font-semibold ">Subscribe & get 10% off </h1>
+          <h1 className="text-lg font-semibold ">Subscribe & get 10% off </h1>
         </div>
         <div className="flex gap-3 py-2 ">
           <div>
@@ -83,11 +69,11 @@ const Footer = () => {
         <div className="py-5 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         {helpData.map((section) => (
         <div key={section.category}>
-          <h3 className="text-lg font-semibold ">{section.category}</h3>
+          <h3 className="text-md font-semibold ">{section.category}</h3>
           <ul>
             {section.items.map((item) => (
               <li key={item.name}>
-                <Link href={item.link} className="leading-loose hover:underline underline-offset-2 text-zinc-400 hover:text-zinc-300 text-md " >{item.name}</Link>
+                <Link href={item.link} className="leading-loose hover:underline underline-offset-2 text-zinc-400 hover:text-current text-md " >{item.name}</Link>
               </li>
             ))}
           </ul>
@@ -95,17 +81,17 @@ const Footer = () => {
       ))}
       <div>
         <div>
-            <Link href="#" className="flex items-center gap-2 leading-loose  underline-offset-2  hover:text-zinc-400 text-lg font-semibold ">
+            <Link href="#" className="flex items-center gap-2 leading-loose  underline-offset-2  hover:text-neutral-500 text-md font-semibold ">
             <CiLocationOn/> 
             Location
             <GrFormNext/>
             </Link>
-            <Link href="#" className="flex items-center gap-2 leading-loose  underline-offset-2  hover:text-zinc-400 text-lg font-semibold ">
+            <Link href="#" className="flex items-center gap-2 leading-loose  underline-offset-2  hover:text-zinc-400 text-md font-semibold ">
             <IoIosGlobe />
             United Kingdom
             <GrFormNext/>
             </Link>
-            <Link href="#" className="flex items-center gap-2 leading-loose  underline-offset-2  hover:text-zinc-400 text-lg font-semibold ">
+            <Link href="#" className="flex items-center gap-2 leading-loose  underline-offset-2  hover:text-zinc-400 text-md font-semibold ">
             <FiMessageSquare /> 
             Send us feedback
             <GrFormNext/>
@@ -113,7 +99,7 @@ const Footer = () => {
             
         </div>
         <div className="my-10">
-            <h1 className="text-lg font-semibold ">Stay connected</h1>
+            <h1 className="text-md font-semibold   ">Stay connected</h1>
             <div className="flex gap-5 py-2">
             <Link href="/" className="  text-zinc-400 hover:text-current text-lg font-semibold ">
             <FaInstagram />
@@ -135,12 +121,12 @@ const Footer = () => {
       </div>
         </div>
         <div className="flex items-center gap-2  text-zinc-600 text-sm font-semibold">
-         <p>© 2025 Precart Labs.</p>
          
-          <Chip variant="dot" className="hover:text-white  hover:underline underline-offset-2">Terms</Chip>
-          <Chip variant="dot" className="hover:text-white hover:underline underline-offset-2">Privacy</Chip>
-          <Chip variant="dot" className="hover:text-white hover:underline underline-offset-2">Your Privacy Choices</Chip>
-          <Chip variant="dot" className="hover:text-white hover:underline underline-offset-2" onClick={toggleTheme}>
+         
+          <Chip variant="dot" className=" hover:underline underline-offset-2">Terms</Chip>
+          <Chip variant="dot" className=" hover:underline underline-offset-2">Privacy</Chip>
+          <Chip variant="dot" className=" hover:underline underline-offset-2">Your Privacy Choices</Chip>
+          <Chip variant="dot" className=" hover:underline underline-offset-2" onClick={toggleTheme}>
          {theme === 'light' ?  <FiMoon />:<MdOutlineWbSunny /> } 
           </Chip>
          

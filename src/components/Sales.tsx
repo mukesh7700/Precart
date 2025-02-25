@@ -1,3 +1,4 @@
+import { useTheme } from '@/context/ThemeContext'
 import { Card } from '@jamsr-ui/react'
 import Link from 'next/link'
 import React from 'react'
@@ -82,8 +83,11 @@ const data = [
 
   
 const Sales = () => {
+  const { theme } = useTheme();
   return (
-    <Card className="md:max-w-md bg-[#181818] mx-auto md:p-2">
+    <Card className={`md:max-w-md bg-[#181818] mx-auto md:p-2 ${
+      theme === "light" ? "bg-white text-black" : "bg-[#181818] text-white"
+    }`}>
         <div className=" md:grid grid-cols-2 gap-4 md:p-4">
           {data.map((item, index)=>(
             <div key={index} className='md:p-4'>

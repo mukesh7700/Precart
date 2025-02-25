@@ -1,3 +1,4 @@
+import { useTheme } from "@/context/ThemeContext";
 import { Button, Card } from "@jamsr-ui/react";
 
 import Image from "next/image";
@@ -6,10 +7,14 @@ import Link from "next/link";
 import React from "react";
 
 const Home = () => {
+  const { theme } = useTheme();
   return (
     
     <div className="">
-      <Card className=" w-fit mx-auto bg-[#181818]   p-2 px-8">
+      <Card className={ `w-fit mx-auto bg-[#181818]   p-2 px-8  ${
+        theme === "light" ? "bg-white text-black" : "bg-[#181818] text-white"
+      }`} 
+      >
         <div className="md:p-10 md:max-w-xl text-center mx-auto ">
           <div className="">
             <Button

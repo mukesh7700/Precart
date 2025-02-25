@@ -1,15 +1,12 @@
 "use client";
 
-import {
-  Divider,
-  Sidebar,
-  SidebarMenuItemButton,
-} from "@jamsr-ui/react";
+import { Divider, Sidebar, SidebarMenuItemButton } from "@jamsr-ui/react";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";  // Import useRouter
+import { usePathname } from "next/navigation"; // Import useRouter
 import data from "@/data/Menu";
 import React from "react";
+import { Logo, Logout } from "./svgs";
 
 export const SidebarUsage = () => {
   const pathname = usePathname(); // Get the current path
@@ -29,17 +26,20 @@ export const SidebarUsage = () => {
                         isActive ? "bg-zinc-800 " : ""
                       }`}
                     >
-                      <span className="w-6 h-6">
-                      {subItem.icon}
-                      </span>
-                      
-                      
-                      
+                      <span className="w-6 h-6">{subItem.icon}</span>
+
                       <span>{subItem.title}</span>
                     </SidebarMenuItemButton>
                   </Link>
                 );
               })}
+              <SidebarMenuItemButton  className="mt-3 flex gap-3 text-lg">
+                <span className="w-6 h-6">
+                  <Logout />
+                </span>
+
+                <span>Logout</span>
+              </SidebarMenuItemButton>
             </div>
             {index !== data.length - 1 && <Divider className="mx-2" />}
           </React.Fragment>

@@ -3,15 +3,21 @@ import React from 'react'
 import men from "@/data/Men"
 
 import { Card } from '@jamsr-ui/react'
+import { useTheme } from '@/context/ThemeContext'
 
 
 const Men = () => {
+    const { theme } = useTheme();
     return (
         <div className="w-screen  ">
             
         
 
-        <Card className='w-screen xl:w-[1500px] mx-auto  dark:bg-[#181818] p-2 px-8  '>
+            <Card
+      className={`w-screen xl:w-[1500px] mx-auto p-2 px-8 transition-colors duration-300 ${
+        theme === "light" ? "bg-white text-black" : "bg-[#181818] text-white"
+      }`}
+    >
             <div className="container  mx-auto ">
 
                 <div className=" grid md:grid-flow-col-dense md:my-2  ">

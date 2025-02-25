@@ -31,6 +31,7 @@ import Kids from "@/components/Kids";
 
 import Menu1 from "@/components/Menu1";
 import { CartIcon, Logo, SearchIcon } from "./svgs";
+import { useTheme } from "@/context/ThemeContext";
 
 const popoverData = [
   { label: "Men", content: <Men /> },
@@ -53,6 +54,7 @@ const HeaderUsage = (props: HeaderProps) => {
   const closeCart = () => setIsCartOpen(false);
 
   const openSearch = () => setIsSearchOpen(true);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <>
@@ -72,7 +74,7 @@ const HeaderUsage = (props: HeaderProps) => {
                     variant="text"
                     disableRipple
                     disableAnimation
-                    className="hover:underline ui-hover:text-neutral-500 underline-offset-8 text-md  "
+                    className=" ui-hover:text-neutral-500 underline-offset-8 text-md  "
                   >
                     {label}
                   </Button>
@@ -105,34 +107,40 @@ const HeaderUsage = (props: HeaderProps) => {
 
             <Menu
               classNames={{
-                popover: "min-w-[300px] ",
-                content: "bg-[#121212]  border-none  p-2",
+                popover: "min-w-[250px] ",
+                content: "  border-none p-0 ",
               }}
               trigger={
-                <IconButton radius="full" label="Popover Trigger">
+                <IconButton label="trigger" radius="full"  className="py-0" >
                   <Avatar
                     alt="image"
                     className="flex"
-                    src="/images/avatar/profile.jpg"
+                    src="https://i.pravatar.cc/300?u=20"
                     width={100}
                     height={100}
-                    {...props}
+                   
+                    
                   />
                 </IconButton>
               }
+              lockScroll={false}
             >
-              <MenuItem className="mb-3 ">
+              <div className="p-2">
+
+              
+              <MenuItem>
                 <Link href="/account">
                   <Card className=" p-1 border-none  bg-transparent">
                     <CardHeader
                       heading="James Collins"
                       startContent={<Avatar
                         alt="image"
-                        className="flex text-red-500"
-                        src="/images/avatar/profile.jpg"
+                        className="flex "
+                        src="https://i.pravatar.cc/300?u=20"
                         width={100}
                         height={100}
-                        {...props}
+                        
+                        
                       />}
                       subHeading="jamescollins@site.so"
                       className="p-0"
@@ -140,8 +148,13 @@ const HeaderUsage = (props: HeaderProps) => {
                   </Card>
                 </Link>
               </MenuItem>
-              <Divider className="mx-2" />
+              </div>
+              <Divider/>
+              <div className="p-2">
               <Menu1 />
+              </div>
+              
+              
             </Menu>
             <IconButton label="" className="md:hidden" onClick={openMenu}>
               <CiMenuKebab />

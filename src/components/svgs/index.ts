@@ -32,5 +32,8 @@ export {default as Logout} from './Logout.svg'
 export {default as Order} from './Order.svg'
 export {default as OrderDitals} from './OrderDitals.svg'
 export {default as Person} from './Person.svg'
+export {default as Return1} from './Return1.svg'
+export {default as Moon} from './Moon.svg'
+export {default as Sun} from './Sun.svg'
 
 
