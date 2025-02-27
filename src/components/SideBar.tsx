@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; // Import useRouter
 import data from "@/data/Menu";
 import React from "react";
-import { Logo, Logout } from "./svgs";
+import {Logout } from "./svgs";
 
 export const SidebarUsage = () => {
   const pathname = usePathname(); // Get the current path

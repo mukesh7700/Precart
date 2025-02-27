@@ -31,7 +31,6 @@ import Kids from "@/components/Kids";
 
 import Menu1 from "@/components/Menu1";
 import { CartIcon, Logo, SearchIcon } from "./svgs";
-import { useTheme } from "@/context/ThemeContext";
 
 const popoverData = [
   { label: "Men", content: <Men /> },
@@ -54,7 +53,6 @@ const HeaderUsage = (props: HeaderProps) => {
   const closeCart = () => setIsCartOpen(false);
 
   const openSearch = () => setIsSearchOpen(true);
-  const { theme, toggleTheme } = useTheme();
 
   return (
     <>

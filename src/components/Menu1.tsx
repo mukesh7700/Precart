@@ -1,10 +1,8 @@
-import { Button, Chip, Divider, IconButton, MenuItem } from "@jamsr-ui/react";
+import { Divider, MenuItem } from "@jamsr-ui/react";
 import Link from "next/link";
 import data from "@/data/Menu";
 import React from "react";
 import { useTheme } from "@/context/ThemeContext";
-import { FiMoon } from "react-icons/fi";
-import { MdOutlineWbSunny } from "react-icons/md";
 import { Logout, Moon, Sun } from "./svgs";
 
 

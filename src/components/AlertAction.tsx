@@ -1,7 +1,7 @@
 "use client";
 
-import { Alert, Button, IconButton } from "@jamsr-ui/react";
-import { CloseIcon, EyeClosedIcon } from "@jamsr-ui/shared-icons";
+import { Alert, IconButton } from "@jamsr-ui/react";
+import { CloseIcon,} from "@jamsr-ui/shared-icons";
 import { useState } from "react";
 
 export const AlertWithAction = () => {

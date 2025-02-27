@@ -10,7 +10,6 @@ import { FaYoutube } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FiMoon } from "react-icons/fi";
 import { MdOutlineWbSunny } from "react-icons/md";
-import { useState, useEffect } from 'react';
 import { useTheme } from "@/context/ThemeContext";
 
 

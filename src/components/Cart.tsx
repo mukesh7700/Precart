@@ -1,14 +1,14 @@
 "use client";
 
 import {
-  Alert,
+
   Button,
   Divider,
   Drawer,
   DrawerBody,
   DrawerFooter,
   DrawerHeader,
-  Repeater,
+
 } from "@jamsr-ui/react";
 import { Close } from "./svgs";
 import { AlertWithAction } from "./AlertAction";

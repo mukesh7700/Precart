@@ -1,13 +1,8 @@
 import {
-  Email1,
-  Gift1,
   Location2,
-  Logout,
   Order,
   OrderDitals,
   Person,
-  Return1,
-  Wallet1,
 } from "@/components/svgs";
 
 const data = [
