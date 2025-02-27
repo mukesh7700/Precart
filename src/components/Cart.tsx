@@ -12,6 +12,9 @@ import {
 } from "@jamsr-ui/react";
 import { Close } from "./svgs";
 import { AlertWithAction } from "./AlertAction";
+import CartCard from "./CartCard";
+import CartData from "@/data/CartData";
+import Link from "next/link";
 
 interface CartProps {
   isOpen: boolean;
@@ -43,15 +46,39 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose, setIsOpen }) => {
         <Divider/>
         <DrawerBody className="p-0">
        <AlertWithAction/>
+       <div>
+        {
+          CartData.map((cart, index)=>(
+            <CartCard
+            key={index}
+            imageSrc={cart.imageSrc}
+            productName={cart.productName}
+            color={cart.color}
+            size={cart.size}
+            quantity={cart.quantity}
+            price={cart.price}
+            />
+          ))
+        }
+       </div>
         </DrawerBody>
         <Divider/>
-        <DrawerFooter className="flex justify-between">
-          <Button onClick={onClose} variant="light">
-            Cancel
+        <DrawerFooter>
+          <div className="p-2 w-full ">
+            <div className="flex justify-between items-center text-lg font-semibold  ">
+              <div>Subtotal</div>
+              <div>$229</div>
+            </div>
+            <div className="text-sm text-neutral-500">Shipping, taxes and discounts are calculated at checkout. </div>
+            <div className="flex justify-between items-center py-2">
+            <Link href="/cart" onClick={onClose}  className="border border-neutral-500 px-8 py-1 hover:bg-neutral-400  rounded-lg">
+            View cart (3)
+          </Link>
+          <Button onClick={onClose} color="primary" className=" px-8">
+            Checkout
           </Button>
-          <Button onClick={onClose} color="success">
-            Apply
-          </Button>
+            </div>
+          </div>
         </DrawerFooter>
       </Drawer>
     </div>

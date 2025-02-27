@@ -1,26 +1,30 @@
-
-import { Button, Menu, MenuItem } from '@jamsr-ui/react'
-import { ChevronUpIcon } from "@jamsr-ui/shared-icons";
-import React from 'react'
+"use client"
+import { IconButton, Popover, Text } from "@jamsr-ui/react";
+import { InfoIcon } from "@jamsr-ui/shared-icons";
+import { useState } from "react";
 
 
 const Order = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex justify-center">
-      <Menu
-        classNames={{
-          popover: "min-w-[300px]",
-        }}
-        trigger={<Button endContent={<ChevronUpIcon />}>Open Me</Button>}
+       <div className="grid place-content-center">
+      <Popover
+        trigger={
+          <IconButton
+            label="Popover Trigger"
+            className={isOpen ? "text-red-500" : ""}
+          >
+            <InfoIcon />
+          </IconButton>
+        }
+        className="p-2"
+        triggerOn="hover"
+        onOpenChange={(open) => setIsOpen(open)}
       >
-        <MenuItem className="text-red-600 text-6xl">Undo</MenuItem>
-        <MenuItem>Info</MenuItem>
-        <MenuItem>Search</MenuItem>
-        <MenuItem isDisabled>Redo</MenuItem>
-        <MenuItem>Cut</MenuItem>
-        <MenuItem isDisabled>Edit</MenuItem>
-        <MenuItem color="danger">Delete</MenuItem>
-      </Menu>
+        <Text as="p">This is a Popover content</Text>
+      </Popover>
+    </div>
     </div>
   )
 }

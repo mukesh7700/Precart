@@ -46,6 +46,7 @@ const HeaderUsage = (props: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<number | null>(null);
 
   const openMenu = () => setIsMenuOpen(true);
 
@@ -72,13 +73,14 @@ const HeaderUsage = (props: HeaderProps) => {
                     variant="text"
                     disableRipple
                     disableAnimation
-                    className=" ui-hover:text-neutral-500 underline-offset-8 text-md  "
+                    className={` ui-hover:text-neutral-500 underline-offset-8  text-md ${isOpen === index ? "text-neutral-500" : ""}`}
                   >
                     {label}
                   </Button>
                 }
                 className="p-0 mt-2 bg-transparent shadow-none"
                 triggerOn="hover"
+                onOpenChange={(open) => setIsOpen(open ? index : null)}
               >
                 <div className="">{content}</div>
               </Popover>
