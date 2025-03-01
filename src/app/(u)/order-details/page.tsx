@@ -1,5 +1,5 @@
 "use client"
-import { IconButton, Popover, Text } from "@jamsr-ui/react";
+import { IconButton, Popover } from "@jamsr-ui/react";
 import { InfoIcon } from "@jamsr-ui/shared-icons";
 import { useState } from "react";
 
@@ -8,7 +8,7 @@ const Order = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex justify-center">
-       <div className="grid place-content-center">
+       
       <Popover
         trigger={
           <IconButton
@@ -18,13 +18,14 @@ const Order = () => {
             <InfoIcon />
           </IconButton>
         }
-        className="p-2"
+        placement="bottom"
+        className="w-screen mx-2 shadow-none p-4 bg-transparent backdrop-blur-none "
         triggerOn="hover"
         onOpenChange={(open) => setIsOpen(open)}
       >
-        <Text as="p">This is a Popover content</Text>
+        <div className="max-w-lg bg-red-500 mx-auto" >This is a Popover content</div>
       </Popover>
-    </div>
+    
     </div>
   )
 }

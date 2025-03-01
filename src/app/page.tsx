@@ -45,7 +45,7 @@ const products: Product[] = [
     title: "Nike Shoes",
     subtitle: "Starting from $99",
     linkText: "View all",
-    linkHref: "/products/nike-shoes",
+    linkHref: "/product/shoes",
   },
   {
     id: 2,
@@ -117,9 +117,7 @@ const Page = () => {
     console.log("Liked!");
   };
 
-  const handleInfo = () => {
-    console.log("Show info clicked!");
-  };
+  
 
   return (
     <div>
@@ -150,9 +148,10 @@ const Page = () => {
                       title={card.title}
                       description={card.description}
                       price={card.price}
+                      mainPrice={card.mainPrice}
                       isTrending={card.isTrending}
                       onLike={handleLike}
-                      onInfo={handleInfo}
+                      colors={card.colors}
                       showInfoText="Quick view"
                     />
                   ))}
@@ -182,7 +181,8 @@ const Page = () => {
                         price={card.price}
                         isTrending={card.isTrending}
                         onLike={handleLike}
-                        onInfo={handleInfo}
+                        mainPrice={card.price}
+                        
                         showInfoText="Quick view"
                       />
                     ))}

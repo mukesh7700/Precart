@@ -4,7 +4,9 @@ interface menCard {
     title: string;
     description: string;
     price: string;
+    mainPrice: string;
     isTrending?: boolean;
+    colors?: { colorImage: string; colorName: string }[];
   }
   const mencardData: menCard[] = [
     {
@@ -13,6 +15,11 @@ interface menCard {
       title: "Slim Lyocell Trousers",
       description: "Men's Trousers",
       price: "$50",
+      mainPrice: "$200",
+      colors: [
+        { colorImage: "/images/others/shoes/1.webp", colorName: "Black" },
+        { colorImage: "/images/others/shoes/2.webp", colorName: "Blue" }
+      ]
     },
     {
       imageSrc: "/images/men/3.jpg",
@@ -20,6 +27,7 @@ interface menCard {
       title: "Casual Leather Shoes",
       description: "Men's Footwear",
       price: "$120",
+      mainPrice: "$100"
     },
     {
       imageSrc: "/images/men/2.jpg",
@@ -27,6 +35,7 @@ interface menCard {
       title: "Classic Denim Jacket",
       description: "Men's Outerwear",
       price: "$80",
+      mainPrice: "$150"
     },
     {
       imageSrc: "/images/men/4.jpg",
@@ -34,6 +43,7 @@ interface menCard {
       title: "Cotton Crew Neck Tee",
       description: "Men's T-Shirt",
       price: "$25",
+      mainPrice: "$199"
     },
     {
       imageSrc: "/images/men/6.jpg",
@@ -41,6 +51,7 @@ interface menCard {
       title: "Casual Leather Shoes",
       description: "Men's Footwear",
       price: "$120",
+      mainPrice: "$299"
     },
     {
       imageSrc: "/images/men/7.jpg",
@@ -48,6 +59,7 @@ interface menCard {
       title: "Slim Lyocell Trousers",
       description: "Men's Trousers",
       price: "$50",
+      mainPrice: "$200"
     },
     {
       imageSrc: "/images/men/10.jpg",
@@ -55,6 +67,7 @@ interface menCard {
       title: "Classic Denim Jacket",
       description: "Men's Outerwear",
       price: "$80",
+      mainPrice: "$150"
     },
     {
       imageSrc: "/images/men/8.jpg",
@@ -62,6 +75,7 @@ interface menCard {
       title: "Cotton Crew Neck Tee",
       description: "Men's T-Shirt",
       price: "$25",
+      mainPrice: "$50",
       isTrending: true,
     },
     {
@@ -70,6 +84,7 @@ interface menCard {
       title: "Casual Leather Shoes",
       description: "Men's Footwear",
       price: "$120",
+      mainPrice: "$220"
     },
     {
       imageSrc: "/images/men/5.jpg",
@@ -77,13 +92,15 @@ interface menCard {
       title: "Casual Leather Shoes",
       description: "Men's Footwear",
       price: "$120",
+      mainPrice: "$200"
     },
     {
       imageSrc: "/images/men/13.jpg",
       altText: "Clothing Item",
       title: "Casual Leather Shoes",
       description: "Men's Footwear",
-      price: "$120",
+      price: "$140",
+      mainPrice: "$160"
     },
     ];
   

@@ -40,8 +40,6 @@ const popoverData = [
   { label: "Sales", content: <Sales /> },
 ];
 
-
-
 const HeaderUsage = (props: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -73,16 +71,20 @@ const HeaderUsage = (props: HeaderProps) => {
                     variant="text"
                     disableRipple
                     disableAnimation
-                    className={` ui-hover:text-neutral-500 underline-offset-8  text-md ${isOpen === index ? "text-neutral-500" : ""}`}
+                    className={` ui-hover:text-neutral-500   text-md ${
+                      isOpen === index ? "text-neutral-500" : ""
+                    }`}
                   >
                     {label}
                   </Button>
                 }
-                className="p-0 mt-2 bg-transparent shadow-none"
+                className="w-screen left-0 right-0 mx-auto p-0 shadow-none  bg-transparent backdrop-blur-none"
                 triggerOn="hover"
                 onOpenChange={(open) => setIsOpen(open ? index : null)}
               >
-                <div className="">{content}</div>
+                <div className="flex justify-center me-2">
+                  <div className="max-w-[1280px] w-full mx-auto">{content}</div>
+                </div>
               </Popover>
             ))}
           </div>
@@ -111,50 +113,44 @@ const HeaderUsage = (props: HeaderProps) => {
                 content: "  border-none p-0 ",
               }}
               trigger={
-                <IconButton label="trigger" radius="full"  className="py-0" >
+                <IconButton label="trigger" radius="full" className="py-0">
                   <Avatar
                     alt="image"
                     className="flex"
                     src="https://i.pravatar.cc/300?u=20"
                     width={100}
                     height={100}
-                   
-                    
                   />
                 </IconButton>
               }
               lockScroll={false}
             >
               <div className="p-2">
-
-              
-              <MenuItem>
-                <Link href="/account">
-                  <Card className=" p-1 border-none  bg-transparent">
-                    <CardHeader
-                      heading="James Collins"
-                      startContent={<Avatar
-                        alt="image"
-                        className="flex "
-                        src="https://i.pravatar.cc/300?u=20"
-                        width={100}
-                        height={100}
-                        
-                        
-                      />}
-                      subHeading="jamescollins@site.so"
-                      className="p-0"
-                    />
-                  </Card>
-                </Link>
-              </MenuItem>
+                <MenuItem>
+                  <Link href="/account">
+                    <Card className=" p-1 border-none  bg-transparent">
+                      <CardHeader
+                        heading="James Collins"
+                        startContent={
+                          <Avatar
+                            alt="image"
+                            className="flex "
+                            src="https://i.pravatar.cc/300?u=20"
+                            width={100}
+                            height={100}
+                          />
+                        }
+                        subHeading="jamescollins@site.so"
+                        className="p-0"
+                      />
+                    </Card>
+                  </Link>
+                </MenuItem>
               </div>
-              <Divider/>
+              <Divider />
               <div className="p-2">
-              <Menu1 />
+                <Menu1 />
               </div>
-              
-              
             </Menu>
             <IconButton label="" className="md:hidden" onClick={openMenu}>
               <CiMenuKebab />

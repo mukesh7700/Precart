@@ -36,6 +36,7 @@ export {default as Return1} from './Return1.svg'
 export {default as Moon} from './Moon.svg'
 export {default as Sun} from './Sun.svg'
 export {default as Heart} from './Heart.svg'
+export {default as Clock} from './Clock.svg'
 
 
 
