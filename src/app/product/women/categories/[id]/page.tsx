@@ -1,9 +1,13 @@
 import Carousel2 from "@/components/Carousel2";
 import womencardData from "@/data/WomenCloths";
 
-const Page = async ({ params }: { params: { id: string } }) => {
-  const index = parseInt(params.id); // Convert the id to a number
-  const card = womencardData[index]; // Get the product by index
+interface Props {
+  params: { id: string };
+}
+
+const Page = ({ params }: Props) => {
+  const title = decodeURIComponent(params.id); // Get title from URL
+  const card = womencardData.find((item) => item.title === title); // Find product by title
 
   if (!card) {
     return <div className="text-red-500 text-xl">Product not found 😞</div>;
