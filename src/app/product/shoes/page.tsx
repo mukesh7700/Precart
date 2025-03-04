@@ -1,9 +1,10 @@
+import Carousel2 from '@/components/Carousel2'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      ram
+    <div className='p-5'>
+      <Carousel2/>
     </div>
   )
 }

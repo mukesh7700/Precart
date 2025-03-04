@@ -5,6 +5,7 @@ interface WomenCard {
   description: string;
   price: string;
   isTrending?: boolean;
+  productImages?: string[]
 }
 const womencardData: WomenCard[] = [
     {
@@ -14,6 +15,12 @@ const womencardData: WomenCard[] = [
       description: "Men's Trousers",
       price: "$50",
       isTrending: true,
+      productImages:[
+        '/images/others/shoes/1.webp',
+        '/images/others/shoes/2.webp',
+        '/images/others/shoes/3.webp',
+        '/images/others/shoes/4.webp',
+      ]
     },
     {
       imageSrc: "/images/women/2.jpg",

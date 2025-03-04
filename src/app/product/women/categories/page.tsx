@@ -127,7 +127,7 @@ const page = () => {
         />
         {womencardData.map((card, index) => (
           <ShopingCard
-            href={`/product/women/categories/${card.title}`} 
+            href={`/product/women/categories/${index}`} 
             key={index}
             imageSrc={card.imageSrc}
             altText={card.altText}
