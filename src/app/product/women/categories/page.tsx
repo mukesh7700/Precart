@@ -127,7 +127,7 @@ const page = () => {
         />
         {womencardData.map((card, index) => (
           <ShopingCard
-            href={`/product/women/categories/${index}`} 
+            href={`/product/women/categories/${card.title.replace(/\s+/g, "-").toLowerCase()}`} 
             key={index}
             imageSrc={card.imageSrc}
             altText={card.altText}

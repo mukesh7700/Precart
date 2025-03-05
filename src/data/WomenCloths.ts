@@ -6,6 +6,8 @@ interface WomenCard {
   price: string;
   isTrending?: boolean;
   productImages?: string[]
+  colors?: { colorImage: string; colorName: string }[]
+  rating?: number
 }
 const womencardData: WomenCard[] = [
     {
@@ -15,7 +17,12 @@ const womencardData: WomenCard[] = [
       description: "Men's Trousers",
       price: "$50",
       isTrending: true,
+      colors: [
+        { colorImage: "/images/others/shoes/1.webp", colorName: "Black" },
+        { colorImage: "/images/others/shoes/2.webp", colorName: "Blue" }
+      ],
       productImages:[
+        "/images/women/1.jpg",
         '/images/others/shoes/1.webp',
         '/images/others/shoes/2.webp',
         '/images/others/shoes/3.webp',

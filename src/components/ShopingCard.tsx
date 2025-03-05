@@ -17,6 +17,7 @@ interface CardComponentProps {
   showInfoText?: string;
   className?: string;
   isTrending?: boolean;
+  
 }
 
 export default function ShopingCard({
@@ -30,6 +31,7 @@ export default function ShopingCard({
 
   className = "",
   isTrending = false,
+  
 }: CardComponentProps) {
   return (
     <Link href={href} className={`text-start cursor-pointer ${className}`}>
