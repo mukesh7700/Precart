@@ -72,7 +72,7 @@ export default function CardComponent({
       <Link href={href} className={`text-start cursor-pointer ${className}`}>
         <div className="relative h-[300px] md:h-[400px] rounded-lg group transition-transform duration-300 overflow-hidden">
           {isTrending && (
-            <Chip className="absolute top-3 left-3 bg-black pe-3 font-bold">
+            <Chip className="absolute top-3 left-3 bg-black text-white pe-3 font-bold">
               <Fire className="h-5 w-5" /> Trending
             </Chip>
           )}
@@ -93,9 +93,10 @@ export default function CardComponent({
           </div>
 
           <Button
-            className="text-md font-semibold hover:text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-zinc-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            className="text-md ui-hover:none  font-semibold hover:text-current absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-neutral-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             size="sm"
             disableAnimation
+            disableRipple
             startContent={<MdOutlineRemoveRedEye />}
             onClick={handleInfo}
           >
@@ -104,8 +105,8 @@ export default function CardComponent({
         </div>
         <div className="px-1">
           <h1 className="text-md font-semibold mt-2">{title}</h1>
-          <p className="text-sm font-semibold text-zinc-500">{description}</p>
-          <p className="text-sm font-semibold text-zinc-300">{price}</p>
+          <p className="text-sm font-semibold text-neutral-500">{description}</p>
+          <p className="text-sm font-semibold text-neutral-500">{price}</p>
         </div>
       </Link>
 
@@ -139,7 +140,7 @@ export default function CardComponent({
               <div className="py-5 px-4 ">
                 <div className="flex justify-between">
                   <div>
-                    <p className="text-md text-zinc-500">{description}</p>
+                    <p className="text-md text-neutral-500">{description}</p>
                     <h1 className="text-xl font-semibold">{title}</h1>
                   </div>
                   <div>
@@ -215,7 +216,7 @@ export default function CardComponent({
                 </Select>
                 <Button
                   size="lg"
-                  className="flex-grow bg-white text-black ui-hover:bg-neutral-200"
+                  className="flex-grow bg-neutral-300 text-black ui-hover:bg-neutral-200"
                   onClick={handleAddToCart}
                 >
                   Add to cart

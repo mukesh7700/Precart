@@ -160,9 +160,10 @@ const Page = () => {
               <div className="py-4 flex justify-center">
                 <Link
                   href="/men"
-                  className="hover:text-purple-600 hover:underline underline-offset-4 flex items-end text-lg "
+                  className="hover:text-purple-600 hover:underline underline-offset-4 flex items-center text-lg "
                 >
-                  Show all men <NextArrow className="h-6" />
+                 <p>Show all men</p>
+                 <NextArrow className="h-3" />
                 </Link>
               </div>
             </Tab>
@@ -191,9 +192,10 @@ const Page = () => {
                 <div className="py-5 flex justify-center">
                   <Link
                     href="/product/women/categories"
-                    className="  hover:text-purple-600 hover:underline underline-offset-4 flex items-end text-lg "
+                    className="  hover:text-purple-600 hover:underline underline-offset-4 flex items-center text-lg "
                   >
-                    <p>Show all women</p> <NextArrow className="h-6" />
+                    <p>Show all women</p>
+                    <NextArrow className="h-3" />
                   </Link>
                 </div>
               </div>

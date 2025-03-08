@@ -38,7 +38,7 @@ export default function ShopingCard({
       <div className="relative h-[300px] md:h-[400px] rounded-lg group transition-transform duration-300 overflow-hidden">
         {/* Trending Chip */}
         {isTrending && (
-          <Chip className="absolute top-3 left-3 bg-black pe-3 font-bold  ">
+          <Chip className="absolute top-3 left-3 bg-black text-white pe-3 font-bold  ">
             <Fire className="h-5 w-5" />
             Trending
           </Chip>
@@ -65,8 +65,8 @@ export default function ShopingCard({
       </div>
       <div className="px-1">
         <h1 className="text-md font-semibold mt-2">{title}</h1>
-        <p className="text-sm font-semibold text-zinc-500">{description}</p>
-        <p className="text-sm font-semibold text-zinc-300">{price}</p>
+        <p className="text-sm font-semibold text-neutral-500">{description}</p>
+        <p className="text-sm font-semibold text-neutral-500">{price}</p>
       </div>
     </Link>
   );

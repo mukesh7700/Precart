@@ -7,10 +7,11 @@ import { usePathname } from "next/navigation"; // Import useRouter
 import data from "@/data/Menu";
 import React from "react";
 import {Logout } from "./svgs";
+import { useTheme } from "@/context/ThemeContext";
 
 export const SidebarUsage = () => {
   const pathname = usePathname(); // Get the current path
-
+  const { theme} = useTheme();
   return (
     <Sidebar className="w-[300px] h-auto bg-transparent ">
       <>
@@ -23,7 +24,7 @@ export const SidebarUsage = () => {
                   <Link href={subItem.url} key={subIndex}>
                     <SidebarMenuItemButton
                       className={`mt-3 flex gap-3 text-lg ${
-                        isActive ? "bg-zinc-800 " : ""
+                        isActive ? theme === "light" ? "bg-neutral-100" : "bg-zinc-800" : ""
                       }`}
                     >
                       <span className="w-6 h-6">{subItem.icon}</span>
@@ -33,7 +34,7 @@ export const SidebarUsage = () => {
                   </Link>
                 );
               })}
-              <SidebarMenuItemButton  className="mt-3 flex gap-3 text-lg">
+              <SidebarMenuItemButton  className="mt-3 flex gap-3 text-lg ui-hover:bg-danger">
                 <span className="w-6 h-6">
                   <Logout />
                 </span>

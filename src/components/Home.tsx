@@ -12,7 +12,7 @@ const Home = () => {
     
     <div className="">
       <Card className={ `w-fit mx-auto bg-[#181818]   p-2 px-8  ${
-        theme === "light" ? "bg-white text-black" : "bg-[#181818] text-white"
+        theme === "light" ? "bg-white text-black border-none shadow" : "bg-[#181818] text-white"
       }`} 
       >
         <div className="md:p-10 md:max-w-xl text-center mx-auto ">

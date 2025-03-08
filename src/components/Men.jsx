@@ -10,7 +10,7 @@ const Men = () => {
   return (
     <Card
       className={`px-8  ${
-        theme === "light" ? "bg-white text-black" : "bg-[#181818] text-white"
+        theme === "light" ? "bg-white text-black border-none shadow" : "bg-[#181818] text-white"
       }`}
     >
       <div className=" grid md:grid-flow-col-dense md:my-2  ">
@@ -20,7 +20,7 @@ const Men = () => {
             {item.items.map((item, index) => (
               <Link
                 href="#"
-                className="text-sm text-neutral-400 underline-offset-4 hover:underline hover:text-white mb-3 block"
+                className="text-sm text-neutral-400 underline-offset-4 hover:underline hover:text-current mb-3 block"
                 key={index}
               >
                 {item.title}

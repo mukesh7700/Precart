@@ -27,7 +27,8 @@ interface menCard {
       title: "Casual Leather Shoes",
       description: "Men's Footwear",
       price: "$120",
-      mainPrice: "$100"
+      mainPrice: "$100",
+      isTrending: true
     },
     {
       imageSrc: "/images/men/2.jpg",

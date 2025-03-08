@@ -16,8 +16,8 @@ const Menu1 = () => {
             {item.items.map((subItem, subIndex) => (
               <Link href={subItem.url} key={subIndex}>
                 <MenuItem
-                  className="py-3 text-md  text-neutral-300 "
-                  startContent={<div className="h-5 w-5 text-neutral-300">{subItem.icon}</div>}
+                  className={`py-3 text-md   ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`}
+                  startContent={<div className={`h-5 w-5 ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`}>{subItem.icon}</div>}
                 >
                   <span>{subItem.title}</span>
                 </MenuItem>
@@ -30,13 +30,13 @@ const Menu1 = () => {
         </React.Fragment>
       ))}
 
-      <MenuItem  onClick={toggleTheme} className="py-3 text-md text-neutral-300 " startContent={<div className="h-5 w-5  text-neutral-300">{theme === 'light' ?  <Moon />:<Sun/> } </div>}>
+      <MenuItem  onClick={toggleTheme} className={`py-3 text-md   ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`} startContent={<div className={`h-5 w-5 ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`}>{theme === 'light' ?  <Moon />:<Sun/> } </div>}>
          
         <span>
           Change Appearance
         </span>
           </MenuItem>
-          <MenuItem color="danger" onClick={toggleTheme} className="py-3 text-md text-neutral-300 " startContent={<div className="h-5 w-5 text-neutral-300"><Logout/> </div>}>
+          <MenuItem color="danger" onClick={toggleTheme} className={`py-3 text-md   ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`} startContent={<div className={`h-5 w-5 ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`}><Logout/> </div>}>
          
         <span>
           Logout

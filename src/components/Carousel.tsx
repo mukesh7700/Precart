@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { m } from "framer-motion";
-import { BackArrow, NextArrow } from "@/components/svgs";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { IconButton } from "@jamsr-ui/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -114,19 +114,23 @@ const Carousel = () => {
 
       {/* Navigation Buttons */}
       <IconButton
+      
+      disableRipple
         label="back"
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white z-20"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 ui-hover:bg-white  bg-white text-black p-2 rounded-full  z-20"
       >
-        <BackArrow />
+        <IoIosArrowBack size={24} />
       </IconButton>
 
       <IconButton
+      
+      disableRipple
         label="next"
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white z-20"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 ui-hover:bg-white bg-white p-2 rounded-full text-black z-20"
       >
-        <NextArrow />
+        <IoIosArrowForward size={24} />
       </IconButton>
     </div>
   );

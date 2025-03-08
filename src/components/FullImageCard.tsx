@@ -10,7 +10,7 @@ type FullImageCardProps = {
   };
 const FullImageCard: React.FC<FullImageCardProps> = ({href, src, title, subtitle}) => {
   return (
-    <Link href={href} className='relative'>
+    <Link href={href} className='relative text-white'>
         <Image width={400} height={400} src={src} alt="women" className='rounded-lg   w-full h-full ' />
         <div className='text-center absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
         <h1 className='text-xl font-bold'>{title}</h1>

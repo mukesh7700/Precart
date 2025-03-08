@@ -10,7 +10,7 @@ const Women = () => {
     
       <Card
         className={` px-8  ${
-          theme === "light" ? "bg-white text-black" : "bg-[#181818] text-white"
+          theme === "light" ? "bg-white text-black border-none shadow" : "bg-[#181818] text-white"
         }`}
       >
         
@@ -25,7 +25,7 @@ const Women = () => {
                     {product.items.map((item) => (
                       <Link
                         href="#"
-                        className="text-sm text-neutral-400 underline-offset-4 hover:underline hover:text-white mb-3 block"
+                        className="text-sm text-neutral-400 underline-offset-4 hover:underline hover:text-current mb-3 block"
                         key={item.title}
                       >
                         {item.title}
