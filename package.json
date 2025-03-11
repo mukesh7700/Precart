@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@jamsr-ui/react": "0.1.4",
+    "@jamsr-ui/react": "0.1.7",
     "@svgr/webpack": "^8.1.0",
     "framer-motion": "12.4.7",
     "next": "15.1.4",

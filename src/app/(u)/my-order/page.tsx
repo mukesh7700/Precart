@@ -1,7 +1,7 @@
 "use client"
 
 
-import { Card, CardContent, Tab, Tabs } from "@jamsr-ui/react";
+import { Card, CardContent, Select, SelectItem, Tab, Tabs } from "@jamsr-ui/react";
 const TabContent = () => (
   <Card>
     <CardContent>
@@ -12,7 +12,13 @@ const TabContent = () => (
     </CardContent>
   </Card>
 );
-
+ 
+const tab =[
+  {heading:"Order", value:"order", content:<TabContent/>},
+  {heading:"Payment", value:"payment", content:<TabContent/>},
+  {heading:"Shipping", value:"shipping", content:<TabContent/>},
+  
+]
 
 const page = () => {
   
@@ -23,24 +29,32 @@ const page = () => {
         </div>
         <div className='flex items-center gap-2 w-1/2 justify-end  '>
 
-        2 orders <span className='text-neutral-500'> placed in:</span> 
+        2 orders <span className='text-neutral-500'> placed in:</span>
+        <Select
+        className="max-w-fit "
+        defaultValue={["2025"]}
+      >
+        <SelectItem value="2023">2023</SelectItem>
+        <SelectItem value="2024">2024</SelectItem>
+        <SelectItem value="2025">2025</SelectItem>
+        
+      </Select> 
         
         </div>
       </div>
-      <div>
-      <Tabs defaultValue="photos" variant='underlined' className='border-b border-neutral-500 pb-0 mb-0'>
-      <Tab value="photos" heading="Photos" className='pb-0'>
-      </Tab>
-      <Tab value="music" heading="Music">
-       
-      </Tab>
-      <Tab value="videos" heading="Videos">
-        
-      </Tab>
-    </Tabs>
-    
+      <div  className="border border-neutral-500">
+      <Tabs variant="underlined" color="" classNames={{base: "p-0 ",}}  aria-label="Tabs variants">
+          {tab.map((item, index) => (
+            <Tab key={index} value={item.value} heading={item.heading} className=" text-md font-semibold hover:bg-default">
+              <div className="border-t border-neutral-500 -mt-2">
+              {item.content}
+              </div>
+              
+            </Tab>
+          ))}
+        </Tabs>
       </div>
-      <TabContent/>
+      
     </div>
   )
 }
