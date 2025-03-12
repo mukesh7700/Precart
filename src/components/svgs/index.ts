@@ -40,6 +40,9 @@ export {default as Clock} from './Clock.svg'
 export {default as Info} from './Info.svg'
 export {default as Eye} from './Eye.svg'
 export {default as Trending} from './Trending.svg'
+export {default as Cardimg} from './Cardimg.svg'
+export {default as Pen} from './Pen.svg'
+export {default as Print} from './Print.svg'
 
 
 

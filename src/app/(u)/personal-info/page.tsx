@@ -12,7 +12,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTrigger,
-  IconButton,
   Input,
   Text,
 } from "@jamsr-ui/react";
