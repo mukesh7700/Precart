@@ -10,11 +10,11 @@ export default function BlogLayout({
       className="flex gap-5  container  max-w-[1280px]  mx-auto
 "
     >
-      <div className="hidden lg:block min-h-full    border-r border-zinc-600 sticky top-[72px]   ">
+      <div className="hidden lg:block h-fit  sticky top-[50px]   ">
         <h1 className="text-lg font-semibold pt-4 ps-4">Account</h1>
         <SidebarUsage />
       </div>
-      <div className="w-full">{children}</div>
+      <div className="w-full border-l border-zinc-600">{children}</div>
     </section>
   );
 }

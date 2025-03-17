@@ -10,7 +10,7 @@ interface ProductItemCardProps {
   color: string;
   size: string;
   quantity: number;
-  showDivider?: boolean;
+  
   
 }
 
@@ -22,7 +22,7 @@ const OrderItemCard: React.FC<ProductItemCardProps> = ({
   color,
   size,
   quantity,
-  showDivider = true,
+  
 }) => {
   return (
     <div className="w-full">
@@ -69,7 +69,7 @@ const OrderItemCard: React.FC<ProductItemCardProps> = ({
         </div>
       </div>
 
-      {showDivider && <Divider className="mt-4" />}
+       <Divider className="mt-4" />
     </div>
   );
 };

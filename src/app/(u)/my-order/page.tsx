@@ -1,66 +1,21 @@
-"use client"
+"use client";
 
-import OrderCard from "@/components/OrderCard";
-import OrderItemCard from "@/components/OrderItemCard";
-import TabContent from "@/components/TabContent";
-
-import {Select, SelectItem, Tab, Tabs } from "@jamsr-ui/react";
-
-const orderInfo = [
-  { heading: "Status", value: "Order in progress" },
-  { heading: "Order ID", value: "72813820" },
-  { heading: "Order date", value: "04/08/2024" },
-  { heading: "Total", value: "$229" },
-];
-
-const order = {
-  orderId: '12345',
-  estimatedDelivery: 'Wednesday, Aug 7 2024',
-  shippingAddress: '280 Suzanne Throughway, New York, Breannabury, OR 45801, US',
-  products: [
-    {
-      id: 1,
-      name: 'Embroidered Hoodie',
-      price: 69,
-      image: '/images/men/1.jpg',
-      color: 'Brown/Red',
-      size: 'US7',
-      quantity: 1,
-    },
-    {
-      id: 2,
-      name: 'Another Hoodie',
-      price: 79,
-      image: '/images/men/2.jpg',
-      color: 'Blue/White',
-      size: 'US8',
-      quantity: 2,
-    },
-  ],
-};
-
+import Order from "@/components/Order";
+import { Select, SelectItem, Tab, Tabs } from "@jamsr-ui/react";
 
 const tabs = [
-  { heading: "Orders", value: "orders", content: <TabContent orderData={orderInfo}>
-    <OrderCard
-      orderId={order.orderId}
-      estimatedDelivery={order.estimatedDelivery}
-      shippingAddress={order.shippingAddress}
-    >
-      {order.products.map((product, index) => (
-        <OrderItemCard key={product.id} {...product}
-        showDivider={index !== order.products.length - 1}
-        />
-      ))}
-    </OrderCard>
-    
-    </TabContent> },
-  { heading: "Open orders", value: "open-orders", content: "Looking for an order? You don't have an open order. " },
-  { heading: "Cancelled orders", value: "cancelled-orders", content:"Looking for an order? You don't have a cancelled order. " },
+  { heading: "Orders", value: "orders", content: <Order /> },
+  {
+    heading: "Open orders",
+    value: "open-orders",
+    content: "Looking for an order? You don't have an open order. ",
+  },
+  {
+    heading: "Cancelled orders",
+    value: "cancelled-orders",
+    content: "Looking for an order? You don't have a cancelled order. ",
+  },
 ];
-
-
-
 
 const Page = () => {
   return (
@@ -79,18 +34,17 @@ const Page = () => {
       </div>
 
       {/* Tabs */}
-      <div >
+      <div>
         <Tabs
           variant="underlined"
-          
           classNames={{
-            panel:" py-2 px-0 border-t border-neutral-800 text-md tracking-wide ",
-            cursor:"w-full  ",
-            base:" bg-transparent border-none shadow-none",
-            tab:"p-2  text-md  hover: ",
-            tabList:" p-0 rounded-none",
+            panel:
+              " py-2 px-0 border-t border-neutral-800 text-md tracking-wide ",
+            cursor: "w-full  ",
+            base: " bg-transparent border-none shadow-none",
+            tab: "p-2  text-md  hover: ",
+            tabList: " p-0 rounded-none",
           }}
-          
           aria-label="Order Tabs"
         >
           {tabs.map((item, index) => (
@@ -100,7 +54,7 @@ const Page = () => {
               heading={item.heading}
               className=""
             >
-              <div >{item.content}</div>
+              <div>{item.content}</div>
             </Tab>
           ))}
         </Tabs>

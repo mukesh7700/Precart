@@ -5,14 +5,14 @@ import React from 'react';
 import { Location, Van } from './svgs';
 
 interface OrderCardProps {
-  orderId: string | number;
+  
   estimatedDelivery: string;
   shippingAddress: string;
   children?: React.ReactNode; // To pass product cards as children
 }
 
 const OrderCard: React.FC<OrderCardProps> = ({
-  orderId,
+  
   estimatedDelivery,
   shippingAddress,
   children,
@@ -42,7 +42,7 @@ const OrderCard: React.FC<OrderCardProps> = ({
           </div>
           <div>
             <Link
-              href={`/order-details/${orderId}`}
+              href={`/order-details`}
               className={`p-2 text-sm rounded-md ${
                 isLightTheme
                   ? 'bg-black text-white'

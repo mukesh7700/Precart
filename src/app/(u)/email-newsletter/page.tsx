@@ -1,8 +1,11 @@
+import AdderssCard from '@/components/AddressCard'
 import React from 'react'
 
 const Email = () => {
   return (
-    <div>Email</div>
+    <div>
+      
+    </div>
   )
 }
 

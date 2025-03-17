@@ -4,15 +4,15 @@ import React, { ReactNode } from "react";
 
 
 type OrderItem = {
-    heading: string;
-    value: string;
+    status: string;
+    orderId: string;
+    orderDate: string;
+    total: string;
+    children?: ReactNode;
   };
 
-  type TabContentProps = {
-    orderData: OrderItem[];
-    children?: ReactNode; // Optional slot for any content
-  };
-const TabContent: React.FC<TabContentProps> = ({ orderData, children }) => {
+  
+const TabContent: React.FC<OrderItem> = ({ orderDate, orderId, status, total, children }) => {
   const { theme } = useTheme();
   return (
     <div>
@@ -23,14 +23,32 @@ const TabContent: React.FC<TabContentProps> = ({ orderData, children }) => {
       >
         <CardContent>
           <div className="grid grid-cols-2 md:grid-cols-4 py-2 gap-2">
-            {orderData.map((item, index) => (
-              <div key={index}>
-                <p className="text-sm ">{item.heading}</p>
+            
+              <div >
+                <p className="text-sm ">Status</p>
                 <p className="text-sm text-neutral-500 font-semibold">
-                  {item.value}
+                  {status}
                 </p>
               </div>
-            ))}
+              <div >
+                <p className="text-sm ">OrderId</p>
+                <p className="text-sm text-neutral-500 font-semibold">
+                  {orderId}
+                </p>
+              </div>
+              <div >
+                <p className="text-sm ">Order date</p>
+                <p className="text-sm text-neutral-500 font-semibold">
+                  {orderDate}
+                </p>
+              </div>
+              <div >
+                <p className="text-sm ">Total</p>
+                <p className="text-sm text-neutral-500 font-semibold">
+                  {total}
+                </p>
+              </div>
+            
           </div>
           <div>
           {children && <div className="mt-4">{children}</div>}
