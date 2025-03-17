@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <ThemeProvider>
         <UIProvider>
@@ -46,7 +46,7 @@ export default function RootLayout({
           >
             <HeaderUsage isBordered />
 
-            {children}
+            <main className="flex-grow h-full">{children}</main>
 
             <Footer />
           </UIConfigProvider>

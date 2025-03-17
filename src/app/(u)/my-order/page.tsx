@@ -1,6 +1,7 @@
 "use client"
 
 import OrderCard from "@/components/OrderCard";
+import OrderItemCard from "@/components/OrderItemCard";
 import TabContent from "@/components/TabContent";
 
 import {Select, SelectItem, Tab, Tabs } from "@jamsr-ui/react";
@@ -12,10 +13,47 @@ const orderInfo = [
   { heading: "Total", value: "$229" },
 ];
 
+const order = {
+  orderId: '12345',
+  estimatedDelivery: 'Wednesday, Aug 7 2024',
+  shippingAddress: '280 Suzanne Throughway, New York, Breannabury, OR 45801, US',
+  products: [
+    {
+      id: 1,
+      name: 'Embroidered Hoodie',
+      price: 69,
+      image: '/images/men/1.jpg',
+      color: 'Brown/Red',
+      size: 'US7',
+      quantity: 1,
+    },
+    {
+      id: 2,
+      name: 'Another Hoodie',
+      price: 79,
+      image: '/images/men/2.jpg',
+      color: 'Blue/White',
+      size: 'US8',
+      quantity: 2,
+    },
+  ],
+};
+
 
 const tabs = [
   { heading: "Orders", value: "orders", content: <TabContent orderData={orderInfo}>
-    <OrderCard/>
+    <OrderCard
+      orderId={order.orderId}
+      estimatedDelivery={order.estimatedDelivery}
+      shippingAddress={order.shippingAddress}
+    >
+      {order.products.map((product, index) => (
+        <OrderItemCard key={product.id} {...product}
+        showDivider={index !== order.products.length - 1}
+        />
+      ))}
+    </OrderCard>
+    
     </TabContent> },
   { heading: "Open orders", value: "open-orders", content: "Looking for an order? You don't have an open order. " },
   { heading: "Cancelled orders", value: "cancelled-orders", content:"Looking for an order? You don't have a cancelled order. " },

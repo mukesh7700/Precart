@@ -1,19 +1,20 @@
-import { SidebarUsage } from "@/components/SideBar"
-
+import { SidebarUsage } from "@/components/SideBar";
 
 export default function BlogLayout({
-    children,
-  }: {
-    children: React.ReactNode
-  }) {
-    return <section className="flex gap-5  container max-w-[1280px] mx-auto">
-      <div className="hidden lg:block   h-[600px]  sticky top-[50px]">
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <section
+      className="flex gap-5  container  max-w-[1280px]  mx-auto
+"
+    >
+      <div className="hidden lg:block min-h-full    border-r border-zinc-600 sticky top-[72px]   ">
         <h1 className="text-lg font-semibold pt-4 ps-4">Account</h1>
-      <SidebarUsage/>
+        <SidebarUsage />
       </div>
-      <div className="border-l border-zinc-600 w-full">
-      {children}
-      </div>
-        
-        </section>
-  }
+      <div className="w-full">{children}</div>
+    </section>
+  );
+}
