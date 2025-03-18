@@ -43,6 +43,7 @@ export {default as Trending} from './Trending.svg'
 export {default as Cardimg} from './Cardimg.svg'
 export {default as Pen} from './Pen.svg'
 export {default as Print} from './Print.svg'
+export {default as Add} from './Add.svg'
 
 
 
