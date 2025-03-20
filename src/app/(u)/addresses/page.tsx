@@ -1,9 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import AddressCard, { AddressData } from "@/components/AddressCard";
-import { div } from "framer-motion/client";
 import { Add } from "@/components/svgs";
-import { Input } from "@jamsr-ui/react";
 import AddressUpdate from "@/components/AddressUpdate";
 
 const initialAddresses: AddressData[] = [

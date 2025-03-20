@@ -21,7 +21,7 @@ export const CountrySelect = () => {
     { label: "Brazil", value: "BR", flag: "🇧🇷" },
   ];
 
-  const [selected, setSelected] = useState<string | undefined>("");
+  const [selected] = useState<string | undefined>("");
 
   // Find the selected country object based on selected value
   const selectedCountry = countries.find(

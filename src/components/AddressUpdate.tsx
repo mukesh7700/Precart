@@ -7,12 +7,9 @@ import {
   Dialog,
   DialogBody,
   DialogContent,
-  DialogFooter,
   DialogHeader,
   type DialogProps,
   Input,
-  Repeater,
-  Text,
 } from "@jamsr-ui/react";
 import { CountrySelect } from "./CountrySelectWithFlags";
 

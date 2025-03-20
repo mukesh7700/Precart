@@ -1,9 +1,8 @@
 "use client";
 
 import { useTheme } from "@/context/ThemeContext";
-import { Chip, Divider, IconButton } from "@jamsr-ui/react";
+import { Chip,} from "@jamsr-ui/react";
 import React from "react";
-import { Email } from "./svgs";
 
 export type AddressData = {
   id: string; // useful for identifying in callbacks

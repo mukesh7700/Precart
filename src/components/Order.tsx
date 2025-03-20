@@ -3,12 +3,7 @@ import TabContent from "./TabContent";
 import OrderCard from "./OrderCard";
 import OrderItemCard from "./OrderItemCard";
 
-const orderInfo = [
-  { heading: "Status", value: "Order in progress" },
-  { heading: "Order ID", value: "72813820" },
-  { heading: "Order date", value: "04/08/2024" },
-  { heading: "Total", value: "$229" },
-];
+
 
 const orders = [
   {

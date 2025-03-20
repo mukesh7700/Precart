@@ -15,7 +15,7 @@ interface ProductItemCardProps {
 }
 
 const OrderItemCard: React.FC<ProductItemCardProps> = ({
-  id,
+  
   name,
   price,
   image,
