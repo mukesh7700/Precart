@@ -10,15 +10,15 @@ type CountryOption = {
 export const CountrySelect = () => {
   const countries: CountryOption[] = [
     { label: "United States", value: "US", flag: "🇺🇸" },
-    { label: "Canada", value: "CA", flag: "🇨🇦" },
+    { label: "Canada", value: "Canada", flag: "🇨🇦" },
     { label: "United Kingdom", value: "UK", flag: "🇬🇧" },
-    { label: "Australia", value: "AU", flag: "🇦🇺" },
-    { label: "Germany", value: "DE", flag: "🇩🇪" },
-    { label: "France", value: "FR", flag: "🇫🇷" },
-    { label: "India", value: "IN", flag: "🇮🇳" },
-    { label: "Japan", value: "JP", flag: "🇯🇵" },
-    { label: "China", value: "CN", flag: "🇨🇳" },
-    { label: "Brazil", value: "BR", flag: "🇧🇷" },
+    { label: "Australia", value: "Australia", flag: "🇦🇺" },
+    { label: "Germany", value: "Germany", flag: "🇩🇪" },
+    { label: "France", value: "France", flag: "🇫🇷" },
+    { label: "India", value: "India", flag: "🇮🇳" },
+    { label: "Japan", value: "Japan", flag: "🇯🇵" },
+    { label: "China", value: "China", flag: "🇨🇳" },
+    { label: "Brazil", value: "Brazil", flag: "🇧🇷" },
   ];
 
   const [selected] = useState<string | undefined>("");
@@ -29,12 +29,12 @@ export const CountrySelect = () => {
   );
 
   return (
-    <div className="min-h-[80px]">
+    <div className="w-full">
       <Select
-        className="max-w-sm"
+        className=""
+        size="lg"
         label="Select Country"
         placeholder="Choose a country"
-       
         startContent={
           selectedCountry ? (
             <span className="text-xl">{selectedCountry.flag}</span>

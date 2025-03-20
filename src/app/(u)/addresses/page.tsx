@@ -32,6 +32,9 @@ const initialAddresses: AddressData[] = [
 const Page: React.FC = () => {
   const [addresses, setAddresses] = useState<AddressData[]>(initialAddresses);
   const [defaultAddressId, setDefaultAddressId] = useState("1");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => setIsOpen(true);
 
   const handleEdit = (id: string) => {
     console.log(`Edit address ${id}`);
@@ -77,7 +80,7 @@ const Page: React.FC = () => {
         <p className="text-gray-500 text-sm">No addresses found.</p>
       )}
       <div
-        
+        onClick={handleOpen}
         className="min-w-[300px] group  border rounded-2xl border-neutral-500 border-dashed p-2  h-[215px] flex items-center justify-center ">
         <div  >
         <Add className="w-10 h-10 text-neutral-500 mx-auto"/>
@@ -85,7 +88,13 @@ const Page: React.FC = () => {
         </div>
       </div>
     </div>
-    <AddressUpdate/>
+    {isOpen && (
+      <AddressUpdate
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        // Pass other props as needed
+      />
+    )}
     </div>
   );
 };
