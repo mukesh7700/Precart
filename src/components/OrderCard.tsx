@@ -3,11 +3,12 @@ import { Divider } from '@jamsr-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import { Location, Van } from './svgs';
+import {AddressData } from "./AddressCard";
 
 interface OrderCardProps {
   
   estimatedDelivery: string;
-  shippingAddress: string;
+  shippingAddress: AddressData;
   children?: React.ReactNode; // To pass product cards as children
 }
 
@@ -37,7 +38,10 @@ const OrderCard: React.FC<OrderCardProps> = ({
             </p>
             <p className="text-sm text-neutral-400 leading-6 flex items-center gap-2 mb-1">
               <Location />
-              {shippingAddress}
+              
+              {`${shippingAddress.city}, ${shippingAddress.state} ${shippingAddress.postalCode}`} 
+              {shippingAddress.country}
+              {shippingAddress.phone}
             </p>
           </div>
           <div>

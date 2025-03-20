@@ -11,7 +11,7 @@ const initialAddresses: AddressData[] = [
     recipientName: "James Collins",
     street: "280 Suzanne Throughway",
     city: "Breannabury",
-    state: "OR",
+    state: "Bihar",
     postalCode: "45801",
     country: "US",
     phone: "+44 000 000 0001",
@@ -22,7 +22,7 @@ const initialAddresses: AddressData[] = [
     recipientName: "James Collins",
     street: "123 Business St",
     city: "Portland",
-    state: "OR",
+    state: "Utter Pradesh",
     postalCode: "97035",
     country: "US",
     phone: "+44 000 000 0002",
@@ -33,11 +33,19 @@ const Page: React.FC = () => {
   const [addresses, setAddresses] = useState<AddressData[]>(initialAddresses);
   const [defaultAddressId, setDefaultAddressId] = useState("1");
   const [isOpen, setIsOpen] = useState(false);
+  const [editingAddress, setEditingAddress] = useState<AddressData | null>(null);
 
-  const handleOpen = () => setIsOpen(true);
+  const handleOpen = () => {
+    setEditingAddress(null); 
+    setIsOpen(true);
+  };
 
   const handleEdit = (id: string) => {
-    console.log(`Edit address ${id}`);
+    const address = addresses.find((addr) => addr.id === id);
+    if (address) {
+      setEditingAddress(address); // Pass the address to the modal
+      setIsOpen(true);
+    }
     // Add your edit modal logic here
   };
 
@@ -92,6 +100,7 @@ const Page: React.FC = () => {
       <AddressUpdate
         open={isOpen}
         onClose={() => setIsOpen(false)}
+        address={editingAddress}
         // Pass other props as needed
       />
     )}

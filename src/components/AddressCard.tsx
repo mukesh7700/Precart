@@ -9,6 +9,7 @@ export type AddressData = {
   label: string; // title of address (e.g., "Home", "Work", or city)
   recipientName: string;
   street: string;
+  street2?: string;
   city: string;
   state: string;
   postalCode: string;

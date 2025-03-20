@@ -1,10 +1,12 @@
 "use client";
 
+import { AddressData } from "@/components/AddressCard";
 import AddressCard from "@/components/AddressDetailsCard";
+import AddressUpdate from "@/components/AddressUpdate";
 import OrderCard from "@/components/OrderCard";
 import OrderItemCard from "@/components/OrderItemCard";
 import TabContent from "@/components/TabContent";
-import React from "react";
+import React, { useState } from "react";
 
 const orders = [
   {
@@ -13,7 +15,17 @@ const orders = [
     orderId: "98765",
     total: "$229",
     estimatedDelivery: "Monday, Aug 12 2024",
-    shippingAddress: "42 Elm Street, Springfield, IL 62704, US",
+    shippingAddress: {
+      id: "address-1", 
+      label: "Office",
+      recipientName: "James Collins",
+      street: "280 Suzanne Throughway",
+      city: "Breannabury",
+      state: "Bihar",
+      postalCode: "45801",
+      country: "US",
+      phone: "+44 000 000 0001",
+    },
     products: [
       {
         id: 101,
@@ -41,7 +53,17 @@ const orders = [
     orderId: "98765",
     total: "$99",
     estimatedDelivery: "Friday, Aug 16 2024",
-    shippingAddress: "77 Maple Avenue, Brooklyn, NY 11201, US",
+    shippingAddress: {
+      id: "address-1", 
+      label: "Office",
+      recipientName: "James Collins",
+      street: "280 Suzanne Throughway",
+      city: "Breannabury",
+      state: "Bihar",
+      postalCode: "45801",
+      country: "US",
+      phone: "+44 000 000 0001",
+    },
     products: [
       {
         id: 201,
@@ -56,7 +78,20 @@ const orders = [
   },
 ];
 
+
 const Order = () => {
+  const [addresses, setAddresses] = useState<AddressData[]>(orders[0].shippingAddress);
+  const [isOpen, setIsOpen] = useState(false);
+  const [editingAddress, setEditingAddress] = useState<AddressData | null>(null);
+
+  const handleEdit = (id: string) => {
+    const address = addresses.find((addr) => addr.id === id);
+    if (address) {
+      setEditingAddress(address); // Pass the address to the modal
+      setIsOpen(true);
+    }
+    // Add your edit modal logic here
+  };
   // Filter orders with status "Order in progress"
   const inProgressOrders = orders.filter(
     (order) => order.Status === "Order in progress"
@@ -80,7 +115,7 @@ const Order = () => {
                 status={order.Status}
                 total={order.total}
               >
-                <AddressCard />
+                <AddressCard address={order.shippingAddress} onEdit={handleEdit}/>
                 <br />
                 <OrderCard
                   estimatedDelivery={order.estimatedDelivery}
@@ -98,6 +133,14 @@ const Order = () => {
           <div>No orders in progress.</div>
         )}
       </div>
+      {isOpen && (
+      <AddressUpdate
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        address={editingAddress}
+        // Pass other props as needed
+      />
+    )}
     </div>
   );
 };
