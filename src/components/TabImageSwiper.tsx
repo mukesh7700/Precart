@@ -11,10 +11,10 @@ import { Swiper as SwiperType } from "swiper/types";
 
 interface TabImageSwiperProps {
   items: ReactNode[]; // Accepts array of React components
-  
+  ButtonClassName?: string; 
 }
 
-const TabImageSwiper: React.FC<TabImageSwiperProps> = ({ items }) => {
+const TabImageSwiper: React.FC<TabImageSwiperProps> = ({ items, ButtonClassName =" absolute -translate-y-1/2 z-10 rounded-full bg-white p-2 shadow-lg text-black" }) => {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const swiperRef = useRef<SwiperType | null>(null);
@@ -61,14 +61,14 @@ const TabImageSwiper: React.FC<TabImageSwiperProps> = ({ items }) => {
       {/* Custom Navigation Buttons */}
       <button
         ref={prevRef}
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white p-2 shadow-lg text-black"
+        className={`left-2 top-1/2 ${ButtonClassName}` }
       >
         <IoIosArrowBack size={24} />
       </button>
 
       <button
         ref={nextRef}
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white p-2 shadow-lg text-black"
+        className={`right-2 top-1/2 ${ButtonClassName}` }
       >
         <IoIosArrowForward size={24} />
       </button>

@@ -68,9 +68,7 @@ const AddressUpdate: React.FC<DrawerProps> = ({ open, onClose, address }) => {
     setFormValues((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleCountryChange = (countryCode: string) => {
-    setFormValues((prev) => ({ ...prev, country: countryCode }));
-  };
+  
 
   const handleSave = () => {
     console.log("Save address:", formValues);

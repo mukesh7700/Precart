@@ -17,6 +17,9 @@ interface CardComponentProps {
   showInfoText?: string;
   className?: string;
   isTrending?: boolean;
+  imageContainerClassName?: string; 
+  imageLikeClassName?: string; 
+  imageTrendingClassName?: string; 
   
 }
 
@@ -31,14 +34,16 @@ export default function ShopingCard({
 
   className = "",
   isTrending = false,
-  
+  imageContainerClassName = "h-[300px] md:h-[400px]",
+  imageLikeClassName="", 
+  imageTrendingClassName="",
 }: CardComponentProps) {
   return (
     <Link href={href} className={`text-start cursor-pointer ${className}`}>
-      <div className="relative h-[300px] md:h-[400px] rounded-lg group transition-transform duration-300 overflow-hidden">
+      <div className={`relative ${imageContainerClassName} rounded-lg group transition-transform duration-300 overflow-hidden`}>
         {/* Trending Chip */}
         {isTrending && (
-          <Chip className="absolute top-3 left-3 bg-black text-white pe-3 font-bold  ">
+          <Chip className= {`absolute  top-3 left-3 bg-black text-white pe-3 font-bold ${imageTrendingClassName}`}>
             <Fire className="h-5 w-5" />
             Trending
           </Chip>
@@ -55,10 +60,10 @@ export default function ShopingCard({
 
         {/* Like Button */}
         <div
-          className="absolute p-2 top-3 right-3 bg-white text-black rounded-full cursor-pointer"
+          className={`absolute p-2 top-3 right-3 bg-white text-black rounded-full cursor-pointer ${imageLikeClassName} group-hover:bg-neutral-200 transition duration-300`}
           onClick={onLike}
         >
-          <FaRegHeart />
+          <FaRegHeart  />
         </div>
 
         {/* Info Button */}

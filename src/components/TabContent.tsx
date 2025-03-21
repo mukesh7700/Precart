@@ -1,6 +1,7 @@
 import { useTheme } from "@/context/ThemeContext";
 import { Card, CardContent } from "@jamsr-ui/react";
 import React, { ReactNode } from "react";
+import { Check } from "./svgs";
 
 
 type OrderItem = {
@@ -27,7 +28,7 @@ const TabContent: React.FC<OrderItem> = ({ orderDate, orderId, status, total, ch
               <div >
                 <p className="text-sm ">Status</p>
                 <p className="text-sm text-neutral-500 font-semibold">
-                  {status}
+                  {status === 'delivered' ? <span className=" flex items-center"><Check/>{status}</span> : <span className=" flex items-center gap-1"><div className="h-2 w-2 bg-green-500 rounded-full"/>{status}</span> }
                 </p>
               </div>
               <div >
@@ -51,6 +52,7 @@ const TabContent: React.FC<OrderItem> = ({ orderDate, orderId, status, total, ch
             
           </div>
           <div>
+          
           {children && <div className="mt-4">{children}</div>}
           </div>
         </CardContent>

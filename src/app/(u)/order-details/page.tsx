@@ -48,7 +48,7 @@ const orders = [
     ],
   },
   {
-    Status: "Order delivered",
+    Status: "delivered",
     orderDate: "08/03/2025",
     orderId: "98765",
     total: "$99",
@@ -80,22 +80,21 @@ const orders = [
 
 
 const Order = () => {
-  const [addresses, setAddresses] = useState<AddressData[]>(orders[0].shippingAddress);
+  
   const [isOpen, setIsOpen] = useState(false);
+  
   const [editingAddress, setEditingAddress] = useState<AddressData | null>(null);
 
-  const handleEdit = (id: string) => {
-    const address = addresses.find((addr) => addr.id === id);
-    if (address) {
-      setEditingAddress(address); // Pass the address to the modal
-      setIsOpen(true);
-    }
-    // Add your edit modal logic here
+  const handleEdit = (address: AddressData) => {
+    setEditingAddress(address);
+    setIsOpen(true);
   };
   // Filter orders with status "Order in progress"
   const inProgressOrders = orders.filter(
     (order) => order.Status === "Order in progress"
   );
+  
+  
 
   return (
     <div className="p-5 w-full min-h-full">
@@ -115,11 +114,14 @@ const Order = () => {
                 status={order.Status}
                 total={order.total}
               >
-                <AddressCard address={order.shippingAddress} onEdit={handleEdit}/>
+                <AddressCard address={order.shippingAddress} onEdit={() => handleEdit(order.shippingAddress)}/>
                 <br />
                 <OrderCard
                   estimatedDelivery={order.estimatedDelivery}
                   shippingAddress={order.shippingAddress}
+                  orderStatus={order.Status}
+                  showOrderDetailsButton={false}
+                  showShippingAddress={false}
                 >
                   {order.products.map((product) => (
                     <OrderItemCard key={product.id} {...product} />
@@ -133,7 +135,7 @@ const Order = () => {
           <div>No orders in progress.</div>
         )}
       </div>
-      {isOpen && (
+      {isOpen && editingAddress && (
       <AddressUpdate
         open={isOpen}
         onClose={() => setIsOpen(false)}

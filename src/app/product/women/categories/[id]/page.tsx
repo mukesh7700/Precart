@@ -37,15 +37,15 @@ const ProductPage = () => {
   );
 
   return (
-    <div className="container mx-auto max-w-[1280px] py-10 ">
-      <div className="flex gap-4">
-        <div className="w-1/2 h-[500px] sticky top-[70px]">
+    <div className="container mx-auto max-w-[1280px] px-2 py-10 ">
+      <div className="md:flex gap-4">
+        <div className="md:w-1/2 h-[500px] md:sticky top-[70px]">
           <div className="mb-2  ">
             <Breadcrumb />
           </div>
           <Carousel2 images={product.productImages} />
         </div>
-        <div className="w-1/2 max-w-[500px]">
+        <div className="md:w-1/2 max-w-[500px]">
           <h1 className="text-md text-neutral-500">{product.description}</h1>
           <h1 className="text-2xl font-semibold">{product.title}</h1>
           <h1 className="text-xl font-semibold ">{product.price}</h1>
@@ -187,8 +187,8 @@ const ProductPage = () => {
                       For wider feet, we suggest going up a size
                     </li>
                     <li className="py-2">
-                      If you&apos;re usually a half size, we recommend going for the
-                      larger size.
+                      If you&apos;re usually a half size, we recommend going for
+                      the larger size.
                     </li>
                   </ul>
                 </div>
@@ -221,28 +221,45 @@ const ProductPage = () => {
           <div className="py-2">
             <h1 className="text-lg font-semibold">Goes well with...</h1>
             <TabImageSwiper
-            items={mencardData.slice(0, 6).map((card, index) => (
-              <ShopingCard
-                href="/"
-                key={index}
-                imageSrc={card.imageSrc}
-                altText={card.altText}
-                title={card.title}
-                description={card.description}
-                price={card.price}
-                
-                isTrending={card.isTrending}
-                
-                
-                showInfoText="Quick view"
-              />
-            ))}
+              items={mencardData.slice(0, 6).map((card, index) => (
+                <ShopingCard
+                  href="/"
+                  key={index}
+                  imageSrc={card.imageSrc}
+                  altText={card.altText}
+                  title={card.title}
+                  description={card.description}
+                  price={card.price}
+                  isTrending={card.isTrending}
+                  imageContainerClassName="h-[150px] md:h-[ 150px]"
+                  imageLikeClassName="hidden "
+                  imageTrendingClassName="hidden"
+                  showInfoText="Quick view"
+                />
+              ))}
             />
           </div>
         </div>
       </div>
+      <div className="py-10">
+        <div className="flex items-center justify-between py-3">
+          <h1 className="text-xl font-semibold">Reviews</h1>
 
-      <Button className="mt-5">Add to Cart</Button>
+          <div className="flex items-center gap-2 w-1/2 justify-end">
+          
+           <p> 4 of 12 reviews</p>
+          
+           <p>Sort By:</p>
+            <Select className="max-w-fit" defaultValue={["Newest"]}>
+              <SelectItem value="Relevant">Relevant</SelectItem>
+              <SelectItem value="Helpful">Helpful</SelectItem>
+              <SelectItem value="Newest">Newest</SelectItem>
+              <SelectItem value="Highest rated">Highest rated</SelectItem>
+              <SelectItem value="Lowest rated">Lowest rated</SelectItem>
+            </Select>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

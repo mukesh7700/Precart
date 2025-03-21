@@ -5,6 +5,7 @@ import OrderItemCard from "./OrderItemCard";
 
 
 
+
 const orders = [
   {
     Status: "Order in progress",
@@ -12,7 +13,17 @@ const orders = [
     orderId: "98765",
     total: "$229",
     estimatedDelivery: "Monday, Aug 12 2024",
-    shippingAddress: "42 Elm Street, Springfield, IL 62704, US",
+    shippingAddress: {
+      id: "address-1", 
+      label: "Office",
+      recipientName: "James Collins",
+      street: "280 Suzanne Throughway",
+      city: "Breannabury",
+      state: "Bihar",
+      postalCode: "45801",
+      country: "US",
+      phone: "+44 000 000 0001",
+    },
     products: [
       {
         id: 101,
@@ -35,12 +46,22 @@ const orders = [
     ],
   },
   {
-    Status: "Order delivered",
+    Status: "delivered",
     orderDate: "08/03/2025",
     orderId: "98765",
     total: "$99",
     estimatedDelivery: "Friday, Aug 16 2024",
-    shippingAddress: "77 Maple Avenue, Brooklyn, NY 11201, US",
+    shippingAddress: {
+      id: "address-1", 
+      label: "Office",
+      recipientName: "James Collins",
+      street: "280 Suzanne Throughway",
+      city: "Breannabury",
+      state: "Bihar",
+      postalCode: "45801",
+      country: "US",
+      phone: "+44 000 000 0001",
+    },
     products: [
       {
         id: 201,
@@ -69,9 +90,12 @@ const Order = () => {
             <OrderCard
               estimatedDelivery={order.estimatedDelivery}
               shippingAddress={order.shippingAddress}
+              orderStatus={order.Status}
             >
+              
+              
               {order.products.map((product) => (
-                <OrderItemCard key={product.id} {...product} />
+                <OrderItemCard key={product.id} {...product}  />
               ))}
             </OrderCard>
           </TabContent>

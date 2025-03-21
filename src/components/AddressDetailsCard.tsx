@@ -1,8 +1,9 @@
 import { useTheme } from "@/context/ThemeContext";
 import { Button, Divider } from "@jamsr-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { Cardimg, NextArrow, Pen, Print } from "./svgs";
 import { AddressData } from "./AddressCard";
+import CancelOrder from "./CancelOrderDialog.tsx";
 
 
 export type AddressCardProps = {
@@ -12,7 +13,14 @@ export type AddressCardProps = {
   
 };
 const AddressCard:React.FC<AddressCardProps> = ({ address, onEdit}) => {
+  const [isCancelOpen, setIsCancelOpenOpen] = useState(false);
   const { theme } = useTheme();
+
+  const handleCancel = () => {
+    console.log("Order cancelled");
+    setIsCancelOpenOpen(true);
+  }
+
   return (
     <div>
       <div
@@ -95,26 +103,34 @@ const AddressCard:React.FC<AddressCardProps> = ({ address, onEdit}) => {
         <Divider />
         <div className="flex justify-between items-center pt-2">
           <h1 className="text-neutral-500">
-            Something wrong?{" "}
+            Something wrong?
             <Button
               disableAnimation
               disableRipple
               variant="text"
-              className="px-0 ui-hover:text-blue-500 underline underline-offset-4"
+              className="px-1 ui-hover:text-blue-500 underline underline-offset-4"
               endContent={<NextArrow className="h=3 w-3 px-0" />}
             >
-              Change address
-            </Button>{" "}
+              Exchange or return
+            </Button>
           </h1>
           <Button
             disableAnimation
             disableRipple
+            onClick={handleCancel}
             variant="outlined"
             className="text-danger ui-hover:text-danger-400"
           >
             Cancel order
           </Button>
         </div>
+        {isCancelOpen && (
+          <CancelOrder
+            open={isCancelOpen}
+            onClose={() => setIsCancelOpenOpen(false)}
+            
+          />
+        )}
       </div>
     </div>
   );
