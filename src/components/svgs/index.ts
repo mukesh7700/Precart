@@ -45,6 +45,15 @@ export {default as Pen} from './Pen.svg'
 export {default as Print} from './Print.svg'
 export {default as Add} from './Add.svg'
 export {default as Check} from './CheckMarkIcon.svg'
+export {default as StarIcon} from './StarIcon.svg'
+export {default as QualityIcon} from './QualityIcon.svg'
+export {default as FitIcon} from './FitIcon.svg'
+export {default as ComfortIcon} from './ComfortIcon.svg'
+export {default as ThumbsUpIcon} from './ThumbsUpIcon.svg'
+export {default as ThumbsDownIcon} from './ThumbsDownIcon.svg'
+
+
+
 
 
 

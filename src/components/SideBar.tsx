@@ -37,7 +37,7 @@ export const SidebarUsage = () => {
               <SidebarMenuItemButton  className="mt-3 flex gap-3 text-lg ui-hover:bg-danger">
                 <span className="w-6 h-6">
                   <Logout />
-                </span>
+               </span>
 
                 <span>Logout</span>
               </SidebarMenuItemButton>

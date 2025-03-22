@@ -35,18 +35,18 @@ const CancelOrder: React.FC<DrawerProps> = ({ open, onClose }) => {
           </DialogHeader>
           <DialogBody className="flex flex-col gap-4">
             <Select className="" label="Reason">
-              <SelectItem value="apple">Changed mind about purchase</SelectItem>
-              <SelectItem value="blueberry">Found better price elsewhere</SelectItem>
-              <SelectItem value="watermelon">Shipping time too long</SelectItem>
-              <SelectItem value="banana">Ordered incorrect item</SelectItem>
-              <SelectItem value="orange">Duplicate order placed accidentally</SelectItem>
-              <SelectItem value="orange">Financial reasons</SelectItem>
-              <SelectItem value="orange">No longer need item</SelectItem>
-              <SelectItem value="orange">Concerns about product quality</SelectItem>
-              <SelectItem value="orange">Product was damaged or defective</SelectItem>
-              <SelectItem value="orange">Other - please specify</SelectItem>
+              <SelectItem value="Changed mind about purchase">Changed mind about purchase</SelectItem>
+              <SelectItem value="Found better price elsewhere">Found better price elsewhere</SelectItem>
+              <SelectItem value="Shipping time too long">Shipping time too long</SelectItem>
+              <SelectItem value="Ordered incorrect item">Ordered incorrect item</SelectItem>
+              <SelectItem value="Duplicate order placed accidentally">Duplicate order placed accidentally</SelectItem>
+              <SelectItem value="Financial reasons">Financial reasons</SelectItem>
+              <SelectItem value="No longer need item">No longer need item</SelectItem>
+              <SelectItem value="Concerns about product quality">Concerns about product quality</SelectItem>
+              <SelectItem value="Product was damaged or defective">Product was damaged or defective</SelectItem>
+              <SelectItem value="Other">Other - please specify</SelectItem>
             </Select>
-            <Textarea label="Enter your email" size="lg" />
+            <Textarea label="Tell us why you want to cancel " size="lg" />
 
             <Button onClick={handleSave}  color="primary">
               Cancel Order

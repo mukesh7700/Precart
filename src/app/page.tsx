@@ -53,7 +53,7 @@ const products: Product[] = [
     title: "Men's Cloting",
     subtitle: "Starting from $39",
     linkText: "View all",
-    linkHref: "/men",
+    linkHref: "product/men",
   },
   {
     id: 3,
@@ -159,7 +159,7 @@ const Page = () => {
               </div>
               <div className="py-4 flex justify-center">
                 <Link
-                  href="/men"
+                  href="product/men"
                   className="hover:text-purple-600 hover:underline underline-offset-4 flex items-center text-lg "
                 >
                  <p>Show all men</p>

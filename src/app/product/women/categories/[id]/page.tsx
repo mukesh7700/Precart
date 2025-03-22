@@ -6,7 +6,10 @@ import {
   AccordionItem,
   Avatar,
   Button,
+  Chip,
+  Divider,
   IconButton,
+  LinearProgress,
   Rating,
   Select,
   SelectItem,
@@ -14,11 +17,76 @@ import {
 import Carousel2 from "@/components/Carousel2";
 import Breadcrumb from "@/components/Breadcrumb";
 import Carousel3 from "@/components/Carousel3";
-import { Batch, Clock, Heart, Return } from "@/components/svgs";
+import { Batch, Clock, ComfortIcon, FitIcon, Heart, QualityIcon, Return, StarIcon } from "@/components/svgs";
 import Link from "next/link";
 import TabImageSwiper from "@/components/TabImageSwiper";
 import mencardData from "@/data/MenCloths";
 import ShopingCard from "@/components/ShopingCard";
+import RatingSlider from "@/components/RatingSlider";
+import ProductReview from "@/components/ProductReview";
+
+const reviews = [
+  {
+    reviewer:"runMiles",
+    reviewTitle :"Comfortable relaxed fit",
+    reviewText: "The most stylish and funky slippers I've ever owned! Much admired by friends and family.",
+    timePosted :"13 hours ago",
+    images: [
+      "/images/men/1.jpg", // Replace with actual URLs
+      "/images/men/2.jpg",
+    ],
+    helpfulVotes : 2,
+    notHelpfulVotes : 0,
+  },
+  {
+    reviewer:"runMiles",
+    reviewTitle :"Comfortable relaxed fit",
+    reviewText: "The most stylish and funky slippers I've ever owned! Much admired by friends and family.",
+    timePosted :"13 hours ago",
+    images: [
+      "/images/men/1.jpg", // Replace with actual URLs
+      "/images/men/2.jpg",
+    ],
+    helpfulVotes : 2,
+    notHelpfulVotes : 0,
+  },
+  {
+    reviewer:"runMiles",
+    reviewTitle :"Comfortable relaxed fit",
+    reviewText: "The most stylish and funky slippers I've ever owned! Much admired by friends and family.",
+    timePosted :"13 hours ago",
+    images: [
+      "/images/men/1.jpg", // Replace with actual URLs
+      "/images/men/2.jpg",
+    ],
+    helpfulVotes : 2,
+    notHelpfulVotes : 0,
+  },
+  {
+    reviewer:"runMiles",
+    reviewTitle :"Comfortable relaxed fit",
+    reviewText: "The most stylish and funky slippers I've ever owned! Much admired by friends and family.",
+    timePosted :"13 hours ago",
+    images: [
+      "/images/men/1.jpg", // Replace with actual URLs
+      "/images/men/2.jpg",
+    ],
+    helpfulVotes : 2,
+    notHelpfulVotes : 0,
+  },
+  {
+    reviewer:"runMiles",
+    reviewTitle :"Comfortable relaxed fit",
+    reviewText: "The most stylish and funky slippers I've ever owned! Much admired by friends and family.",
+    timePosted :"13 hours ago",
+    images: [
+      "/images/men/1.jpg", // Replace with actual URLs
+      "/images/men/2.jpg",
+    ],
+    helpfulVotes : 2,
+    notHelpfulVotes : 0,
+  },
+]
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -241,15 +309,14 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-      <div className="py-10">
+      <section className="py-10">
         <div className="flex items-center justify-between py-3">
           <h1 className="text-xl font-semibold">Reviews</h1>
 
-          <div className="flex items-center gap-2 w-1/2 justify-end">
-          
-           <p> 4 of 12 reviews</p>
-          
-           <p>Sort By:</p>
+          <div className="flex items-center gap-2 w-1/2 justify-end text-sm">
+            <p> 4 of 12 reviews</p>
+            <Divider orientation="vertical" className="h-4" />
+            <p>Sort By:</p>
             <Select className="max-w-fit" defaultValue={["Newest"]}>
               <SelectItem value="Relevant">Relevant</SelectItem>
               <SelectItem value="Helpful">Helpful</SelectItem>
@@ -259,7 +326,148 @@ const ProductPage = () => {
             </Select>
           </div>
         </div>
-      </div>
+        <Divider />
+        <div className="flex gap-4 py-6">
+          <div className="basis-1/3 h-full sticky top-[70px]">
+            <div className="flex items-center gap-3 py-3">
+              <h1 className="text-4xl font-semibold ">4.7</h1>
+              <div>
+                <Rating
+                  isReadonly
+                  defaultValue={5}
+                  classNames={{
+                    starWrapper: " data-[checked=true]:text-blue-500",
+                    star: "size-3",
+                  }}
+                />
+                <p className="text-sm text-neutral-500 ">
+                  12 reviews
+                  <span>
+                    <Chip
+                      size="sm"
+                      className="ml-2 "
+                      color="success"
+                      variant="flat"
+                    >
+                      {" "}
+                      Verified by Shop
+                    </Chip>
+                  </span>
+                </p>
+              </div>
+            </div>
+            <Divider />
+            <div className=" py-3 ">
+              <h1 className="text-md font-semibold mb-2 ">Rating snapshot </h1>
+              <ul className="text-sm text-neutral-500">
+                <li className="flex items-center gap-2 mb-2 w-full">
+                  <p>5 stars</p>{" "}
+                  <LinearProgress progress={80} className="w-[80%]" size="lg" />{" "}
+                  <p>10</p>
+                </li>
+                <li className="flex items-center gap-2 mb-2 w-full">
+                  <p>4 stars</p>{" "}
+                  <LinearProgress progress={10} className="w-[80%]" size="lg" />{" "}
+                  <p>1</p>
+                </li>
+                <li className="flex items-center gap-2 mb-2 w-full">
+                  <p>3 stars</p>{" "}
+                  <LinearProgress progress={10} className="w-[80%]" size="lg" />{" "}
+                  <p>1</p>
+                </li>
+                <li className="flex items-center gap-2 mb-2 w-full">
+                  <p>2 stars</p>{" "}
+                  <LinearProgress progress={0} className="w-[80%]" size="lg" />{" "}
+                  <p>0</p>
+                </li>
+                <li className="flex items-center gap-2 mb-2 w-full">
+                  <p>1 stars</p>{" "}
+                  <LinearProgress progress={0} className="w-[80%]" size="lg" />{" "}
+                  <p>0</p>
+                </li>
+              </ul>
+            </div>
+            <Divider />
+            <div className="py-3">
+              <h1 className="text-md font-semibold text-current mb-2 ">
+                Filter by star rating
+              </h1>
+              <div className="grid grid-cols-5 gap-2">
+                <div className="border border-neutral-500 py-3  flex items-center justify-center  rounded-md">
+                  <div>
+                    <p className="text-center">1 </p>
+                    <StarIcon className="w-5 h-5" />
+                  </div>
+                </div>
+                <div className="border border-neutral-500 flex items-center justify-center  rounded-md">
+                  <div>
+                    <p className="text-center">2 </p>
+                    <StarIcon className="w-5 h-5" />
+                  </div>
+                </div>
+                <div className="border border-neutral-500 flex items-center justify-center rounded-md">
+                  <div>
+                    <p className="text-center">3 </p>
+                    <StarIcon className="w-5 h-5" />
+                  </div>
+                </div>
+                <div className="border border-neutral-500  flex items-center justify-center  rounded-md">
+                  <div>
+                    <p className="text-center">4 </p>
+                    <StarIcon className="w-5 h-5" />
+                  </div>
+                </div>
+                <div className="border border-neutral-500 flex items-center justify-center rounded-md">
+                  <div>
+                    <p className="text-center">5 </p>
+                    <StarIcon className="w-5 h-5" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Divider />
+            <div className="py-3">
+              <h1 className="text-md font-semibold  mb-2 ">Customer rating</h1>
+              <RatingSlider
+                title="Quality"
+                icon={<QualityIcon className="w-5" />}
+                minLabel="Runs tight"
+                maxLabel="Runs loose"
+                value={20}
+              />
+              <RatingSlider
+                title="Fit"
+                icon={<FitIcon className="w-5" />}
+                minLabel="Runs small"
+                maxLabel="Runs tight"
+                value={10}
+              />
+              <RatingSlider
+                title="Comfort"
+                icon={<ComfortIcon className="w-5" />}
+                minLabel="Uncomfortable"
+                maxLabel="Very comfortable"
+                value={50}
+              />
+            </div>
+          </div>
+          <div className="basis-2/3">
+          {reviews.map((review, index) => (
+            <ProductReview
+              reviewer={review.reviewer}
+              reviewTitle={review.reviewTitle}
+              reviewText={review.reviewText}
+              timePosted={review.timePosted}
+              images={review.images}
+              helpfulVotes={review.helpfulVotes}
+              notHelpfulVotes={review.notHelpfulVotes}
+
+              key={index}/>
+          ))}
+            
+            </div>
+        </div>
+      </section>
     </div>
   );
 };

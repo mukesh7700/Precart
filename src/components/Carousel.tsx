@@ -19,7 +19,7 @@ const slides = [
     description:
       "From lightweight layers to the perfect pair of pants, new seasonal favorites are here.",
     buttons: [
-      { text: "Shop men", link: "/men" },
+      { text: "Shop men", link: "product/men" },
       { text: "Shop women", link: "/product/women/categories" },
     ],
   },
@@ -28,7 +28,7 @@ const slides = [
     title: "Up to 50% off",
     description: "Summer sale",
     buttons: [
-      { text: "Shop men", link: "/men" },
+      { text: "Shop men", link: "product/men" },
       { text: "Shop women", link: "/product/women/categories" },
     ],
   },
