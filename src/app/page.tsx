@@ -106,10 +106,10 @@ const shoes = [
 ];
 
 const items = [
-  { name: "T Shirt", image: "/images/others/tShirt/1.webp", link: "/help" },
-  { name: "Trousers", image: "/images/others/tShirt/2.webp", link: "#" },
-  { name: "Shoes", image: "/images/others/shoes/1.webp", link: "#" },
-  { name: "Jackets", image: "/images/others/tShirt/3.webp", link: "#" },
+  { name: "T Shirt", image: "/images/others/tShirt/1.webp", link: "/men-&-women" },
+  { name: "Trousers", image: "/images/others/tShirt/2.webp", link: "/men-&-women" },
+  { name: "Shoes", image: "/images/others/shoes/1.webp", link: "/men-&-women" },
+  { name: "Jackets", image: "/images/others/tShirt/3.webp", link: "/men-&-women" },
 ];
 
 const Page = () => {
@@ -125,7 +125,7 @@ const Page = () => {
         <section className="">
           <Carousel />
         </section>
-        <ItemList items={items} />
+        <ItemList items={items}  />
         <section className=" text-center">
           <h1 className="text-3xl font-semibold my-3">Trending Now </h1>
           <Tabs
@@ -141,7 +141,9 @@ const Page = () => {
                 <TabImageSwiper
                   items={mencardData.slice(0, 6).map((card, index) => (
                     <CardComponent
-                      href="/"
+                      href={`/product/men/${card.title
+                        .replace(/\s+/g, "-")
+                        .toLowerCase()}`}
                       key={index}
                       imageSrc={card.imageSrc}
                       altText={card.altText}
@@ -173,7 +175,9 @@ const Page = () => {
                   <TabImageSwiper
                     items={womencardData.slice(0, 6).map((card, index) => (
                       <CardComponent
-                        href="/"
+                        href={`/product/women/categories/${card.title
+                          .replace(/\s+/g, "-")
+                          .toLowerCase()}`}
                         key={index}
                         imageSrc={card.imageSrc}
                         altText={card.altText}

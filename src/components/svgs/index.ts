@@ -51,6 +51,7 @@ export {default as FitIcon} from './FitIcon.svg'
 export {default as ComfortIcon} from './ComfortIcon.svg'
 export {default as ThumbsUpIcon} from './ThumbsUpIcon.svg'
 export {default as ThumbsDownIcon} from './ThumbsDownIcon.svg'
+export {default as PayPalIcon} from './PayPalIcon.svg'
 
 
 

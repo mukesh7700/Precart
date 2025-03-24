@@ -12,6 +12,7 @@ interface CardComponentProps {
   title: string;
   description: string;
   price: string;
+  
   onLike?: () => void;
   onInfo?: () => void;
   showInfoText?: string;
@@ -30,6 +31,7 @@ export default function ShopingCard({
   title,
   description,
   price,
+  
   onLike = () => {},
 
   className = "",
@@ -37,6 +39,7 @@ export default function ShopingCard({
   imageContainerClassName = "h-[300px] md:h-[400px]",
   imageLikeClassName="", 
   imageTrendingClassName="",
+  
 }: CardComponentProps) {
   return (
     <Link href={href} className={`text-start cursor-pointer ${className}`}>

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-
+import { useTheme } from '@/context/ThemeContext';
 const Color: React.FC = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-
+  const {theme} = useTheme();
   const categories = [
     { label: "Shirt", count: 47 },
     { label: "T-shirt", count: 89 },
@@ -28,7 +28,7 @@ const Color: React.FC = () => {
   };
 
   return (
-    <div className="p-2 rounded-md bg-black ">
+    <div className={`p-2 rounded-md mb-2 ${ theme === "light" ? "bg-neutral-100" : "bg-black" }`}>
       <h1 className="mb-3 font-semibold">Color</h1>
       <div>
         <div className="bg-black text-white p-2 rounded-lg">

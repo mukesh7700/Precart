@@ -142,7 +142,7 @@ const ProductPage = () => {
               }}
             />
             <p className="text-sm text-neutral-500 tracking-tight">
-              Includes reviewers who received this item for free{" "}
+              Includes reviewers who received this item for free
             </p>
           </div>
           {product.colors && product.colors.length > 0 && (
@@ -207,7 +207,7 @@ const ProductPage = () => {
           </div>
           <div className="py-2 text-center text-neutral-500 tracking-wide">
             <h1>
-              4 interest-free payments of $10 with{" "}
+              4 interest-free payments of $10 with
               <span className="font-bold text-current"> Klarna.</span>
             </h1>
             <Link
@@ -227,7 +227,7 @@ const ProductPage = () => {
                 <Batch className=" h-6 w-6" /> <p>Secure checkout</p>
               </li>
               <li className="flex gap-2">
-                {" "}
+                
                 <Return className=" h-6 w-6" />
                 <p>30 days return</p>
               </li>
@@ -240,7 +240,7 @@ const ProductPage = () => {
                   <p className="py-2 text-sm text-neutral-500">
                     Sink into pure, simple comfort the moment you step in the
                     door. mahabis classic has a pared-back design for those who
-                    love the beautiful yet understated things in life.{" "}
+                    love the beautiful yet understated things in life.
                   </p>
                   <ul className="list-disc pl-5 text-neutral-500">
                     <li className="py-2">Iconic, understated design.</li>
@@ -248,13 +248,13 @@ const ProductPage = () => {
                     <li className="py-2">100% wool lining. </li>
                     <li className="py-2">
                       Machine washable at 30°, remove insoles and wash ugbru a
-                      wool/delicates cycle.{" "}
+                      wool/delicates cycle.
                     </li>
                     <li className="py-2">
-                      Neoprene heel gently secures your foot in place.{" "}
+                      Neoprene heel gently secures your foot in place.
                     </li>
                     <li className="py-2">
-                      Contoured footbed for extra support.{" "}
+                      Contoured footbed for extra support.
                     </li>
                     <li className="py-2">Eco-friendly packaging </li>
                     <li className="py-2">
@@ -283,12 +283,12 @@ const ProductPage = () => {
                 <div className="py-2 text-sm text-neutral-500">
                   <p>
                     Free standard shipping ugbru orders over $50 and free 30-day
-                    returns.{" "}
+                    returns.
                     <Link
                       href="#"
                       className="underline underline-offset-4 hover:text-blue-500"
                     >
-                      {" "}
+                      
                       Learn more.
                     </Link>
                   </p>
@@ -364,7 +364,7 @@ const ProductPage = () => {
                       color="success"
                       variant="flat"
                     >
-                      {" "}
+                      
                       Verified by Shop
                     </Chip>
                   </span>
@@ -376,28 +376,28 @@ const ProductPage = () => {
               <h1 className="text-md font-semibold mb-2 ">Rating snapshot </h1>
               <ul className="text-sm text-neutral-500">
                 <li className="flex items-center gap-2 mb-2 w-full">
-                  <p>5 stars</p>{" "}
-                  <LinearProgress progress={80} className="w-[80%]" size="lg" />{" "}
+                  <p>5 stars</p>
+                  <LinearProgress progress={80} className="w-[80%]" size="lg" />
                   <p>10</p>
                 </li>
                 <li className="flex items-center gap-2 mb-2 w-full">
-                  <p>4 stars</p>{" "}
-                  <LinearProgress progress={10} className="w-[80%]" size="lg" />{" "}
+                  <p>4 stars</p>
+                  <LinearProgress progress={10} className="w-[80%]" size="lg" />
                   <p>1</p>
                 </li>
                 <li className="flex items-center gap-2 mb-2 w-full">
-                  <p>3 stars</p>{" "}
-                  <LinearProgress progress={10} className="w-[80%]" size="lg" />{" "}
+                  <p>3 stars</p>
+                  <LinearProgress progress={10} className="w-[80%]" size="lg" />
                   <p>1</p>
                 </li>
                 <li className="flex items-center gap-2 mb-2 w-full">
-                  <p>2 stars</p>{" "}
-                  <LinearProgress progress={0} className="w-[80%]" size="lg" />{" "}
+                  <p>2 stars</p>
+                  <LinearProgress progress={0} className="w-[80%]" size="lg" />
                   <p>0</p>
                 </li>
                 <li className="flex items-center gap-2 mb-2 w-full">
-                  <p>1 stars</p>{" "}
-                  <LinearProgress progress={0} className="w-[80%]" size="lg" />{" "}
+                  <p>1 stars</p>
+                  <LinearProgress progress={0} className="w-[80%]" size="lg" />
                   <p>0</p>
                 </li>
               </ul>
@@ -408,31 +408,31 @@ const ProductPage = () => {
                 Filter by star rating
               </h1>
               <div className="grid grid-cols-5 gap-2">
-                <div className="border border-neutral-500 py-3  flex items-center justify-center gap-2   rounded-md">
+                <div className="border border-neutral-500 py-3  flex items-center justify-center gap-2  rounded-md">
                   
                     <p className="text-center">1 </p>
                     <StarIcon className="w-5 h-5" />
-                 
+                  
                 </div>
-                <div className="border border-neutral-500 flex items-center justify-center gap-2  rounded-md">
+                <div className="border border-neutral-500 flex items-center justify-center gap-2   rounded-md">
                   
                     <p className="text-center">2 </p>
                     <StarIcon className="w-5 h-5" />
                   
                 </div>
-                <div className="border border-neutral-500 flex items-center justify-center gap-2 rounded-md">
-                 
+                <div className="border border-neutral-500 flex items-center justify-center gap-2  rounded-md">
+                  
                     <p className="text-center">3 </p>
                     <StarIcon className="w-5 h-5" />
                   
                 </div>
-                <div className="border border-neutral-500  flex items-center justify-center gap-2  rounded-md">
-                 
+                <div className="border border-neutral-500  flex items-center justify-center gap-2   rounded-md">
+                  
                     <p className="text-center">4 </p>
                     <StarIcon className="w-5 h-5" />
                   
                 </div>
-                <div className="border border-neutral-500 flex items-center justify-center gap-2 rounded-md">
+                <div className="border border-neutral-500 flex items-center justify-center gap-2  rounded-md">
                   
                     <p className="text-center">5 </p>
                     <StarIcon className="w-5 h-5" />
