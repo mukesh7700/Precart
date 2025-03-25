@@ -1,3 +1,4 @@
+import { LinearProgress } from '@jamsr-ui/react';
 import React from 'react';
 
 type RatingProps = {
@@ -16,12 +17,8 @@ const RatingSlider: React.FC<RatingProps> = ({ title, icon, minLabel, maxLabel, 
         <h3 className="text-md font-semibold">{title}</h3>
       </div>
       <div className="relative w-full">
-        <div className="h-1 bg-gray-700 rounded-full" />
-        <div
-          className="absolute top-0 h-1 bg-indigo-500 rounded transition-all duration-300"
-          style={{ width: `${value}%` }}
-        />
         
+        <LinearProgress progress={value} size='md' />
       </div>
       <div className="flex justify-between text-sm text-gray-400 mt-2">
         <span>{minLabel}</span>

@@ -89,9 +89,7 @@ const Page = () => {
             {mencardData.map((card, index) => (
               <ShopingCard
                 key={index}
-                href={`/product/women/categories/${card.title
-                  .replace(/\s+/g, "-")
-                  .toLowerCase()}`}
+                href="/product/women/categories/product-details"
                 imageContainerClassName="h-[300px] md:h-[600px]"
                 imageSrc={card.imageSrc}
                 altText={card.altText}

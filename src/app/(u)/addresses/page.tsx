@@ -92,7 +92,7 @@ const Page: React.FC = () => {
         className="min-w-[300px] group  border rounded-2xl border-neutral-500 border-dashed p-2  h-[215px] flex items-center justify-center ">
         <div  >
         <Add className="w-10 h-10 text-neutral-500 mx-auto"/>
-        <p className="text-sm group-hover:text-purple-500">Add address</p>
+        <p className="text-sm group-hover:text-blue-400">Add address</p>
         </div>
       </div>
     </div>

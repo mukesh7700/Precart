@@ -46,7 +46,7 @@ export default function RootLayout({
           >
             <HeaderUsage isBordered />
 
-            <main className="flex-grow h-full">{children}</main>
+            <main className="flex-grow ">{children}</main>
 
             <Footer />
           </UIConfigProvider>

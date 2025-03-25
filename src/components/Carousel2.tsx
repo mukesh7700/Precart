@@ -7,6 +7,8 @@ interface CarouselProps {
   images?: string[];
 }
 
+
+
 export default function Carousel({ images = [] }: CarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -32,8 +34,8 @@ export default function Carousel({ images = [] }: CarouselProps) {
   };
 
   return (
-    <div className="flex gap-4 max-h-[500px]">
-      <div className="flex flex-col gap-2 overflow-auto">
+    <div className="flex gap-4 max-h-[600px]">
+      <div className="flex flex-col gap-2 overflow-auto w-fit-content ">
         {images.map((img, index) => (
           <div 
             key={index} 
@@ -46,7 +48,7 @@ export default function Carousel({ images = [] }: CarouselProps) {
         ))}
       </div>
 
-      <div className="relative w-[500px] h-[500px]">
+      <div className="relative w-[500px] h-[600px]">
         {images.length > 0 && (
           <Image src={images[activeIndex]} fill alt={`main-${activeIndex}`} className="rounded-lg object-cover" />
         )}

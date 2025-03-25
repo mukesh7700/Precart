@@ -1,9 +1,10 @@
 import { useTheme } from "@/context/ThemeContext";
 import { Button, Divider } from "@jamsr-ui/react";
 import React, { useState } from "react";
-import { Cardimg, NextArrow, Pen, Print } from "./svgs";
+import { Cardimg,  Pen, Print } from "./svgs";
 import { AddressData } from "./AddressCard";
 import CancelOrder from "./CancelOrderDialog.tsx";
+import Link from "next/link";
 
 
 export type AddressCardProps = {
@@ -101,18 +102,17 @@ const AddressCard:React.FC<AddressCardProps> = ({ address, onEdit}) => {
           </Button>
         </div>
         <Divider />
-        <div className="flex justify-between items-center pt-2">
+        <div className="flex justify-between items-center pt-2 text-sm">
           <h1 className="text-neutral-500">
             Something wrong?
-            <Button
-              disableAnimation
-              disableRipple
-              variant="text"
-              className="px-1 ui-hover:text-blue-500 underline underline-offset-4"
-              endContent={<NextArrow className="h=3 w-3 px-0" />}
+            <Link
+              href="/exchange-or-return" 
+              
+              className="px-1 hover:text-blue-500 underline underline-offset-4"
+              
             >
-              Exchange or return
-            </Button>
+              Exchange or return  &raquo;
+            </Link>
           </h1>
           <Button
             disableAnimation

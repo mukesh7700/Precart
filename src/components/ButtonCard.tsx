@@ -21,7 +21,7 @@ const ButtonCard: React.FC<ButtonCardProps> = ({href, src, label, count}) => {
       height={100}
       className='w-[35px] h-[35px] bg-cover'
     />
-      <p className='text-md font-semibold me-2 group-hover:text-violet-500'>{label} <span>({count})</span></p>
+      <p className='text-md font-semibold me-2 group-hover:text-blue-400'>{label} <span>({count})</span></p>
     </Link>
   );
 };

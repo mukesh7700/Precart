@@ -141,9 +141,7 @@ const Page = () => {
                 <TabImageSwiper
                   items={mencardData.slice(0, 6).map((card, index) => (
                     <CardComponent
-                      href={`/product/men/${card.title
-                        .replace(/\s+/g, "-")
-                        .toLowerCase()}`}
+                      href="/product/women/categories/product-details"
                       key={index}
                       imageSrc={card.imageSrc}
                       altText={card.altText}
@@ -162,7 +160,7 @@ const Page = () => {
               <div className="py-4 flex justify-center">
                 <Link
                   href="product/men"
-                  className="hover:text-purple-600 hover:underline underline-offset-4 flex items-center text-lg "
+                  className="hover:text-blue-400 hover:underline underline-offset-4 flex items-center text-lg "
                 >
                  <p>Show all men</p>
                  <NextArrow className="h-3" />
@@ -175,9 +173,7 @@ const Page = () => {
                   <TabImageSwiper
                     items={womencardData.slice(0, 6).map((card, index) => (
                       <CardComponent
-                        href={`/product/women/categories/${card.title
-                          .replace(/\s+/g, "-")
-                          .toLowerCase()}`}
+                        href="/product/women/categories/product-details"
                         key={index}
                         imageSrc={card.imageSrc}
                         altText={card.altText}
@@ -196,7 +192,7 @@ const Page = () => {
                 <div className="py-5 flex justify-center">
                   <Link
                     href="/product/women/categories"
-                    className="  hover:text-purple-600 hover:underline underline-offset-4 flex items-center text-lg "
+                    className="  hover:text-blue-400 hover:underline underline-offset-4 flex items-center text-lg "
                   >
                     <p>Show all women</p>
                     <NextArrow className="h-3" />

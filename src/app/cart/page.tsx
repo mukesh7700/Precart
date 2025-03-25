@@ -69,7 +69,7 @@ const page = () => {
         <TabImageSwiper
           items={mencardData.slice(0, 6).map((card, index) => (
             <ShopingCard
-              href="/"
+              href="/product/women/categories/product-details"
               key={index}
               imageSrc={card.imageSrc}
               altText={card.altText}

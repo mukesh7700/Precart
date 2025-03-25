@@ -85,7 +85,7 @@ const AddressCard: React.FC<AddressCardProps> = ({
       <div className="flex items-center justify-center gap-3 p-2 text-sm">
         <button
           onClick={handleEdit}
-          className="hover:underline underline-offset-4 hover:text-purple-500 cursor-pointer"
+          className="hover:underline underline-offset-4 hover:text-blue-400 cursor-pointer"
         >
           Edit
         </button>
@@ -98,7 +98,7 @@ const AddressCard: React.FC<AddressCardProps> = ({
           className={`${
             isDefault
               ? "text-neutral-400 "
-              : "hover:underline hover:text-purple-500 cursor-pointer underline-offset-4"
+              : "hover:underline hover:text-blue-400 cursor-pointer underline-offset-4"
           }`}
         >
           Remove
@@ -112,7 +112,7 @@ const AddressCard: React.FC<AddressCardProps> = ({
           className={`${
             isDefault
               ? "text-neutral-400"
-              : "hover:underline hover:text-purple-500 cursor-pointer underline-offset-4"
+              : "hover:underline hover:text-blue-400 cursor-pointer underline-offset-4"
           }`}
         >
           Set as default

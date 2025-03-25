@@ -1,6 +1,6 @@
 "use client";
-import { useParams } from "next/navigation";
-import womencardData from "@/data/WomenCloths";
+
+
 import {
   Accordion,
   AccordionItem,
@@ -34,6 +34,17 @@ import mencardData from "@/data/MenCloths";
 import ShopingCard from "@/components/ShopingCard";
 import RatingSlider from "@/components/RatingSlider";
 import ProductReview from "@/components/ProductReview";
+
+const  productImages = [
+  
+  '/images/others/shoes/1.webp',
+  '/images/others/shoes/2.webp',
+  '/images/others/shoes/3.webp',
+  '/images/others/shoes/4.webp',
+  '/images/others/shoes/5.webp',
+  '/images/others/shoes/6.webp',
+  '/images/others/shoes/7.webp',
+];
 
 const reviews = [
   {
@@ -103,17 +114,9 @@ const reviews = [
   },
 ];
 
+
 const ProductPage = () => {
-  const { id } = useParams();
-  const productIndex = Array.isArray(id) ? id[0] : id; // Convert array to string if needed
-
-  const product = womencardData.find(
-    (item) => item.title.replace(/\s+/g, "-").toLowerCase() === productIndex
-  );
-
-  if (!product) {
-    return <h1 className="text-center text-xl py-10">Product Not Found</h1>;
-  }
+ 
 
   const sizes = Array.from({ length: (12 - 6.5) / 0.5 + 1 }, (_, i) =>
     (6.5 + i * 0.5).toFixed(1)
@@ -122,20 +125,20 @@ const ProductPage = () => {
   return (
     <div className="container mx-auto max-w-[1280px] px-2 py-10 ">
       <div className="md:flex gap-4">
-        <div className="md:w-1/2 h-[500px] md:sticky top-[70px]">
+        <div className="md:w-1/2 h-fit md:sticky top-[70px]">
           <div className="mb-2  ">
             <Breadcrumb />
           </div>
-          <Carousel2 images={product.productImages} />
+          <Carousel2 images={productImages} />
         </div>
         <div className="md:w-1/2 max-w-[500px]">
-          <h1 className="text-md text-neutral-500">{product.description}</h1>
-          <h1 className="text-2xl font-semibold">{product.title}</h1>
-          <h1 className="text-xl font-semibold ">{product.price}</h1>
+          <h1 className="text-md text-neutral-500">Men&lsquo;s Trousers</h1>
+          <h1 className="text-2xl font-semibold">Slim Lyocell Trousers</h1>
+          <h1 className="text-xl font-semibold ">$50</h1>
           <div className="py-2">
             <Rating
               isReadonly
-              defaultValue={product.rating || 3}
+              defaultValue={ 3}
               classNames={{
                 starWrapper: " data-[checked=true]:text-yellow-400",
                 star: "size-3",
@@ -145,25 +148,35 @@ const ProductPage = () => {
               Includes reviewers who received this item for free{" "}
             </p>
           </div>
-          {product.colors && product.colors.length > 0 && (
+          
             <div className="py-2">
               <h3 className="text-md font-medium mb-2"> Colors:</h3>
               <div className="flex gap-2">
-                {product.colors.map((color, index) => (
-                  <div key={index}>
+                
+                  <div >
                     <Avatar
-                      src={color.colorImage}
-                      alt={color.colorName}
+                      src="/images/others/shoes/2.webp"
+                      alt="red"
                       className="size-10 cursor-pointer border border-neutral-300  transition-all"
                     />
                     <p className="text-xs text-neutral-500 text-center mt-1">
-                      {color.colorName}
+                      Red
                     </p>
                   </div>
-                ))}
+                  <div >
+                    <Avatar
+                      src="/images/others/shoes/1.webp"
+                      alt="Blue"
+                      className="size-10 cursor-pointer border border-neutral-300  transition-all"
+                    />
+                    <p className="text-xs text-neutral-500 text-center mt-1">
+                    Blue
+                    </p>
+                  </div>
+                
               </div>
             </div>
-          )}
+          
           <Carousel3 />
           <div className="py-2">
             <p className="text-md font-semibold">Sizes</p>
@@ -227,14 +240,14 @@ const ProductPage = () => {
                 <Batch className=" h-6 w-6" /> <p>Secure checkout</p>
               </li>
               <li className="flex gap-2">
-                {" "}
+                
                 <Return className=" h-6 w-6" />
                 <p>30 days return</p>
               </li>
             </ul>
           </div>
           <div className="py-2">
-            <Accordion isMultiple>
+            <Accordion isMultiple >
               <AccordionItem aria-label="Accordion 1" heading="Description">
                 <div>
                   <p className="py-2 text-sm text-neutral-500">
@@ -283,12 +296,12 @@ const ProductPage = () => {
                 <div className="py-2 text-sm text-neutral-500">
                   <p>
                     Free standard shipping ugbru orders over $50 and free 30-day
-                    returns.{" "}
+                    returns.
                     <Link
                       href="#"
-                      className="underline underline-offset-4 hover:text-blue-500"
+                      className="underline underline-offset-4 hover:text-blue-400"
                     >
-                      {" "}
+                      
                       Learn more.
                     </Link>
                   </p>
@@ -306,7 +319,7 @@ const ProductPage = () => {
             <TabImageSwiper
               items={mencardData.slice(0, 6).map((card, index) => (
                 <ShopingCard
-                  href="/"
+                  href="/product/women/categories/product-details"
                   key={index}
                   imageSrc={card.imageSrc}
                   altText={card.altText}
@@ -497,7 +510,7 @@ const ProductPage = () => {
         <TabImageSwiper
           items={mencardData.slice(0, 6).map((card, index) => (
             <ShopingCard
-              href="/"
+              href="/product/women/categories/product-details"
               key={index}
               imageSrc={card.imageSrc}
               altText={card.altText}

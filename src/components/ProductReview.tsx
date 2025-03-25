@@ -31,9 +31,12 @@ const ProductReview: FC<ProductReviewProps> = ({
       {/* Rating and time */}
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center gap-2">
-          <Rating value={4} />
+          <Rating value={4} classNames={{
+                    starWrapper: " data-[checked=true]:text-blue-500",
+                    star: "size-4",
+                  }} />
           <Chip variant="flat" size="sm">
-            Highly recommended{" "}
+            Highly recommended
           </Chip>
         </div>
         <div className="text-sm text-neutral-500">{timePosted}</div>

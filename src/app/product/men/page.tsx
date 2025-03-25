@@ -87,10 +87,8 @@ const Page = () => {
         <FullImageCard src="/images/men/14.webp" href="#" title="Be Your Own Boss" subtitle="Shop Now"/>
         {mencardData.map((card, index) => (
           <ShopingCard
-          href={`/product/men/${card.title
-            .replace(/\s+/g, "-")
-            .toLowerCase()}`}
           key={index}
+          href="/product/women/categories/product-details"
           imageSrc={card.imageSrc}
           altText={card.altText}
           title={card.title}
