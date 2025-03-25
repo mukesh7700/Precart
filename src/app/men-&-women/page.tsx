@@ -13,7 +13,6 @@ import ShopingCard from "@/components/ShopingCard";
 import { DownArrow } from "@/components/svgs";
 import mencardData from "@/data/MenCloths";
 import { Button, Popover } from "@jamsr-ui/react";
-import { section } from "framer-motion/client";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -28,7 +27,7 @@ const popoverData = [
   { label: "Sleeve Length", content: <Sleeve /> },
 ];
 
-const page = () => {
+const Page = () => {
   
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -119,4 +118,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

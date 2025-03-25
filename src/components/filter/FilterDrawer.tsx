@@ -6,7 +6,6 @@ import {
   DrawerHeader,
   Button,
 } from "@jamsr-ui/react";
-import { useTheme } from '@/context/ThemeContext';
 
 import { Close } from "../svgs";
 import AppliesFilter from "@/components/filter/AppliesFilter";
@@ -24,7 +23,6 @@ interface CartProps {
 }
 
 const FilterDrawer: React.FC<CartProps> = ({ isOpen, setIsOpen, onClose }) => {
-  const {theme} = useTheme();
   return (
     <div>
       <Drawer
