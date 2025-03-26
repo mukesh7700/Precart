@@ -1,4 +1,4 @@
-import { Button, Checkbox, Input } from '@jamsr-ui/react'
+import { Button, Input } from '@jamsr-ui/react'
 import Link from 'next/link'
 import React from 'react'
 

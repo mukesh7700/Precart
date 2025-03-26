@@ -24,7 +24,7 @@ const page = () => {
         ))}
         <Button color='primary' size='lg' className='w-full my-5' >Confirm</Button>
         <p className='text-sm text-neutral-500  mt-5 tracking-wide leading-4'>By returning, you confirm that all items are in the same condition as when you received them. Please pack everything in its original packaging and ensure the tags remain attached. </p>
-        <p className='text-sm text-neutral-500  my-5 tracking-wide leading-4'>We will assess the items' condition before processing your refund. </p>
+        <p className='text-sm text-neutral-500  my-5 tracking-wide leading-4'>We will assess the items&lsquo; condition before processing your refund. </p>
         <Link href="/exchange-or-return" className='text-sm font-semibold text-center  underline underline-offset-4'>view return policy</Link>
         </div>
       </div>
