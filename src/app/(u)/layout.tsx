@@ -7,14 +7,14 @@ export default function BlogLayout({
 }) {
   return (
     <section
-      className="flex gap-5  container  max-w-[1280px]  mx-auto
+      className="flex gap-5  container   max-w-[1280px]  mx-auto
 "
     >
       <div className="hidden lg:block h-fit  sticky top-[50px]   ">
         <h1 className="text-lg font-semibold pt-4 ps-4">Account</h1>
         <SidebarUsage />
       </div>
-      <div className="w-full border-l border-zinc-600">{children}</div>
+      <div className=" border-l border-zinc-600">{children}</div>
     </section>
   );
 }

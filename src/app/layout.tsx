@@ -34,23 +34,23 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  flex flex-col min-h-screen`}
       >
         <ThemeProvider>
-        <UIProvider>
-          <UIConfigProvider
-            card={{
-              isBordered: true,
-              className: "border border-[hsl(210,9.8%,16.1%)] bg-transparent",
-            }}
-          >
-            <HeaderUsage isBordered />
+          <UIProvider>
+            <UIConfigProvider
+              card={{
+                isBordered: true,
+                className: "border border-[hsl(210,9.8%,16.1%)] bg-transparent",
+              }}
+            >
+              <HeaderUsage isBordered />
 
-            <main className="flex-grow ">{children}</main>
+              <main className="flex-grow flex">{children}</main>
 
-            <Footer />
-          </UIConfigProvider>
-        </UIProvider>
+              <Footer />
+            </UIConfigProvider>
+          </UIProvider>
         </ThemeProvider>
       </body>
     </html>

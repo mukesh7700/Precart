@@ -5,6 +5,8 @@ interface CartCardProps {
     size: string;
     quantity: number;
     price: number;
+    stock: number; // Out of stock example
+    isReturnable: boolean; 
   }
   const CartData: CartCardProps[] = [
     {
@@ -14,6 +16,8 @@ interface CartCardProps {
       size: "M",
       quantity: 4,
       price: 50,
+      stock: 10,
+      isReturnable: true,
     },
     {
       imageSrc: "/images/others/tShirt/1.webp",
@@ -22,6 +26,9 @@ interface CartCardProps {
       size: "M",
       quantity: 1,
       price: 149,
+      stock: 10,
+      isReturnable: false,
+
     },
     {
       imageSrc: "/images/women/2.jpg",
@@ -30,6 +37,8 @@ interface CartCardProps {
       size: "M",
       quantity: 1,
       price: 50,
+      stock: 0,
+      isReturnable: true,
     },
     {
       imageSrc: "/images/others/shoes/1.webp",
@@ -38,6 +47,8 @@ interface CartCardProps {
       size: "S",
       quantity: 2,
       price: 50,
+      stock: 10,
+      isReturnable: true,
     },
     
     ];

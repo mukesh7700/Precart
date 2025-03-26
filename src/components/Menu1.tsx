@@ -36,7 +36,7 @@ const Menu1 = () => {
           Change Appearance
         </span>
           </MenuItem>
-          <MenuItem color="danger" onClick={toggleTheme} className={`py-3 text-md   ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`} startContent={<div className={`h-5 w-5 ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`}><Logout/> </div>}>
+          <MenuItem color="danger" className={`py-3 text-md   ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`} startContent={<div className={`h-5 w-5 ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`}><Logout/> </div>}>
          
         <span>
           Logout

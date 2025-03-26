@@ -19,9 +19,9 @@ const page = () => {
         </div>
         
       </div>
-      <div className='container mx-auto flex'>
-        <div className='p-5 border-e border-neutral-500 hidden lg:block'></div>
-        <div className='py-10 px-16'>
+      <div className='container mx-auto max-w-[1280px] flex'>
+        <div className='p-5 border-e border-neutral-500 hidden lg:block h-fit sticky top-[50px]'>ram</div>
+        <div className='py-10 px-16 h-screen'>
             <h1 className='font-semibold' >Delivery</h1>
             <div className=''></div>
             
