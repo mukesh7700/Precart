@@ -3,7 +3,7 @@ import Link from "next/link";
 import data from "@/data/Menu";
 import React from "react";
 import { useTheme } from "@/context/ThemeContext";
-import { LogInIcon, Logout, Moon, Sun } from "./svgs";
+import { LogInIcon, Moon, Sun } from "./svgs";
 
 const Menu1 = () => {
   const { theme, toggleTheme } = useTheme();

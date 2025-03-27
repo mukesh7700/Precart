@@ -1,7 +1,6 @@
 import { IconButton, Popover, Text } from '@jamsr-ui/react'
 import React from 'react'
 import { InfoIcon } from "@jamsr-ui/shared-icons";
-import { div } from 'framer-motion/client';
 
 const Email = () => {
   return (

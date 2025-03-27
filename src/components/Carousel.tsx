@@ -42,7 +42,7 @@ const Carousel = () => {
 
   const changeSlide = (newIndex: number, newDirection: number) => {
     setDirection(newDirection);
-    setCurrentIndex((prevIndex) => (newIndex + slides.length) % slides.length);
+    setCurrentIndex(() => (newIndex + slides.length) % slides.length);
   };
 
   const nextSlide = () => changeSlide(currentIndex + 1, 1);
