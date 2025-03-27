@@ -3,8 +3,7 @@ import Link from "next/link";
 import data from "@/data/Menu";
 import React from "react";
 import { useTheme } from "@/context/ThemeContext";
-import { Logout, Moon, Sun } from "./svgs";
-
+import { LogInIcon, Logout, Moon, Sun } from "./svgs";
 
 const Menu1 = () => {
   const { theme, toggleTheme } = useTheme();
@@ -12,36 +11,69 @@ const Menu1 = () => {
     <>
       {data.map((item, index) => (
         <React.Fragment key={index}>
-          <div >
+          <div>
             {item.items.map((subItem, subIndex) => (
               <Link href={subItem.url} key={subIndex}>
                 <MenuItem
-                  className={`py-3 text-md   ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`}
-                  startContent={<div className={`h-5 w-5 ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`}>{subItem.icon}</div>}
+                  className={`py-3 text-md   ${
+                    theme === "light" ? "text-neutral-500" : "text-neutral-300"
+                  }`}
+                  startContent={
+                    <div
+                      className={`h-5 w-5 ${
+                        theme === "light"
+                          ? "text-neutral-500"
+                          : "text-neutral-300"
+                      }`}
+                    >
+                      {subItem.icon}
+                    </div>
+                  }
                 >
                   <span>{subItem.title}</span>
                 </MenuItem>
               </Link>
-              
             ))}
-            
           </div>
           {index !== data.length - 1 && <Divider className="mx-2" />}
         </React.Fragment>
       ))}
 
-      <MenuItem  onClick={toggleTheme} className={`py-3 text-md   ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`} startContent={<div className={`h-5 w-5 ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`}>{theme === 'light' ?  <Moon />:<Sun/> } </div>}>
-         
-        <span>
-          Change Appearance
-        </span>
-          </MenuItem>
-          <MenuItem color="danger" className={`py-3 text-md   ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`} startContent={<div className={`h-5 w-5 ${theme === "light" ? "text-neutral-500" : "text-neutral-300"}`}><Logout/> </div>}>
-         
-        <span>
-          Logout
-        </span>
-          </MenuItem>
+      <MenuItem
+        onClick={toggleTheme}
+        className={`py-3 text-md   ${
+          theme === "light" ? "text-neutral-500" : "text-neutral-300"
+        }`}
+        startContent={
+          <div
+            className={`h-5 w-5 ${
+              theme === "light" ? "text-neutral-500" : "text-neutral-300"
+            }`}
+          >
+            {theme === "light" ? <Moon /> : <Sun />}{" "}
+          </div>
+        }
+      >
+        <span>Change Appearance</span>
+      </MenuItem>
+      <Link href="/login">
+      <MenuItem
+        className={`py-3 text-md   ${
+          theme === "light" ? "text-neutral-500" : "text-neutral-300"
+        }`}
+        startContent={
+          <div
+            className={`h-5 w-5 ${
+              theme === "light" ? "text-neutral-500" : "text-neutral-300"
+            }`}
+          >
+            <LogInIcon />{" "}
+          </div>
+        }
+      >
+        <span>Log In</span>
+      </MenuItem>
+      </Link>
     </>
   );
 };

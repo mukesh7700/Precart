@@ -53,6 +53,7 @@ export {default as ThumbsUpIcon} from './ThumbsUpIcon.svg'
 export {default as ThumbsDownIcon} from './ThumbsDownIcon.svg'
 export {default as PayPalIcon} from './PayPalIcon.svg'
 export {default as GiftImg} from './GiftImg.svg'
+export {default as LogInIcon} from './LogInIcon.svg'
 
 
 

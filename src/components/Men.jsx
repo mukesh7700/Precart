@@ -9,7 +9,7 @@ const Men = () => {
   const { theme } = useTheme();
   return (
     <Card
-      className={`px-8  ${
+      className={`px-8   ${
         theme === "light" ? "bg-white text-black border-none shadow" : "bg-[#181818] text-white"
       }`}
     >

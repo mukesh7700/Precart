@@ -14,7 +14,7 @@ export default function BlogLayout({
         <h1 className="text-lg font-semibold pt-4 ps-4">Account</h1>
         <SidebarUsage />
       </div>
-      <div className=" border-l border-zinc-600">{children}</div>
+      <div className=" border-l border-zinc-600 w-full">{children}</div>
     </section>
   );
 }

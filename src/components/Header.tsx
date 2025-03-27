@@ -4,6 +4,7 @@ import {
   Button,
   Card,
   CardHeader,
+  Chip,
   Divider,
   Header,
   IconButton,
@@ -56,7 +57,7 @@ const HeaderUsage = (props: HeaderProps) => {
   return (
     <>
       <Header className="flex justify-between " {...props}>
-        <div className="container max-w-[1280px] mx-auto flex justify-between py-4 items-center">
+        <div className="container max-w-[1280px] mx-auto flex justify-between px-2 md:px-0 py-4 items-center">
           <div className="flex  items-center gap-4  w-fit">
             <Link href="/">
               <Logo className="h-[22px]   fill-black dark:fill-white" />
@@ -87,6 +88,12 @@ const HeaderUsage = (props: HeaderProps) => {
                 </div>
               </Popover>
             ))}
+            <Link href="https://github.com/mukesh7700/Precart" target="_blank">
+              <Chip variant="outlined" color="danger" className="outline-1 px-0">
+               
+                <Chip variant="dot" color="danger" className="text-danger font-semibold">Download</Chip>{" "}
+              </Chip>
+            </Link>
           </div>
           <div className="flex justify-center items-center gap-2 ">
             <IconButton

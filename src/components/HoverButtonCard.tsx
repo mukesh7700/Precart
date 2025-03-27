@@ -72,8 +72,8 @@ export default function CardComponent({
       <Link href={href} className={`text-start cursor-pointer ${className}`}>
         <div className="relative h-[300px] md:h-[400px] rounded-lg group transition-transform duration-300 overflow-hidden">
           {isTrending && (
-            <Chip className="absolute top-3 left-3 bg-black text-white pe-3 font-bold">
-              <Fire className="h-5 w-5" /> Trending
+            <Chip size="sm" color="success" className="absolute top-3 left-3  text-white pe-3 font-semibold">
+              <Fire className="h-3 w-3" /> Trending
             </Chip>
           )}
 
