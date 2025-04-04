@@ -11,7 +11,7 @@ const Page = () => {
         router.push('/registration');
       };
   return (
-    <div className='container mx-auto max-w-[1280px]  h-full flex justify-center items-center '>
+    <div className='container mx-auto max-w-[1280px]   flex justify-center items-center '>
         <div className='min-w-lg'>
             <h1 className='text-xl font-semibold text-center mb-5'>Log In </h1>
             <div>

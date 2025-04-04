@@ -4,7 +4,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='container mx-auto max-w-[1280px]  h-full flex justify-center items-center '>
+    <div className='container mx-auto max-w-[1280px]   flex justify-center items-center '>
         <div className='min-w-lg'>
             <h1 className='text-xl font-semibold text-center '>Reset password  </h1>
             <p className='text-sm text-neutral-500 text-center mb-5'>We’ll send you a link to reset your password. </p>

@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { UIConfigProvider, UIProvider } from "@jamsr-ui/react";
-import HeaderUsage from "@/components/Header";
-import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
+import LayoutContent from "@/components/LayoutContent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,11 +43,7 @@ export default function RootLayout({
                 className: "border border-[hsl(210,9.8%,16.1%)] bg-transparent",
               }}
             >
-              <HeaderUsage isBordered />
-
-              <main className="flex-grow">{children}</main>
-
-              <Footer />
+                 <LayoutContent>{children}</LayoutContent>
             </UIConfigProvider>
           </UIProvider>
         </ThemeProvider>

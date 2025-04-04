@@ -4,7 +4,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="container mx-auto max-w-[1280px] flex justify-center items-center ">
+    <div className="container mx-auto max-w-[1280px] flex justify-center items-center  ">
       <div className="min-w-lg max-w-lg">
         <h1 className="text-xl font-semibold text-center mb-5">
           Create an account{" "}
