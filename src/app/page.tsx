@@ -120,7 +120,7 @@ const Page = () => {
   
 
   return (
-    <div>
+    
       <div className="container max-w-[1280px] mx-auto p-2 md:p-0">
         <section className="">
           <Carousel />
@@ -277,7 +277,7 @@ const Page = () => {
           </div>
         </section>
       </div>
-    </div>
+  
   );
 };
 

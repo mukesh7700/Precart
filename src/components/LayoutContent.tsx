@@ -16,7 +16,7 @@ export default function LayoutContent({ children }: { children: React.ReactNode 
   return (
     <>
       {isAuthPage ? <Header2 /> : <HeaderUsage isBordered />}
-      <main className="flex-1 flex justify-center">{children}</main>
+      <main className="flex-1 flex ">{children}</main>
       {isAuthPage ? <Footer2 /> : <Footer />}
     </>
   );
